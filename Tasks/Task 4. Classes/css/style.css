@@ -1,0 +1,11 @@
+pre {
+    font-size: 30px;
+    color: grey;
+          word-spacing: 4px;  
+           letter-spacing: 6px;
+            line-height: 30px;
+
+}
+ins + span{
+    text-decoration: overline;
+}
