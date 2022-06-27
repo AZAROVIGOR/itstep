@@ -3,9 +3,32 @@ pre {
     color: grey;
           word-spacing: 4px;  
            letter-spacing: 6px;
-            line-height: 30px;
+            line-height: 40px;
 
 }
 ins + span{
     text-decoration: overline;
 }
+.prime{
+
+    font-weight: 900;
+}
+del ins{
+    text-shadow: 2px 2px 4px orange;
+}
+ins .prime del{
+    font-size: 35px;
+}
+.power{
+    color: rgba(252, 3, 165, 0.2);
+}
+
+.trans{ 
+     opacity: 0;
+}    
+.trans:hover{
+    opacity: 1;
+}
+
+
+
