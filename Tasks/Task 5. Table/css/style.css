@@ -1,0 +1,20 @@
+   table {
+      border-spacing: 0px;
+      border-collapse: collapse;
+      border: 7px solid #000;
+      width: 1500px;
+      height: 600px;
+      background: brown;
+      color: ivory;
+
+
+
+
+   }
+
+   td,
+   td {
+      font-size: 50px;
+      border: 7px solid #000;
+
+   }
