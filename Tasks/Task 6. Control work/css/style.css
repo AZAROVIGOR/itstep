@@ -1,0 +1,15 @@
+h1{
+    font-style: italic;
+    font-size: 24;
+}
+h2{
+    font-style: italic;
+    font-size: 18;
+}
+p{
+    font-size: 14;
+}
+img{
+    height: 100px;
+    width: 300px;
+}
