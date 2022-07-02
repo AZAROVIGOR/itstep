@@ -1,0 +1,15 @@
+table{
+   border-spacing: 0;
+   border-collapse:collapse ;
+   border: 3px solid#000;
+
+}
+    td{
+      height: 150px;
+      width: 150px;
+      border: 0;
+    }
+
+ tr:nth-child(2) td:nth-child(2){
+   border: 3px solid#000;
+ }
