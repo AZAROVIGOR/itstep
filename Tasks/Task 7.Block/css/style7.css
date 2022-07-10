@@ -18,26 +18,27 @@
     line-height: 100px;
     font-size: 50px;
     position: relative;
- }
-
-.inner1{
-    left: 0px;
-    top: 0px;
-
 }
 
-.inner2{
+.inner1 {
+
     left: 300px;
-    top: -100px;
+    top: 300px;
 
 }
 
-.inner3{
-    top: 100px;
-    left: 0px;
+.inner2 {
+
+    top: 200px;
+
 }
 
-.inner4{
-    top: 0px;
+.inner3 {
+    top: -200px;
     left: 300px;
-} 
+}
+
+.inner4 {
+
+    top: -300px;
+}

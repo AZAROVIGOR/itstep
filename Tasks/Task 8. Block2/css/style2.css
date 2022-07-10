@@ -1,4 +1,4 @@
-.block {
+.block{
     width: 400px;
     height: 400px;
     background: #000;
@@ -8,7 +8,6 @@
     top: 50%;
     margin-top: -200px;
 }
-
 .inner {
     width: 100px;
     height: 100px;
@@ -18,26 +17,37 @@
     line-height: 100px;
     font-size: 50px;
     position: relative;
- }
+    float: left;
+}
 
 .inner1{
-    left: 0px;
-    top: 0px;
+    margin-left: 100px;
 
 }
-
 .inner2{
-    left: 300px;
-    top: -100px;
+    padding-right: 100px
 
 }
-
 .inner3{
-    top: 100px;
-    left: 0px;
-}
+    
+    padding-right: 200px;
+    margin-left: 0px;
 
+}
 .inner4{
-    top: 0px;
-    left: 300px;
-} 
+   
+}
+.inner5{
+    padding-right: 200px
+
+}
+.inner6{
+   
+
+}
+.inner7{
+    margin-left: 100px;
+
+}
+.inner8{
+}
