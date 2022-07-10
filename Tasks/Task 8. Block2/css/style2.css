@@ -20,34 +20,14 @@
     float: left;
 }
 
-.inner1{
+.left100{
     margin-left: 100px;
+}
 
+.right200{
+    margin-right: 200px;
 }
-.inner2{
-    padding-right: 100px
 
-}
-.inner3{
-    
-    padding-right: 200px;
-    margin-left: 0px;
-
-}
-.inner4{
-   
-}
-.inner5{
-    padding-right: 200px
-
-}
-.inner6{
-   
-
-}
-.inner7{
-    margin-left: 100px;
-
-}
-.inner8{
+.right100{
+    margin-right: 100px;
 }

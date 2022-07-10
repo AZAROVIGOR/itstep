@@ -19,36 +19,15 @@
     position: relative;
     float: left;
 }
-.inner1{
-    
 
-}
-.inner2{
-   
-
-}
-.inner3{
-    
-    
-
-}
-.inner4{
-    
-    
-
-}
-.inner5{
-
+.left200{
+    margin-left: 200px;
 }
 
-.inner6{
-
+.left100{
+    margin-left: 100px;
 }
 
-.inner7{
-
-}
-
-.inner8{
-    
+.right100{
+    margin-right: 100px;
 }

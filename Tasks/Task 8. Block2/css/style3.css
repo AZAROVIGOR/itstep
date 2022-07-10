@@ -20,30 +20,10 @@
     float: left;
 }
 
-.inner1{
-    
+.left100{
+    margin-left: 100px;
 }
-.inner2{
-    
 
-}
-.inner3{
-    
-    
-}
-.inner4{
-   
-}
-.inner5{
-   
-}
-.inner6{
-   
-
-}
-.inner7{
-    
-
-}
-.inner8{
-}
+ .right200{
+    margin-right: 200px;
+} 

@@ -1,4 +1,4 @@
-.block{
+.block {
     width: 400px;
     height: 400px;
     background: #000;
@@ -8,6 +8,7 @@
     top: 50%;
     margin-top: -200px;
 }
+
 .inner {
     width: 100px;
     height: 100px;
@@ -19,21 +20,19 @@
     position: relative;
     float: left;
 }
-.inner1{
+
+.inner1 {
     margin-top: 0px;
-
 }
-.inner2{
+
+.inner2 {
     margin-top: 100px;
-
 }
-.inner3{
+
+.inner3 {
     margin-top: 200px;
-    
-
 }
-.inner4{
-    margin-top: 300px;
-    
 
+.inner4 {
+    margin-top: 300px;
 }
