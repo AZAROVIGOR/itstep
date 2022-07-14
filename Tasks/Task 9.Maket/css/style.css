@@ -1,0 +1,79 @@
+ div {
+     position: relative;
+     float: left;
+     text-align: center;
+     line-height: 100px;
+     color: #fff;
+     font-size: 30px;
+ }
+
+ .main {
+     width: 800px;
+     height: 1200px;
+     position: absolute;
+      top: calc(50% - 200px);
+    left: calc(50% - 200px);   
+ }
+
+ .log {
+     height: 200px;
+     width: 200px;
+     background: #000;
+ }
+
+ .info {
+     height: 200px;
+     width: 600px;
+     background: rgb(190, 103, 103);
+ }
+
+ .content-menu {
+     width: 200px;
+
+ }
+
+
+ .menu {
+     width: 200px;
+     height: 600px;
+     background: rgb(17, 226, 132);
+ }
+
+ .stock {
+     width: 200px;
+     height: 200px;
+     background: rgb(61, 14, 234);
+ }
+
+ .products {
+     width: 600px;
+
+ }
+
+ .product {
+     width: 200px;
+     height: 200px;
+     background: rgb(213, 72, 159);
+ }
+
+ .foot {
+     width: 800px;
+ }
+
+ .log2-foot {
+     width: 200px;
+     height: 200px;
+     background: rgb(220, 95, 70);
+ }
+
+ .reviews {
+     width: 600px;
+     height: 100px;
+     background: rgb(136, 235, 223);
+ }
+
+ .social-network {
+     width: 600px;
+     height: 100px;
+     background: rgb(225, 233, 73);
+ }
