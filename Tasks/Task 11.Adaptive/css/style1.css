@@ -1,0 +1,47 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box {
+    margin: 5px;
+    position: relative;
+    background: rgb(95, 169, 162);
+    float: left;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 768px;
+    }
+
+    .box {
+        width: calc(33.3333333% - 10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 1024px;
+    }
+
+    .box {
+        width: calc(25% - 10px);
+    }
+}
+
+@media (min-width:1280px) {
+    .container {
+        width: 1200px;
+    }
+
+    .box {
+        width: calc(16.6666666% - 10px);
+    }
+}
