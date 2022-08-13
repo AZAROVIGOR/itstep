@@ -1,6 +1,5 @@
 body{
-	background: #fff;
-	
+	background: #000;
 }
 div{
 	position: relative;
@@ -33,6 +32,7 @@ div{
 }
 .col-6{
 	width: 50%;
+	
 }
 .col-7{
 	width: 58.33333%;
@@ -91,7 +91,7 @@ div{
 	margin-left: 25%;
 }
 .pull-left-4{
-	margin-left: 100%;
+	margin-left: 33.33333%;
 }
 .d-none{
     display: none;

@@ -1,0 +1,77 @@
+.container{
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid#000;
+    position: relative;
+}
+
+
+.rectangle {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: red;
+    margin: 273px 169px;
+    
+  }
+
+  .rectangle1 {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: red;
+    margin: 273px 169px;
+    
+  }
+
+  .rectangle2 {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: red;
+    margin: 273px 169px;
+    
+  }
+
+  .rectangle3 {
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background: red;
+    margin: 273px 169px;
+    
+  }
+
+  .circle{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        left: 200px;
+        top: 200px;
+        
+        
+        
+
+  }
+  .triangle-up{
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 50px solid transparent;
+      border-right: 50px solid transparent;
+      border-bottom: 100px solid red;
+      right: 150px;
+      bottom: 150px;
+  }
+
+  .triangle-up1{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
