@@ -1,77 +1,98 @@
 .container{
-    width: 600px;
-    height: 600px;
-    margin: 0 auto;
-    border: 2px solid#000;
-    position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+.rectangle {
+  position: absolute;
+  width: 55px;
+  height: 1.5px;
+  background: red;
+  top: 405px;
+  right: 486px;
+  
+}
+.rectangle1 {
+  position: absolute;
+  width: 55px;
+  height: 2px;
+  background: red;
+  top: 418px;
+  right: 486px;
+  
+}
+.rectangle2 {
+  position: absolute;
+  width: 55px;
+  height: 1.5px;
+  background: red;
+  top: 405px;
+  right: 288px;
+  
+}
+.rectangle3 {
+  position: absolute;
+  width: 55px;
+  height: 2px;
+  background: red;
+  top: 418px;
+  right: 288px;
+  
+}
+.circle {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: red;
+  border-radius: 50%;
+  top: 408px;
+  right: 405px;
+  
+
 }
 
+.triangle-up {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 50px solid red;
+  right: 434px;
+  top: 355px;
+}
 
-.rectangle {
-    position: absolute;
-    width: 100px;
-    height: 5px;
-    background: red;
-    margin: 273px 169px;
-    
-  }
+.triangle-up1 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 50px solid red;
+  right: 355px;
+  top: 355px;
+}
 
-  .rectangle1 {
-    position: absolute;
-    width: 100px;
-    height: 5px;
-    background: red;
-    margin: 273px 169px;
-    
-  }
+.triangle-up2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 40px solid #fff;
+  right: 438px;
+  top: 372px;
+}
 
-  .rectangle2 {
-    position: absolute;
-    width: 100px;
-    height: 5px;
-    background: red;
-    margin: 273px 169px;
-    
-  }
-
-  .rectangle3 {
-    position: absolute;
-    width: 100px;
-    height: 5px;
-    background: red;
-    margin: 273px 169px;
-    
-  }
-
-  .circle{
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background: red;
-        border-radius: 50%;
-        left: 200px;
-        top: 200px;
-        
-        
-        
-
-  }
-  .triangle-up{
-      position: absolute;
-      width: 0;
-      height: 0;
-      border-left: 50px solid transparent;
-      border-right: 50px solid transparent;
-      border-bottom: 100px solid red;
-      right: 150px;
-      bottom: 150px;
-  }
-
-  .triangle-up1{
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid red;
+.triangle-up3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 40px solid #ffffff;
+  right: 361px;
+  top: 372px;
 }
