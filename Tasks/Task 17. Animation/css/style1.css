@@ -1,0 +1,456 @@
+.container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+    margin-top: 130px;
+}
+
+.rectangle {
+    position: absolute;
+    width: 30px;
+    height: 1.5px;
+    background: #000;
+    top: 235px;
+    right: 209px;
+    z-index: 1;
+    transform: scale(-1, -1) rotate(12deg);
+    transition-property:width,top,right, ;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+#box:target .rectangle{
+    
+    width: 33px;
+    height: 1.5px;
+    background: #000;
+    top: 228px;
+    right: 219px;
+   
+
+}
+
+.rectangle1 {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    top: 241px;
+    right: 209px;
+    z-index: 1;
+    transition-property:width,top,right, ;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .rectangle1{
+   
+    width: 33px;
+    height: 1.5px;
+    top: 241px;
+    right: 219px;
+    
+
+}
+
+.rectangle2 {
+    position: absolute;
+    width: 30px;
+    height: 1.5px;
+    background: #000;
+    top: 248px;
+    right: 209px;
+    z-index: 1;
+    transform: scale(-1, -1) rotate(-10deg);
+    transition-property: width,top,right, ;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+#box:target .rectangle2{
+   
+    width: 33px;
+    height: 1.5px;
+    top: 255px;
+    right: 219px;
+    
+
+}
+
+.rectangle3 {
+    position: absolute;
+    width: 30px;
+    height: 1.5px;
+    background: #000;
+    top: 234px;
+    right: 149px;
+    z-index: 1;
+    transform: scale(-1, -1) rotate(-10deg);
+    transition-property:width,top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .rectangle3{
+    width: 33px;
+    height: 1.5px;
+    top: 228px;
+    right: 141px;
+   
+
+}
+
+.rectangle4 {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #000;
+    top: 241px;
+    right: 149px;
+    z-index: 1;
+    transition-property:width,top,right, ;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .rectangle4{
+    
+    width: 33px;
+    height: 1.5px;
+    top: 241px;
+    right: 141px;
+  
+
+}
+
+.rectangle5 {
+    position: absolute;
+    width: 30px;
+    height: 1.5px;
+    background: #000;
+    top: 248px;
+    right: 149px;
+    z-index: 1;
+    transform: scale(-1, -1) rotate(10deg);
+    transition-property:width,top,right, ;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+
+}
+
+#box:target .rectangle5{
+    width: 33px;
+    height: 1.5px;
+    top: 254px;
+    right: 141px;
+}
+
+.circle {
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    background: #000;
+    border-radius: 50%;
+    top: 197px;
+    right: 154px;
+    z-index: 1;
+    transition-property:background;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+#box:target .circle{
+    background: #f00;
+
+}
+
+.circle1 {
+    position: absolute;
+    width: 29px;
+    height: 24px;
+    background: #000;
+    border-radius: 50%;
+    top: 197px;
+    right: 215px;
+    z-index: 1;
+    transition-property:background;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+#box:target .circle1{
+    background: #f00;
+
+}
+
+.circle2 {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: 198px;
+    right: 214px;
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+#box:target .circle2{
+    right: 221px;
+    top: 198px;
+    
+
+}
+
+
+.circle3 {
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    top: 198px;
+    right: 159px;
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+#box:target .circle3{
+    right: 152px;
+    top: 198px;
+    
+}
+
+.triangle-up {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid red;
+    right: 228px;
+    top: 144px;
+    transform: scale(-1, -1) rotate(164deg);
+    transition-property:top,right,border-bottom;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+#box:target .triangle-up{
+    right: 205px;
+    top: 144px;
+    transform: scale(-1, -1) rotate(167deg);
+    border-bottom:40px solid#000;
+}
+
+.triangle-up1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 40px solid #ff0000;
+    right: 121px;
+    top: 142px;
+    transform: scale(-1, -1) rotate(193deg);
+    transition-property:top,right,border-bottom;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+#box:target .triangle-up1{
+    right: 139px;
+    top: 142px;
+    transform: scale(-1, -1) rotate(190deg);
+    border-bottom:40px solid#000;
+}
+
+.triangle-up2 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 35px solid #fff;
+    right: 125px;
+    top: 146px;
+    transform: scale(-1, -1) rotate(193deg);
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+
+#box:target .triangle-up2{
+    right: 146px;
+    top: 145px;
+    transform: scale(-1, -1) rotate(190deg);
+}
+
+
+.triangle-up3 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 40px solid #ffffff;
+    right: 234px;
+    top: 146px;
+    transform: scale(-1, -1) rotate(164deg);
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 1s;
+}
+#box:target .triangle-up3{
+    right: 209px;
+    top: 144px;
+    transform: scale(-1, -1) rotate(167deg);
+}
+
+
+.cone {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 146px solid transparent;
+    border-right: 91px solid transparent;
+    border-top: 138px solid red;
+    border-radius: 50%;
+    top: 243px;
+    right: 102px;
+    transform: scale(-1, -1) rotate(8deg);
+}
+
+.cone1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 130px solid transparent;
+    border-right: 102px solid transparent;
+    border-top: 130px solid#fff;
+    border-radius: 50%;
+    top: 248px;
+    right: 102px;
+    transform: scale(-1, -1) rotate(8deg);
+}
+
+
+
+.oval {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: #fff;
+    border-radius: 100px / 50px;
+    border: 2px solid#ff0000;
+    right: 93px;
+    top: 174px;
+    transform: scale(-1, -1) rotate(-3deg);
+}
+
+.oval1 {
+    position: absolute;
+    width: 190px;
+    height: 90px;
+    background: #fff;
+    border-radius: 100px / 50px;
+    top: 179px;
+    right: 98px;
+}
+
+.oval2 {
+    position: absolute;
+    width: 35px;
+    height: 18px;
+    border: 2px solid#000000;
+    background: #ffffff;
+    border-radius: 100px / 50px;
+    right: 133px;
+    top: 360px;
+    transform: scale(-1, -1) rotate(-17deg);
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .oval2{
+   
+    right: 120px;
+    top: 352px;
+    transform: scale(-1, -1) rotate(-27deg);
+    z-index: 1;
+
+}
+
+.oval3 {
+    position: absolute;
+    width: 35px;
+    height: 18px;
+    border: 2px solid#000000;
+    background: #ffffff;
+    border-radius: 100px / 50px;
+    right: 181px;
+    top: 366px;
+    transform: scale(-1, -1) rotate(-2deg);
+    z-index: 1;
+    transition-property:top,right;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .oval3{
+    right: 193px;
+    top: 369px;
+    transform: scale(-1, -1) rotate(2deg);
+    z-index: 1;
+
+}
+
+
+.triangle-down {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #000;
+    top: 238px;
+    right: 184px;
+    transition-property:top,right,border-left,border-right,;
+    transition-timing-function: ease-out;
+    transition-duration: 2s;
+}
+
+#box:target .triangle-down{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 20px solid #f00;
+    top: 234px;
+    right: 180px;
+    transform: scale(-1, -1) rotate(180deg);
+    
+
+}
+
+
+a{
+    position: fixed;
+    display: block;
+    color: #fff;
+    background: black;
+    padding: 15px 20px;
+    top: 40px;
+}
+.start{
+    left: calc(50% - 150px);
+}
+.end{
+    left: calc(50% + 30px);
+}
