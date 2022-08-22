@@ -21,6 +21,7 @@
 
 .main-menu{
     font-family: Roboto;
+    width: 20%;
 }
 
 .main-menu > ul{
@@ -44,31 +45,53 @@
 .main-menu > ul > li > a > span{
     color: #dd7639;
     font-size: 14px;
+    margin-bottom: 5px;
 
 }
 
 .main-menu > ul > li > ul {
-    display: none;
+    display:none;
     position: absolute;
-    margin-left: 20px;
-    margin-top: 40px; 
+    margin-left: 13%;
+    margin-top: -55px; 
     z-index: 1000;
-}
-    
-
-
-.main-menu > ul > li > ul > li{
-    
+    background-color: #f3ece5;
+    box-shadow: 0 5px 6.8px 0.2px rgb(0 0 0 / 16%);
+    width: 250px;
     list-style: none;
-    font-family: Robto;
-    text-decoration: none;
-    font-size: 20px;
-    color: #dd7639;
-    font-weight: bold;
-    font-family: Roboto;
-   
+    padding: 10px 10px;
+    
 }
+
 
 .main-menu > ul > li:hover > ul{
     display: block;
 }
+
+.main-menu > ul > li > ul > li > a{
+    color:#673f35;
+    text-decoration: none;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.main-menu > ul > li > ul > li + li{
+    margin-top: 10px;
+}
+
+.main-menu > ul>li:hover >ul{
+    border-left: 3px solid #ce3a31; 
+}
+
+.main-menu > ul > li > a:hover{
+    color: #d73232;    
+}
+    
+
+
+
+
+
+
