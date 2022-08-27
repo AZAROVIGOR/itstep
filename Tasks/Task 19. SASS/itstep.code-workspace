@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"path": "..\\..\\..\\itstep2\\itstep2\\Tasks\\Task 19. SCSS\\scss"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "itstep"
+	}
+}

@@ -530,12 +530,13 @@
     margin: 0px 50px;
 }
 
-.contact-left-bottom {
+.contact-left-bottom > address {
     font-size: 22px;
     margin-top: 30px;
     width: 200px;
     line-height: 1.5;
     font-family: "Roboto";
+    font-style: normal;
 }
 
 .contacts-right {
@@ -560,6 +561,14 @@
     margin-top: 20px;
     line-height: 1.5;
     font-family: "Open Sans";
+}
+.phone{
+    padding: 3px 0;
+}
+
+.phone > a{
+    color: #fff;
+    text-decoration: none;
 }
 
 @media(min-width:440px)  {
