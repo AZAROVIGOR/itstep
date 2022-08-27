@@ -9,6 +9,10 @@
   position: relative;
 }
 
+.row {
+  display: flex;
+}
+
 .header__logo {
   background: url(../img/logo-new.svg) no-repeat;
   background-size: 100%;
@@ -17,55 +21,56 @@
   margin-left: 30px;
 }
 
-.main-menu {
-  font-family: "https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Meddon&family=Merriweather:wght@700&family=Mystery+Quest&family=Open+Sans:ital,wght@0,300;1,300&family=Playfair+Display&family=Roboto:wght@400;900&family=Splash&display=swap";
-  width: 20%;
-}
-.main-menu ul {
+.main-menu > ul {
   list-style: none;
-}
-.main-menu:hover ul {
-  display: block;
-  border-left: 3px solid #ce3a31;
-}
-.main-menu a {
   display: flex;
   flex-direction: column;
+}
+.main-menu > ul > li {
+  position: relative;
+}
+.main-menu > ul > li > a {
   text-decoration: none;
-  font-weight: bold;
+  display: flex;
+  flex-direction: column;
   color: #673f35;
-  padding: 12px 0px;
-  font-size: 20px;
   text-transform: uppercase;
+  font-weight: bold;
+  padding: 7px 20px;
+  font-size: 20px;
+  border-right: 3px solid transparent;
 }
-.main-menu:hover {
-  color: red;
+.main-menu > ul > li > a:hover {
+  color: #d73232;
 }
-.main-menu span {
+.main-menu > ul > li > a > span {
   color: #dd7639;
   font-size: 14px;
-  margin-bottom: 5px;
 }
-.main-menu ul {
+.main-menu > ul > li:hover > ul {
+  border-left: 3px solid #ce3a31;
+}
+.main-menu > ul > li:hover > ul {
+  display: block;
+}
+.main-menu > ul > li > ul {
   display: none;
   position: absolute;
-  margin-left: 13%;
-  margin-top: -55px;
-  z-index: 1000;
+  left: 100%;
+  top: 0;
+  list-style: none;
+  padding: 20px;
   background-color: #f2ebe3;
+  z-index: 110;
   box-shadow: 0 5px 6.8px 0.2px rgba(0, 0, 0, 0.16);
   width: 250px;
-  list-style: none;
-  padding: 10px 10px;
 }
-.main-menu a {
-  color: #673f35;
-  text-decoration: none;
-  font-family: Roboto;
-  font-weight: bold;
-  font-size: 18px;
-}
-
 .main-menu > ul > li > ul > li + li {
   margin-top: 10px;
+}
+.main-menu > ul > li > ul > li > a {
+  text-decoration: none;
+  color: #673f35;
+  text-transform: uppercase;
+  font-weight: 600;
 }/*# sourceMappingURL=style.css.map */
