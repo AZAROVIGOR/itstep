@@ -29,7 +29,7 @@
 .main-menu > ul > li {
   position: relative;
 }
-.main-menu > ul > li > a {
+.main-menu > ul > li s > a {
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -40,10 +40,10 @@
   font-size: 20px;
   border-right: 3px solid transparent;
 }
-.main-menu > ul > li > a:hover {
+.main-menu > ul > li s > a:hover {
   color: #d73232;
 }
-.main-menu > ul > li > a > span {
+.main-menu > ul > li s > a > span {
   color: #dd7639;
   font-size: 14px;
 }
