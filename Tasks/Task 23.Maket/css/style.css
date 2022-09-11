@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Love+Ya+Like+A+Sister&family=Marck+Script&family=Meddon&family=Merriweather:wght@700&family=Mystery+Quest&family=Open+Sans:ital,wght@0,300;1,300&family=Playfair+Display&family=Poppins:wght@600&family=Roboto:wght@400;900&family=Splash&display=swap");
+.header {
+  width: 1440px;
+}
+
+.header {
+  font-family: "Poppins";
+}
+
+.header__cover {
+  background-image: url(../img/Cover.jpg);
+  height: 757px;
+}
+.header__cover .container__menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.header__cover .container__menu .header__logo {
+  margin-left: 112px;
+}
+.header__cover .container__menu .header__menu ul {
+  display: flex;
+  margin-right: 118px;
+}
+.header__cover .container__menu .header__menu ul li {
+  list-style: none;
+}
+.header__cover .container__menu .header__menu ul li a {
+  font-size: 16px;
+  line-height: 24px;
+  padding: 0 20px;
+  text-decoration: none;
+  color: #333333;
+}
+.header__cover .container__menu .header__menu ul li a:hover {
+  color: #FFCD42;
+}
+.header__cover .container__menu .header__menu ul li a.pl {
+  margin: 0 10px 0;
+}
+.header__cover .container__menu .header__menu ul li a.en {
+  padding: 0 20px;
+}/*# sourceMappingURL=style.css.map */

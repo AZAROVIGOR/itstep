@@ -1,0 +1,55 @@
+.first-screen__main-catigories {
+    height: 80px;
+    margin-top: -20px;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+
+        .procedures {
+            width: 50%;
+            height: 80px;
+            background-color: $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .education {
+            width: 25%;
+            height: 80px;
+            background-color: $green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .vip {
+            width: 25%;
+            height: 80px;
+            background-color: $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        li {
+            list-style: none;
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-size: 21px;
+
+            }
+
+
+
+
+
+        }
+    }
+}

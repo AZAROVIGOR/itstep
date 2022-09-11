@@ -1,0 +1,49 @@
+.header__cover {
+    background-image: url(../img/Cover.jpg);
+    height: 757px;
+
+    .container__menu {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+
+        .header__logo {
+            margin-left: 112px;
+
+        }
+
+        .header__menu {
+
+            ul {
+                display: flex;
+                margin-right: 118px;
+
+
+                li {
+                    list-style: none;
+
+                    a {
+                        font-size: 16px;
+                        line-height: 24px;
+                        padding: 0 20px;
+                        text-decoration: none;
+                        color: $black;
+
+                        &:hover {
+                            color: $yellow;
+                        }
+
+                        &.pl {
+                            margin: 0 10px 0 ;
+                        }
+
+                        &.en {
+                            padding: 0 20px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
