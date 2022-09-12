@@ -1,11 +1,19 @@
-.header__cover {
+.cover_image {
     background-image: url(../img/Cover.jpg);
-    height: 757px;
+    background-size: cover;
+    display: block;
+    position: relative;
+    
+    
+   
+
 
     .container__menu {
+        height: 59px;
         display: flex;
         justify-content: space-between;
         padding-top: 50px;
+
 
         .header__logo {
             margin-left: 112px;
@@ -13,37 +21,158 @@
         }
 
         .header__menu {
+            display: flex;
+            position: relative;
+            margin-right: 118px;
 
             ul {
                 display: flex;
-                margin-right: 118px;
+
 
 
                 li {
                     list-style: none;
+                    padding: 0 0px;
 
                     a {
                         font-size: 16px;
                         line-height: 24px;
-                        padding: 0 20px;
+                        padding: 0 35px;
                         text-decoration: none;
                         color: $black;
+                        font-family: 'Poppins', sans-serif;
+                        font-style: normal;
 
                         &:hover {
                             color: $yellow;
                         }
 
                         &.pl {
-                            margin: 0 10px 0 ;
+                            margin: 0 10px 0;
                         }
 
-                        &.en {
-                            padding: 0 20px;
-                        }
+                        &.en {}
 
+                    }
+                }
+            }
+
+            .languages {
+                padding: 0px;
+
+                li {
+                    padding: 0 0px;
+
+                    .pl {
+                        width: 18px;
+                        height: 24px;
+                        padding: 0px;
+                    }
+
+                    .en {
+                        width: 21px;
+                        height: 24px;
+                        padding: 0px;
+                        color: $yellow;
                     }
                 }
             }
         }
     }
+
+    .slogan {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        width: 694px;
+        height: 245px;
+        background-color: $yellow;
+        margin: 192px 0 11px 120px;
+
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 40px;
+            line-height: 49px;
+            text-transform: uppercase;
+            margin-left: 38px;
+
+        }
+
+    }
+
+    .subtitle {
+        display: flex;
+        width: 694px;
+        height: 85px;
+        background-color: $black;
+        margin-left: 120px;
+        align-items: center;
+        margin-bottom: 115px;
+
+        .sublitle-text {
+            display: flex;
+
+
+            h2 {
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                color: $white;
+                margin: 0 45px;
+            }
+        }
+
+        .request {
+            width: 300px;
+            height: 64px;
+            background-color: $white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+
+            a {
+                font-family: 'Poppins', sans-serif;
+                font-size: 16px;
+                line-height: 24px;
+                text-transform: uppercase;
+                color: $black;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .mission-text {
+        
+        background-color: $black;
+        padding-bottom: 150px;
+       
+
+        .row {
+            width: 1000px;
+            align-items: center;
+            margin-left: 118px;
+
+            p {
+                font-family: 'Poppins', sans-serif;
+                font-size: 24px;
+                line-height: 36px;
+                color: $white;
+                padding-top: 150px;
+                
+            }
+        }
+                
+    }
 }
+
+.cover_image::after {
+    content: "";
+    background-image: url(../img/Graphic\ yellow.png);
+    width: 423px;
+    width: 423px;
+    position: absolute;
+}
+
+

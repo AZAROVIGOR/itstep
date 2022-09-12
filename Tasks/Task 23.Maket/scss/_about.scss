@@ -1,0 +1,77 @@
+.about {
+    width: 930px;
+    background-color: $black;
+    width: 100%;
+
+    .container {
+        .row {
+            .image {
+                background-image: url(../img/About\ image.png);
+                background-size: cover;
+                height: 500px;
+
+            }
+
+            .content {
+                position: relative;
+                width: 1320px;
+                height: 590px;
+                background-color: $white;
+                left: 117px;
+                bottom: 271px;
+                padding-right: 82px;
+
+
+                .content__row {
+                    box-sizing: border-box;
+                    padding: 68px 98px 105px 40px;
+
+                    .content__logo {
+                        margin-bottom: 78px;
+                    }
+
+                    .content__title {
+                        h2 {
+                            font-size: 22px;
+                            line-height: 33px;
+                            font-family: 'Poppins', sans-serif;
+                            text-transform: uppercase;
+                            padding-right: 50px;
+                            margin-bottom: 42px;
+                        }
+
+                        hr {
+                            background-color: #000;
+                            opacity: 0.1;
+                            width: 656.85px;
+                            margin-left: 0px;
+                            margin-bottom: 25px;
+                        }
+                    }
+
+                    .content__about {
+
+                        p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: 'Poppins', sans-serif;
+                            padding-right: 440px;
+                        }
+                    }
+                }
+
+            }
+
+            .content::after {
+                content: "";
+                background-image: url(../img/Graphic\ yellow.png);
+                width: 423px;
+                height: 423px;
+                position: absolute;
+                left: 979px;
+                top:279px
+            }
+
+        }
+    }
+}
