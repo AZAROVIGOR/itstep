@@ -1,13 +1,12 @@
 .product {
-    height: 796px;
-    background-color: #333333;
-    padding-top: 1px;
 
-        
+    background-image: url(../img/yellow_line.png);
+    background-repeat: repeat-x;
+    background-position: 0 260px;
+    margin-bottom: 125px;
+    position: relative;
 
     .row {
-
-        
 
         .product__title {
             margin-left: 117px;
@@ -24,15 +23,13 @@
             display: flex;
             margin-left: 118px;
             box-sizing: border-box;
-
-        
+            padding-bottom: 70px;
 
             .product__item {
                 width: 399px;
                 height: 499px;
                 background-color: $white;
                 margin-right: 11px;
-
 
                 &_icon {
                     margin: 39px 0 16px 39px;
@@ -73,21 +70,30 @@
                     justify-content: center;
                     align-items: center;
 
-                    a{
+                    a {
                         text-decoration: none;
                         text-transform: uppercase;
                         font-size: 14px;
                         line-height: 21px;
                         font-family: 'Poppins', sans-serif;
                         color: $white;
-
-                        
                     }
                 }
 
             }
-            
+
         }
-                
+
     }
+}
+
+.product::before {
+    content: "";
+    background-image: url(../img/Graphic\ grey.png);
+    width: 423px;
+    height: 423px;
+    position: absolute;
+    transform: rotate(180deg);
+    top: 100px;
+    
 }

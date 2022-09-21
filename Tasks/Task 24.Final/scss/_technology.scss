@@ -1,0 +1,84 @@
+.technology {
+    background-color: $black;
+    color: $white;
+
+    .container {
+
+        .technology__row {
+            display: flex;
+
+
+            .technology__stages {
+                padding: 160px 0 0 70px;
+                width: 395px;
+                margin-right: 317px;
+
+                .technology__stages_title {
+                    margin-bottom: 30px;
+
+                    h2 {
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 40px;
+                        line-height: 130%;
+                        letter-spacing: 0.01em;
+                        text-transform: uppercase;
+                        margin: 0;
+                    }
+                }
+
+                .technology__stages_text {
+
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 140%;
+                        letter-spacing: 0.01em;
+                    }
+                }
+            }
+
+            .technology__inform {
+
+                .technology__stage {
+                    padding: 160px 70px 160px 0;
+
+                    .stage {
+                        display: flex;
+                        align-items: center;
+                        width: 1068px;
+                        height: 132px;
+                        border-bottom: 1px solid$white;
+                        border-top: 1px solid$white;
+
+                        .number {
+                            margin-right: 60px;
+
+                            h2 {
+                                font-weight: 300;
+                                font-size: 48px;
+                                line-height: 130%;
+                                letter-spacing: 0.01em;
+                                text-transform: uppercase;
+                                
+                                &:hover{
+                                    color: $red;
+                                }
+                            }
+                        }
+
+                        p {
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 140%;
+                            letter-spacing: 0.01em;
+                            text-transform: uppercase;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,11 +1,11 @@
 .cover_image {
     background-image: url(../img/Cover.jpg);
     background-size: cover;
-    display: block;
-    position: relative;
-    
-    
    
+    
+
+
+
 
 
     .container__menu {
@@ -144,10 +144,10 @@
     }
 
     .mission-text {
-        
+
         background-color: $black;
         padding-bottom: 150px;
-       
+
 
         .row {
             width: 1000px;
@@ -160,19 +160,19 @@
                 line-height: 36px;
                 color: $white;
                 padding-top: 150px;
-                
+
             }
         }
-                
+
     }
 }
 
 .cover_image::after {
     content: "";
-    background-image: url(../img/Graphic\ yellow.png);
-    width: 423px;
+    background-image: url(../img/Graphic\ grey.png);
+    height: 423px;
     width: 423px;
     position: absolute;
+    top:576px;
+    right: 0px;
 }
-
-

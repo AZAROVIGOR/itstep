@@ -1,0 +1,146 @@
+.blog {
+    background-color: $light_gray;
+    height: 866px;
+
+    .container {
+
+        .blog__row {
+            display: flex;
+            padding: 160px 70px;
+            
+
+            .blog__block {
+                width: 25%;
+
+
+                .blog__title {
+                    margin-bottom: 30px;
+
+                    h2 {
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 130%;
+                        letter-spacing: 0.01em;
+                        text-transform: uppercase;
+                        color: $black;
+                        margin: 0;
+                       
+                    }
+
+                }
+
+                .blog__text {
+                    margin-bottom: 30px;
+
+                    p {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 140%;
+                        letter-spacing: 0.01em;
+                        color: $black;
+                        padding-right: 100px;
+                    }
+                }
+
+                .blog__btn {
+
+                    button {
+                        height: 66px;
+                        width: 291px;
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 130%;
+                        letter-spacing: 0.01em;
+                        position: relative;
+                        text-align: start;
+                        padding-left: 40px;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $white;
+                            background-color: $red;
+                            border: 1px solid$red;
+                        }
+
+                        img {
+                            margin-left: 0px;
+                            position: absolute;
+                            right: 40px;
+                            top: 25px;
+                        }
+
+                    }
+                }
+            }
+
+            .results {
+                width: 25%;
+                background-color: $white;
+                margin-right: 20px;
+
+                .results__text {
+
+                    p {
+                    padding: 0 50px 106px;
+                    }
+                }
+            }
+
+            .market {
+                width: 25%;
+                background-color: $white;
+                margin-right: 20px;
+
+                .market__text {
+                    p {
+                        padding: 0 50px
+                    }
+                }
+            }
+
+            .cloud {
+                width: 25%;
+                background-color: $white;
+                margin-right: 20px;
+
+                .cloud__text {
+                    p {
+                        padding: 0 50px
+                    }
+                }
+            }
+        }
+
+        .results__image,
+        .market__image,
+        .cloud__image {
+            margin: 80px 120px 30px 120px;
+        }
+
+        .results__title,
+        .market__title,
+        .cloud__title {
+            padding: 0 50px 18px
+        }
+
+        h3 {
+            font-weight: 600;
+            line-height: 26px;
+            letter-spacing: 0.01em;
+            text-transform: uppercase;
+            color: $black;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: $black
+            
+        }
+    }
+}
