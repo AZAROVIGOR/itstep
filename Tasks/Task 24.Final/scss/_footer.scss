@@ -1,0 +1,126 @@
+.footer {
+    background-color: $black;
+    height: 655px;
+    color: $white;
+
+    .container {
+
+        .footer__row {
+            display: flex;
+            padding: 70px 170px 160px 70px;
+
+            h3 {
+                margin: 0;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 33px;
+                text-transform: uppercase;
+                margin-bottom: 44px;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 32px;
+            }
+
+            a {
+                text-decoration: none;
+                color: $white;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 23px;
+
+                &:hover {
+                    color: $red
+                }
+            }
+
+
+            .footer__logo {
+                margin-right: 206px;
+            }
+
+            .footer__company {
+                margin-right: 122px;
+
+            }
+
+            .footer__services {
+                margin-right: 451px;
+
+                a {
+                    text-transform: uppercase;
+                }
+            }
+
+            .footer__contact {
+
+                .footer__phone {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 18px;
+
+                    .phone_icon {
+                        background-image: url(../img/bi_phone.png);
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 30px;
+                    }
+                }
+
+                .footer__address {
+                    display: flex;
+                    margin-bottom: 18px;
+
+                    .address_icon {
+                        background-image: url(../img/bi_pin-map.png);
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 30px;
+                    }
+                }
+
+                .footer__email {
+                    display: flex;
+                    margin-bottom: 57px;
+
+                    .email_icon {
+                        background-image: url(../img/eva_email-outline.png);
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 30px;
+                    }
+                }
+            }
+
+            .footer__socials {
+                display: flex;
+
+                .footer__socials_icon {
+
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 24px;
+                }
+            }
+        }
+
+        .copyright {
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            margin: 40px;
+            margin-top: 30px;
+
+            p{
+                margin: 0;
+            }
+        }
+    }
+}

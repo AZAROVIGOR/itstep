@@ -11,11 +11,39 @@
             width: 200px;
             height: 45px;
             background-size: cover;
-            margin: 47px 0 0 70px;
+            margin: 47px 0 48px 70px;
+
+            @media(min-width: 440px) {
+                width: 180px;
+                height: 40px;
+                margin: 30px 0 30px 20px;
+            }
+
+            @media(min-width: 1280px) {
+                margin: 50px 0 50px 50px;
+                width: 180px;
+                height: 40px;
+            }
+        }
+
+        .gamburger {
+            margin: 32.5px 20px 32.50px 150px;
+            a {
+                
+                width: 26.25px;
+                height: 20.42px;
+                background-size: cover;
+                margin: 32.5px 20px 0px;
+            }
+
         }
 
         .inform {
-            margin: 58px 0 0 0;
+            margin: 58px 0 57px 0;
+
+            @media(min-width: 440px) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -31,6 +59,16 @@
                         color: $black;
                         padding-right: 50px;
 
+                        @media(min-width:1280px) {
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 23px;
+                            text-align: center;
+                            color: $black;
+                            padding: 0 36px 0 0;
+                        }
+
+
                         &:hover {
                             color: $red;
                         }
@@ -41,7 +79,11 @@
         }
 
         .language {
-            margin: 58px 0 0 0;
+            margin: 58px 35px 58px 0;
+
+            @media(min-width: 440px) {
+                display: none;
+            }
 
             ul {
                 display: flex;
@@ -78,13 +120,18 @@
         }
 
         .btn_contact {
-            margin: 37px 70px 0 0;
+            margin: 37px 70px 36px 0;
+
+            @media(min-width: 440px) {
+                display: none;
+            }
 
             p {
                 font-style: normal;
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 23px;
+                margin: 0;
 
                 button {
                     width: 240px;

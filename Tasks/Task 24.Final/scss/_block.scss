@@ -1,9 +1,12 @@
 .block {
     background-color: $black;
-    height: 942px;
     color: $white;
     box-sizing: border-box;
-    
+
+    @media(min-width:440px){
+        width: 440px;
+    }
+
 
     .container {
 
@@ -12,25 +15,55 @@
             padding-top: 220px;
             margin-bottom: 160px;
 
+            @media(min-width:440px) {
+                padding: 80px 20px 60px 20px;
+                margin: 0;
+            }
+
+            @media(min-width:1280px) {
+                padding-top: 160px;
+                margin-left: 50px;
+            }
+
             h2 {
                 font-style: normal;
                 font-weight: 600;
                 font-size: 40px;
                 line-height: 160%;
+
+                @media(min-width: 440px) {
+                    font-weight: 600;
+                    font-size: 24px;
+                    line-height: 160%;
+                }
             }
         }
 
         .block__inform {
             margin-left: 70px;
+            padding-bottom: 220px;
+
+            @media(min-width:440px) {
+                margin-left: 20px;
+                padding-bottom: 80px;
+            }
+
+            @media(min-width:1280px) {
+                margin-left: 50px;
+            }
 
 
             .block__row {
                 display: flex;
 
+                @media(min-width:440px){
+                    flex-direction: column;
+                }
+
                 h3 {
                     font-style: normal;
                     font-weight: 500;
-                    
+
                     line-height: 140%;
                     text-transform: uppercase;
                 }
@@ -39,6 +72,12 @@
                     font-weight: 500;
                     font-size: 20px;
                     line-height: 150%;
+
+                    @media(min-width:440px) {
+                        font-size: 16px;
+                        margin: 0;
+                        
+                    }
                 }
 
                 .communication,
@@ -66,13 +105,26 @@
                 .communications {
                     width: 33.333333%;
 
+                    @media(min-width:440px) {
+                        width: 100%;
+                    }
+
                     .communication__icon {
                         background-image: url(../img/communication.png);
                     }
 
-                    .communication__subtitle{
-                        p{
+                    .communication__subtitle {
+                        p {
                             padding-right: 130px;
+
+                            @media(min-width:440px) {
+                                padding-right: 20px;
+                                margin-bottom: 60px;
+                            }
+
+                            @media(min-width: 1280px) {
+                                padding-right: 50px;
+                            }
                         }
                     }
 
@@ -81,6 +133,10 @@
                 .individuality {
                     width: 33.333333%;
 
+                    @media(min-width:440px) {
+                        width: 100%;
+                    }
+
                     .individuality__icon {
                         background-image: url(../img/Individuality.png);
                     }
@@ -88,6 +144,15 @@
                     .individuality__subtitle {
                         p {
                             padding-right: 160px;
+
+                            @media(min-width:440px) {
+                                padding-right: 20px;
+                                margin-bottom: 60px;
+                            }
+
+                            @media(min-width: 1280px) {
+                                padding-right: 50px;
+                            }
                         }
                     }
 
@@ -95,20 +160,30 @@
 
                 .speed {
                     width: 33.333333%;
+                    
+                    @media(min-width:440px) {
+                        width: 100%;
+                    }
 
                     .speed__icon {
                         background-image: url(../img/Speed.png);
                     }
 
-                    .speed__subtitle{
-                        p{
+                    .speed__subtitle {
+                        p {
                             padding-right: 150px;
+
+                            @media(min-width:440px) {
+                                padding-right: 20px;
+                                
+                            }
+
+                            @media(min-width: 1280px) {
+                                padding-right: 50px;
+                            }
                         }
                     }
-
-
                 }
-
             }
         }
     }

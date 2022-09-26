@@ -16,6 +16,9 @@
         <div class="container">
             <div class="row">
                 <div class="logo"></div>
+                <div class="gamburger">
+                    <a href="#"><img src="./img/Vector.png" alt="mobile-menu"></a>
+                </div>
                 <div class="inform">
                     <ul>
                         <li><a href="#">Главная</a></li>
@@ -25,14 +28,16 @@
                         <li><a href="#">Блок</a></li>
                     </ul>
                 </div>
-                <div class="language">
-                    <ul>
-                        <li class="language__en"><a href="#">En</a></li>
-                        <li class="language__ru"><a href="#">Ru</a></li>
-                    </ul>
-                </div>
-                <div class="btn_contact">
-                    <p><button type="button" name="Connect_with_us">Связаться с нами</button></p>
+                <div class="row">
+                    <div class="language">
+                        <ul>
+                            <li class="language__en"><a href="#">En</a></li>
+                            <li class="language__ru"><a href="#">Ru</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn_contact">
+                        <p><button type="button" name="Connect_with_us">Связаться с нами</button></p>
+                    </div>
                 </div>
             </div>
             <div class="content">
@@ -141,7 +146,7 @@
                 </div>
                 <div class="mobile">
                     <div class="mobile__image">
-                        <img src="./img/mobile.jpg" alt="mobile phone">
+                        <a href="#"><img src="./img/mobile.jpg" alt="mobile phone"></a>
                     </div>
                     <div class="mobile__title">
                         <h3>Мобильный трекер</h3>
@@ -153,7 +158,7 @@
                 </div>
                 <div class="univer">
                     <div class="univer__image">
-                        <img src="./img/univer.jpg" alt="computer">
+                        <a href="#"><img src="./img/univer.jpg" alt="computer"></a>
                     </div>
                     <div class="univer__title">
                         <h3>univer.today</h3>
@@ -166,7 +171,7 @@
                 </div>
                 <div class="learning">
                     <div class="learning__image">
-                        <img src="./img/learning.jpg" alt="mobile phon">
+                        <a href="#"> <img src="./img/learning.jpg" alt="mobile phon"></a>
                     </div>
                     <div class="learning__title">
                         <h3>блог учебных материалов</h3>
@@ -251,10 +256,12 @@
                 </div>
                 <div class="results">
                     <div class="results__image">
-                        <img src="./img/Teamwork.jpg" alt="picture">
+                        <a href="#"><img src="./img/Teamwork.jpg" alt="picture"></a>
                     </div>
                     <div class="results__title">
-                        <h3>Итоги прошлого месяца</h3>
+                        <a href="#">
+                            <h3>Итоги прошлого месяца</h3>
+                        </a>
                     </div>
                     <div class="results__text">
                         <p>Как вы помните, наша компания стремительно растет и статистика прошлого мясаца показывает
@@ -264,10 +271,12 @@
                 </div>
                 <div class="market">
                     <div class="market__image">
-                        <img src="./img/Teamwork2.jpg" alt="picture">
+                        <a href="#"><img src="./img/Teamwork2.jpg" alt="picture"></a>
                     </div>
                     <div class="market__title">
-                        <h3>Взгляд на рынок</h3>
+                        <a href="#">
+                            <h3>Взгляд на рынок</h3>
+                        </a>
                     </div>
                     <div class="market__text">
                         <p>В октябре мы опубликовали первую статью из нашей серии «Обзор рынка», где мы изучаем макрос
@@ -276,10 +285,12 @@
                 </div>
                 <div class="cloud">
                     <div class="cloud__image">
-                        <img src="./img/Teamwork3.jpg" alt="picture">
+                        <a href="#"><img src="./img/Teamwork3.jpg" alt="picture"></a>
                     </div>
                     <div class="cloud__title">
-                        <h3>Как облако меняет доступ к электронной почте</h3>
+                        <a href="#">
+                            <h3>Как облако меняет доступ к электронной почте</h3>
+                        </a>
                     </div>
                     <div class="cloud__text">
                         <p>Электронная почта, вероятно, была первой настоящей «социальной сетью» в Интернете и первой, а
@@ -313,36 +324,111 @@
                 <div class="contact__form">
                     <div class="contact__row">
                         <div class="name">
-                            <input type="text" name = "name" placeholder="имя">
+                            <input type="text" name="name" placeholder="имя">
+                            <p>Введите ваше имя</p>
                         </div>
                         <div class="phone">
-                            <input type="tel" name = "phone" placeholder="номер телефона">
+                            <input type="tel" name="phone" placeholder="номер телефона">
+                            <p>Введите ваш номер телефона</p>
                         </div>
                     </div>
                     <div class="contact__row">
                         <div class="surname">
-                            <input type="text" name = "surname" placeholder="фамилия">
+                            <input type="text" name="surname" placeholder="фамилия">
+                            <p>Введите вашу фамилию</p>
                         </div>
                         <div class="email">
-                            <input type="email" name = "email" placeholder="email">
+                            <input type="email" name="email" placeholder="email">
+                            <p>Введите адресс элнктронной почты</p>
                         </div>
-                    </div> 
+                    </div>
                     <div class="contact__message">
                         <div class="message">
-                            <input type="text"name = "message" placeholder="ваше сообщение">
+                            <input type="text" name="message" placeholder="ваше сообщение">
+                            <p>Введите ваше сообщение</p>
                         </div>
                         <div class="confidentiality">
-                            <input type="checkbox" name = "message" placeholder="Я согласен с Политикой конфиденциальности и даю разрешение на обработку моих персональных данных для целей, указанных в Политике конфиденциальности.">
+                            <input type="checkbox" name="message" value="message">
+                            <p> Я согласен с Политикой конфиденциальности и даю разрешение на обработку моих
+                                персональных данных для целей, указанных в
+                                <span>Политике конфиденциальности.</span>
+                            </p>
                         </div>
                         <div class="contact__btn">
-                            <input type="submit" name = "btn" placeholder="отправить">
+                            <button type="submit" name="submit" value="submit">Отправить</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__row">
+                <div class="footer__logo">
+                    <img src="./img/SparkIT_footer.png" alt="logo">
+                </div>
+                <div class="footer__company">
+                    <h3>О компании</h3>
+                    <ul>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="footer__services">
+                    <h3>услуги</h3>
+                    <ul>
+                        <li><a href="#">архитектура приложений</a></li>
+                        <li><a href="#">web разработка</a></li>
+                        <li><a href="#">ux / ui дизайн</a></li>
+                        <li><a href="#">бизнес анализ</a></li>
+                        <li><a href="#">2d / 3d анимация</a></li>
+                    </ul>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__title">
+                        <h3>Связаться с нами</h3>
+                    </div>
+                    <div class="footer__phone">
+                        <div class="phone_icon"></div>
+                        <a href="tel:+33775558724">(+33)7 75 55 87 24</a>
+                    </div>
+                    <div class="footer__address">
+                        <div class="address_icon"></div>
+                        <address>2118 Thornridge Cir. Syracuse, <br> Connecticut 35624</address>
+                    </div>
+                    <div class="footer__email">
+                        <div class="email_icon"></div>
+                        <a href="mailto:SpakIT@gmail.com">SpakIT@gmail.com</a>
+                    </div>
+                    <div class="footer__socials">
+                        <div class="footer__socials_icon">
+                            <a href="#"> <img src="./img/icon_telegram.png" alt="icon"></a>
+                        </div>
+                        <div class="footer__socials_icon">
+                            <a href="#"> <img src="./img/icon_dribbble.png" alt="icon"></a>
+                        </div>
+                        <div class="footer__socials_icon">
+                            <a href="#"> <img src="./img/icon_behance.png" alt="icon"></a>
+                        </div>
+                        <div class="footer__socials_icon">
+                            <a href="#"> <img src="./img/icon_linkedin.png" alt="icon"></a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="decor-line">
+                <hr>
+            </div>
+            <div class="copyright">
+                <p>© 2007-2022 sparkit. All Rights Reserved. Privacy Policy.</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

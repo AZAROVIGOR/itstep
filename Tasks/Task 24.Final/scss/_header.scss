@@ -5,12 +5,28 @@
     .slogan {
         margin-left: 70.50px;
 
+        @media (min-width:440px) {
+            margin-left: 20px;
+        }
+
+        @media (min-width:1280px) {
+            margin-left: 50px;
+            margin-bottom: 20px;
+        }
+
         h1 {
             font-style: normal;
             line-height: 120%;
             margin-bottom: 40px;
             font-weight: 800;
-            
+
+            @media (min-width:440px) {
+                font-style: normal;
+                font-weight: 800;
+                font-size: 40px;
+                line-height: 150%;
+            }
+
         }
     }
 
@@ -20,8 +36,16 @@
         .subtitle {
             margin-left: 70px;
 
+            @media (min-width:440px) {
+                margin-left: 20px;
+            }
+
             &__text {
                 padding-bottom: 100px;
+
+                @media(min-width: 440px) {
+                       padding-bottom: 50px;
+                    }
 
                 p {
                     font-style: normal;
@@ -30,7 +54,16 @@
                     line-height: 160%;
                     padding-right: 170px;
 
+                    @media (min-width:440px) {
+                        font-weight: 300;
+                        font-size: 16px;
+                        line-height: 160%;
+                        padding-right: 50px;
+                    }
 
+                    @media(min-width: 1280px) {
+                        padding-right: 390px;
+                    }
                 }
             }
 
@@ -38,6 +71,15 @@
                 display: flex;
                 justify-content: flex-start;
                 height: 230px;
+
+                @media(min-width:440px) {
+                    flex-direction: column;
+                    height: 100%;
+                }
+
+                @media(min-width:1280px) {
+                    margin-bottom: 160px;
+                }
 
                 .subtitle__row {
                     margin-right: 135px;
@@ -60,7 +102,7 @@
                                 text-transform: uppercase;
                                 color: $black;
 
-                                &:hover{
+                                &:hover {
                                     color: $red;
                                 }
                             }
@@ -87,6 +129,10 @@
                         .subtitle__content_text {
                             margin-bottom: 15px;
 
+                            @media(min-width: 440px){
+                                display: none;
+                            }
+
                             h3 {
                                 font-style: normal;
                                 font-weight: 600;
@@ -109,6 +155,10 @@
                                 font-size: 20px;
                                 line-height: 28px;
                                 color: $black;
+
+                                @media(min-width: 440px){
+                                    padding-right: 60px;
+                                }
                             }
                         }
                     }
@@ -119,6 +169,14 @@
         .image {
             margin-right: 70px;
             margin-bottom: 70px;
+
+            @media (min-width:440px) {
+                display: none;
+
+                @media (min-width:1280px) {
+                    display: none;
+                }
+            }
         }
     }
 }

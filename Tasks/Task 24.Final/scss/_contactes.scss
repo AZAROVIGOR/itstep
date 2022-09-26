@@ -95,10 +95,68 @@
             margin: 160px 70px 160px 0;
             border: 1px solid$grey;
 
+            p {
+                display: none;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 130%;
+                padding-top: 5px;
+            }
 
             .contact__row {
                 display: flex;
-                margin: 90px 0 0 120px;
+                margin: 60px 0 0 120px;
+
+                input {
+                    padding-top: 19px;
+                    border: 0px;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 130%;
+                    letter-spacing: 0.01em;
+                    text-transform: uppercase;
+                    color: #929292;
+
+                    &:focus {
+                        outline: none;
+                        color: $black;
+                    }
+
+                    &:hover~p {
+                        display: inline-block;
+                        color: $red;
+                    }
+
+                }
+
+                .name,
+                .phone,
+                .surname,
+                .email {
+                    width: 359px;
+                    height: 49px;
+                    margin-right: 102px;
+                    border-bottom: 1px solid$grey;
+                    display: flex;
+                    flex-direction: column;
+
+
+                }
+
+            }
+        }
+
+        .contact__message {
+            display: flex;
+            flex-direction: column;
+
+            .message {
+                width: 820px;
+                height: 49px;
+                border-bottom: 1px solid$grey;
+                margin: 60px 120px 60px 120px;
+                display: flex;
+                flex-direction: column;
 
                 input {
                     padding-top: 19px;
@@ -113,45 +171,56 @@
                     &:focus {
                         outline: none;
                     }
-                }
 
-                .name,
-                .phone,
-                .surname,
-                .email {
-                    width: 359px;
-                    height: 49px;
-                    margin-right: 102px;
-                    border-bottom: 1px solid$grey;
+                    &:hover~p {
+                        display: inline-block;
+                        color: $red;
+                    }
                 }
             }
 
-            .contact__message {
-                   display: flex;
-                   flex-direction: column;
-                .message {
-                    width: 820px;
-                    height: 49px;
-                    border-bottom: 1px solid$grey;
-                    margin: 60px 120px 60px 120px;
+            .confidentiality {
+                display: flex;
+                align-items: center;
+                margin-bottom: 60px;
 
-                    input {
-                        padding-top: 19px;
-                        border: 0px;
-                        font-weight: 400;
-                        font-size: 16px;
-                        line-height: 130%;
-                        letter-spacing: 0.01em;
-                        text-transform: uppercase;
-                        color: #929292;
+                input {
+                    width: 18px;
+                    height: 18px;
+                    margin: 0px 18px 10px 120px;
 
-                        &:focus {
-                            outline: none;
-                        }
-                    }
                 }
 
+                p {
+                    display: block;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 130%;
+                    letter-spacing: 0.01em;
+                    color: #929292;
+                    padding-right: 135px;
+                    margin: 0;
+                }
 
+                span {
+                    color: $red;
+                }
+            }
+
+            .contact__btn {
+                display: flex;
+                justify-content: end;
+                margin: 0 120px 90px 0;
+
+                button {
+                    width: 224px;
+                    height: 57px;
+                    border: 0px;
+                    background-color: $red;
+                    color: $white;
+                    cursor: pointer;
+                    padding: 0;
+                }
             }
         }
     }
