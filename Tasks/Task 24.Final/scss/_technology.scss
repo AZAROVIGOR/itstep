@@ -2,6 +2,10 @@
     background-color: $black;
     color: $white;
 
+    @media(min-width:440px){
+        width: 440px;
+    }
+
     .container {
 
         .technology__row {

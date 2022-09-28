@@ -27,12 +27,7 @@
                     padding-bottom: 60px;
                 }
 
-                @media (min-width: 1280px) {
-                    margin-left: 50px;
-                    width: 340px;
-                    margin-right: 80px;
-                }
-
+                
                 .works__title {
                     margin-bottom: 30px;
 
@@ -132,11 +127,7 @@
                     padding-bottom: 60px;
                 }
 
-                @media (min-width: 1280px) {
-                    width: 240px;
-                    margin-right: 20px;
-                }
-
+               
                 .mobile__image {
 
                     img {
@@ -144,9 +135,7 @@
                             width: 400px;
                         }
 
-                        @media(min-width: 1280px) {
-                            width: 100%;
-                        }
+                       
                     }
                 }
 
@@ -167,10 +156,7 @@
                         padding-bottom: 60px;
                     }
 
-                @media (min-width: 1280px) {
-                    width: 240px;
-                    margin-right: 20px;
-                }
+                
 
                 .univer__image {
                     img {
@@ -178,9 +164,7 @@
                             width: 400px;
                         }
 
-                        @media(min-width: 1280px) {
-                            width: 100%;
-                        }
+                        
                     }
                 }
 
@@ -199,9 +183,7 @@
                         padding-bottom: 80px;
                     }
 
-                @media (min-width: 1280px) {
-                    width: 240px;
-                }
+               
 
                 .learning__image {
                     img {
@@ -210,9 +192,7 @@
                             width: 400px;
                         }
 
-                        @media(min-width: 1280px) {
-                            width: 100%;
-                        }
+                        
                     }
                 }
 
@@ -252,9 +232,7 @@
             letter-spacing: 0.01em;
             color: $black;
 
-            @media(min-width: 1280px) {
-                display: none;
-            }
+           
 
         }
     }

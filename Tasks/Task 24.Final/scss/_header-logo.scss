@@ -19,14 +19,11 @@
                 margin: 30px 0 30px 20px;
             }
 
-            @media(min-width: 1280px) {
-                margin: 50px 0 50px 50px;
-                width: 180px;
-                height: 40px;
-            }
+            
         }
 
         .gamburger {
+            display: none;
             margin: 32.5px 20px 32.50px 150px;
             a {
                 
@@ -34,6 +31,9 @@
                 height: 20.42px;
                 background-size: cover;
                 margin: 32.5px 20px 0px;
+            }
+            @media(min-width: 440px){
+                display: block;
             }
 
         }
@@ -59,16 +59,7 @@
                         color: $black;
                         padding-right: 50px;
 
-                        @media(min-width:1280px) {
-                            font-weight: 400;
-                            font-size: 18px;
-                            line-height: 23px;
-                            text-align: center;
-                            color: $black;
-                            padding: 0 36px 0 0;
-                        }
-
-
+                        
                         &:hover {
                             color: $red;
                         }

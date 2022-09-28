@@ -1,18 +1,17 @@
 .container {
-    width: 1920px;
-    margin: 0;
+   
+    margin: 0 ;
 }
 
 @media (min-width: 440px) {
     .container {
         width: 440px;
-        
     }
 }
 
 @media (min-width: 768px) {
     .container {
-        width: 7680px;
+        width: 768px;
     }
 }
 
@@ -21,3 +20,4 @@
         width: 1280px;
     }
 }
+
