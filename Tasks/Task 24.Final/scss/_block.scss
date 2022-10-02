@@ -3,24 +3,46 @@
     color: $white;
     box-sizing: border-box;
 
-    @media(min-width:440px){
+    @media(min-width:440px) {
         width: 440px;
+    }
+
+    @media(min-width:768px) {
+        width: 768px;
+    }
+
+    @media(min-width:1280px) {
+        width: 1280px;
+    }
+
+    @media(min-width:1920px) {
+        width: 1920px;
     }
 
 
     .container {
 
         .block__title {
-            margin-left: 70px;
-            padding-top: 220px;
-            margin-bottom: 160px;
+
 
             @media(min-width:440px) {
                 padding: 80px 20px 60px 20px;
                 margin: 0;
             }
 
-            
+            @media(min-width:768px) {
+                padding: 79.4px 34px 86.48px 34px;
+            }
+
+            @media(min-width:1280px) {
+                padding: 160px 50px px;
+            }
+
+            @media(min-width:1920px) {
+                padding: 220px 0 160px 70px;
+            }
+
+
 
             h2 {
                 font-style: normal;
@@ -33,144 +55,189 @@
                     font-size: 24px;
                     line-height: 160%;
                 }
+
+                @media(min-width: 1280px) {
+                    font-size: 40px;
+                    margin: 0;
+                }
             }
         }
 
         .block__inform {
-            margin-left: 70px;
-            padding-bottom: 220px;
+
 
             @media(min-width:440px) {
                 margin-left: 20px;
                 padding-bottom: 80px;
             }
 
-            
+            @media(min-width:768px) {
+                margin: 0;
+                padding: 0 34px 0px 34px;
+            }
+
+            @media(min-width:1280px) {
+                padding: 0 50px 154px 50px;
+            }
+
+            @media(min-width:1920px) {
+                padding: 0 190px 220px 70px;
+            }
 
 
             .block__row {
                 display: flex;
 
-                @media(min-width:440px){
+                @media(min-width:440px) {
                     flex-direction: column;
+                }
+
+                @media(min-width:768px) {
+                    flex-direction: row;
                 }
 
                 h3 {
                     font-style: normal;
                     font-weight: 500;
-
                     line-height: 140%;
                     text-transform: uppercase;
-                }
 
-                p {
-                    font-weight: 500;
-                    font-size: 20px;
-                    line-height: 150%;
+                    @media(min-width: 768px) {
+                        font-size: 18px;
+                    }
 
-                    @media(min-width:440px) {
-                        font-size: 16px;
+                    @media(min-width: 1280px) {
                         margin: 0;
-                        
+                        font-size: 24px;
+                    }
+                }
+            }
+
+            p {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 150%;
+
+                @media(min-width:440px) {
+                    font-size: 16px;
+                    margin: 0;
+
+                }
+            }
+
+            .communication,
+            .individuality,
+            .speed {
+
+
+                &__title {
+                    margin-bottom: 20px;
+                }
+            }
+
+            .communication,
+            .individuality,
+            .speed {
+
+                &__icon {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 30px;
+                }
+            }
+
+
+
+            .communications, .individuality {
+                width: 33.333333%;
+
+                @media(min-width:440px) {
+                    width: 100%;
+                }
+
+                @media(min-width:760px) {
+                    margin-right: 20px;
+                }
+
+                @media(min-width:1280px) {
+                    margin-right: 50px;
+                }
+                @media(min-width:1920px){
+                    margin-right: 160px;
+                }
+
+                .communication__icon {
+                    background-image: url(../img/communication.png);
+                }
+
+                .communication__subtitle {
+                    p {
+                        padding-right: 130px;
+
+                        @media(min-width:440px) {
+                            padding-right: 20px;
+                            margin-bottom: 60px;
+                        }
+
+                        @media(min-width: 1280px) {
+                            font-size: 20px;
+                            padding: 0px;
+                        }
+
+
                     }
                 }
 
-                .communication,
-                .individuality,
-                .speed {
+            }
 
-                    &__title {
-                        margin-bottom: 20px;
-                    }
+            .individuality {
+               
+
+                .individuality__icon {
+                    background-image: url(../img/Individuality.png);
                 }
 
-                .communication,
-                .individuality,
-                .speed {
+                .individuality__subtitle {
+                    p {
 
-                    &__icon {
-                        width: 40px;
-                        height: 40px;
-                        margin-bottom: 30px;
-                    }
-                }
+                        @media(min-width:440px) {
+                            padding-right: 20px;
+                            margin-bottom: 60px;
+                        }
 
-
-
-                .communications {
-                    width: 33.333333%;
-
-                    @media(min-width:440px) {
-                        width: 100%;
-                    }
-
-                    .communication__icon {
-                        background-image: url(../img/communication.png);
-                    }
-
-                    .communication__subtitle {
-                        p {
-                            padding-right: 130px;
-
-                            @media(min-width:440px) {
-                                padding-right: 20px;
-                                margin-bottom: 60px;
-                            }
-
-                            
+                        @media(min-width: 1280px) {
+                            font-size: 20px;
+                            padding: 0px;
                         }
                     }
+                }
+            }
 
+            .speed {
+                width: 33.333333%;
+
+                @media(min-width:440px) {
+                    width: 100%;
                 }
 
-                .individuality {
-                    width: 33.333333%;
-
-                    @media(min-width:440px) {
-                        width: 100%;
-                    }
-
-                    .individuality__icon {
-                        background-image: url(../img/Individuality.png);
-                    }
-
-                    .individuality__subtitle {
-                        p {
-                            padding-right: 160px;
-
-                            @media(min-width:440px) {
-                                padding-right: 20px;
-                                margin-bottom: 60px;
-                            }
-
-                            
-                        }
-                    }
-
+                .speed__icon {
+                    background-image: url(../img/Speed.png);
                 }
 
-                .speed {
-                    width: 33.333333%;
-                    
-                    @media(min-width:440px) {
-                        width: 100%;
-                    }
+                .speed__subtitle {
+                    p {
+                        padding-right: 150px;
 
-                    .speed__icon {
-                        background-image: url(../img/Speed.png);
-                    }
-
-                    .speed__subtitle {
-                        p {
-                            padding-right: 150px;
-
-                            @media(min-width:440px) {
-                                padding-right: 20px;
-                                
-                            }
-
-                            
+                        @media(min-width:440px) {
+                            padding-right: 20px;
                         }
+
+                        @media(min-width: 1280px) {
+                            font-size: 20px;
+                            padding-right: 10px;
+                        }
+
+
                     }
                 }
             }

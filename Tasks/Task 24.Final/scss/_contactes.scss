@@ -1,13 +1,25 @@
 .contactes {
-    @media(min-width:440px){
+    @media(min-width:440px) {
         width: 440px;
     }
-   
+
+    @media(min-width:768px) {
+        width: 768px;
+    }
+
+    @media(min-width:1280px) {
+        width: 1280px;
+    }
+
     .contactes__row {
         display: flex;
 
         @media(min-width:440px) {
             flex-direction: column;
+        }
+
+        @media(min-width:1280px) {
+            flex-direction: row;
         }
 
         .contact__block {
@@ -17,8 +29,20 @@
                 padding: 80px 76px 60px 20px;
             }
 
+            @media(min-width:768px) {
+                padding: 108.5px 390px 29px 32px;
+            }
+
+            @media(min-width:1280px) {
+                padding: 160px 140px 0 50px;
+            }
+
             .contact__block_title {
                 margin-bottom: 30px;
+
+                @media(min-width:1280px) {
+                    width: 425px;
+                }
 
                 h2 {
                     font-weight: 600;
@@ -61,6 +85,10 @@
                     @media(min-width: 440px) {
                         font-size: 20px;
                         line-height: 25px;
+                    }
+
+                    @media(min-width: 1280px) {
+                        font-size: 24px;
                     }
                 }
 
@@ -114,6 +142,10 @@
                         font-size: 20px;
                         line-height: 25px;
                     }
+
+                    @media(min-width: 1280px) {
+                        font-size: 24px;
+                    }
                 }
             }
 
@@ -132,12 +164,29 @@
                 margin: 0 20px 0px 20px;
             }
 
+            @media(min-width:768px) {
+                margin: 0 34px 116px 34px;
+                border: 1px solid$grey;
+                width: 700px;
+                height: auto;
+            }
+
+            @media(min-width:1280px) {
+                margin: 160px 50px 160px 0;
+                width: 618px;
+            }
+
             p {
                 display: none;
                 font-weight: 400;
                 font-size: 12px;
                 line-height: 130%;
                 padding-top: 5px;
+
+                @media(min-width: 768px) {
+                    margin: 0;
+                    padding-top: 10px;
+                }
             }
 
             .contact__row {
@@ -147,6 +196,16 @@
                 @media(min-width:440px) {
                     flex-direction: column;
                     margin: 0;
+                }
+
+                @media(min-width:768px) {
+                    &:first-child {
+                        margin: 70px 100px 0 100px;
+                    }
+
+                    &:nth-child(2n) {
+                        margin: 0 100px 0px 100px;
+                    }
                 }
 
                 input {
@@ -159,8 +218,15 @@
                     text-transform: uppercase;
                     color: #929292;
 
-                    @media(min-width:440px){
+                    @media(min-width:440px) {
                         width: 400px;
+                    }
+
+                    @media(min-width:768px) {
+                        padding-top: 20px;
+                        font-size: 14px;
+
+
                     }
 
                     &:focus {
@@ -188,9 +254,18 @@
 
                     @media(min-width: 440px) {
                         width: 400px;
-                            margin: 0 0 30px 0;
-                        }
+                        margin: 0 0 30px 0;
+                    }
 
+                    @media(min-width: 768px) {
+                        width: 500px;
+                        height: 40px;
+                        margin-bottom: 40px;
+                    }
+
+                    @media(min-width: 1280px) {
+                        width: 418px;
+                    }
 
                 }
 
@@ -201,6 +276,12 @@
             display: flex;
             flex-direction: column;
 
+            @media(min-width:768px) {
+                margin: 0 100px 70px 100px;
+            }
+
+
+
             .message {
                 width: 820px;
                 height: 49px;
@@ -209,9 +290,19 @@
                 display: flex;
                 flex-direction: column;
 
-                @media(min-width:440px){
+                @media(min-width:440px) {
                     margin: 0 0 30px 0;
                     width: 400px;
+                }
+
+                @media(min-width:768px) {
+                    width: 500px;
+                    margin-bottom: 74.50px;
+                }
+
+                @media(min-width:1280px) {
+                    width: 418px;
+                    margin-bottom: 40px;
                 }
 
                 input {
@@ -240,9 +331,17 @@
                 align-items: center;
                 margin-bottom: 60px;
 
-                @media(min-width:440px){
+                @media(min-width:440px) {
                     align-items: flex-start;
                     margin-bottom: 30px;
+                }
+
+                @media(min-width:768px) {
+                    margin-bottom: 5px;
+                }
+
+                @media(min-width:1280px){
+                    margin-bottom: 40px;
                 }
 
                 input {
@@ -250,7 +349,7 @@
                     height: 18px;
                     margin: 0px 18px 10px 120px;
 
-                    @media(min-width: 440px){
+                    @media(min-width: 440px) {
                         margin: 0 18px 0 0;
                     }
 
@@ -266,8 +365,12 @@
                     padding-right: 135px;
                     margin: 0;
 
-                    @media(min-width: 440px){
+                    @media(min-width: 440px) {
                         padding: 0 46px 0 0;
+                    }
+
+                    @media(min-width: 768px) {
+                        padding-right: 65px;
                     }
                 }
 
@@ -281,9 +384,17 @@
                 justify-content: end;
                 margin: 0 120px 90px 0;
 
-                @media(min-width:440px){
+                @media(min-width:440px) {
                     margin: 0;
                     width: 400px;
+                }
+
+                @media(min-width:768px) {
+                    width: 500px;
+                }
+
+                @media(min-width:1280px){
+                    width: 418px;
                 }
 
                 button {
@@ -295,10 +406,11 @@
                     cursor: pointer;
                     padding: 0;
 
-                    @media(min-width: 440px){
+                    @media(min-width: 440px) {
                         width: 164px;
                         height: 56px;
                     }
+
                 }
             }
         }

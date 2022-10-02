@@ -8,6 +8,16 @@
         height: 100%;
     }
 
+    @media(min-width:768px) {
+        width: 768px;
+        height: 556px;
+    }
+
+    @media(min-width:1280px) {
+        width: 1280px;
+        height: 615px;
+    }
+
     .container {
 
         .footer__row {
@@ -17,6 +27,14 @@
             @media(min-width:440px) {
                 flex-wrap: wrap;
                 padding: 60px 20px 85px 20px;
+            }
+
+            @media(min-width: 768px) {
+                padding: 80px 34px 80px 34px;
+            }
+
+            @media(min-width: 1280px) {
+                padding: 57.50px 50px 120px 50px;
             }
         }
 
@@ -32,6 +50,12 @@
                 font-size: 20px;
                 line-height: 27px;
                 margin-bottom: 30px;
+            }
+
+            @media(min-width: 1280px) {
+                font-size: 24px;
+                margin-bottom: 44px;
+                line-height: 33px;
             }
         }
 
@@ -67,6 +91,10 @@
                 font-size: 16px;
                 line-height: 20px;
             }
+
+            @media(min-width: 1280px) {
+                font-size: 18px;
+            }
         }
 
 
@@ -76,6 +104,18 @@
             @media(min-width: 440px) {
                 display: none;
             }
+
+            @media(min-width: 1280px) {
+                display: block;
+                margin-right: 107px;
+            }
+
+            img {
+                @media(min-width: 1280px) {
+                    height: 40px;
+                    width: 112px;
+                }
+            }
         }
 
         .footer__company {
@@ -84,6 +124,16 @@
             @media(min-width:440px) {
                 width: 50%;
                 margin: 0;
+            }
+
+            @media(min-width: 768px) {
+                width: 142px;
+                margin-right: 69px;
+            }
+
+            @media(min-width: 1280px) {
+                width: 170px;
+                margin-right: 85px;
             }
 
         }
@@ -99,9 +149,26 @@
                 width: 50%;
                 margin: 0 0 60px 0;
             }
+
+            @media(min-width: 768px) {
+                width: 188px;
+                margin-right: 69px;
+            }
+
+            @media(min-width: 1280px) {
+                width: 270px;
+                margin-right: 95px;
+            }
         }
 
         .footer__contact {
+            @media(min-width:768px) {
+                width: 232px;
+            }
+
+            @media(min-width:1280px) {
+                width: 340px;
+            }
 
             .footer__phone {
                 display: flex;
@@ -151,27 +218,44 @@
                 margin-right: 24px;
             }
         }
-    }
 
-    .copyright {
-        text-align: center;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 25px;
-        text-transform: uppercase;
-        margin: 40px;
-        margin-top: 30px;
 
-        @media(min-width:440px) {
-            font-size: 16px;
-            line-height: 150%;
-            margin-left: 20px;
-            text-align: start;
-            padding: 25px 0 25px 20px;
-        }
+        .copyright {
+            text-align: center;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            text-transform: uppercase;
+            margin: 40px;
+            margin-top: 30px;
 
-        p {
-            margin: 0;
+            @media(min-width:440px) {
+                font-size: 16px;
+                line-height: 150%;
+                margin-left: 20px;
+                text-align: start;
+                padding: 25px 0 25px 20px;
+            }
+
+            @media(min-width:768px) {
+                display: none;
+            }
+
+            @media(min-width:1280px) {
+                display: block;
+                text-align: center;
+                padding: 0;
+            }
+
+            p {
+                margin: 0;
+
+                @media(min-width: 1280px) {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 25px;
+                }
+            }
         }
     }
 }

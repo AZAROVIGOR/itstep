@@ -2,14 +2,44 @@
     box-sizing: border-box;
     color: $black;
 
+    @media (min-width:440px) {
+        width: 440px;
+    }
+
+    @media (min-width:768px) {
+        width: 768px;
+    }
+
+    @media(min-width:1280px) {
+        width: 1280px;
+    }
+
+    @media(min-width:1920px) {
+        width: 1920px;
+    }
+
     .slogan {
-        margin-left: 70.50px;
+
 
         @media (min-width:440px) {
             margin-left: 20px;
         }
 
-        
+        @media (min-width:768px) {
+            margin-left: 32px;
+            width: 555px;
+        }
+
+        @media(min-width:1280px) {
+            margin: 0 0 0 50px;
+            width: 100%;
+        }
+
+        @media(min-width:1920px) {
+            margin: 0 0 40px 70.5px;
+        }
+
+
         h1 {
             font-style: normal;
             line-height: 120%;
@@ -23,6 +53,20 @@
                 line-height: 150%;
             }
 
+            @media(min-width: 768px) {
+                list-style: 130%;
+                margin-bottom: 19.85px;
+            }
+
+            @media(min-width: 1280px) {
+                font-weight: 800;
+                font-size: 80px;
+                line-height: 120%;
+                margin: 0;
+            }
+
+
+
         }
     }
 
@@ -30,141 +74,232 @@
         display: flex;
 
         .subtitle {
-            margin-left: 70px;
+            
 
             @media (min-width:440px) {
                 margin-left: 20px;
             }
 
+            @media(min-width:768px) {
+                margin: 0 34px 84.42px 34px;
+            }
+
+            @media(min-width:1280px) {
+                margin: 0 0 160px 50px;
+            }
+
+            @media(min-width:1920px) {
+                margin-left: 70px;
+            }
+
             &__text {
-                padding-bottom: 100px;
+                
 
                 @media(min-width: 440px) {
-                       padding-bottom: 50px;
-                    }
+                    padding-bottom: 50px;
+                }
+
+                @media(min-width:768px) {
+                    padding-bottom: 49.62px;
+                }
+
+                @media(min-width:1280px){
+                    padding-bottom: 100px;
+                }
 
                 p {
                     font-style: normal;
                     font-weight: 300;
                     font-size: 20px;
                     line-height: 160%;
-                    padding-right: 170px;
+
 
                     @media (min-width:440px) {
-                        font-weight: 300;
                         font-size: 16px;
-                        line-height: 160%;
                         padding-right: 50px;
                     }
 
-                   
+                    @media(min-width: 1280px) {
+                        padding-right: 570px;
+                        font-size: 20px;
+                    }
+
+                    @media(min-width: 1920px) {
+                        padding-right: 180px;
+                    }
+
                 }
             }
 
             .subtitle__tabs {
                 display: flex;
                 justify-content: flex-start;
-                height: 230px;
+                
 
                 @media(min-width:440px) {
                     flex-direction: column;
                     height: 100%;
+                    position: relative;
+                    height: 391px;
                 }
 
-                
+                @media(min-width:768px) {
+                    flex-direction: row;
+                }
+
+                @media(min-width:1920px){
+                    height: 230px;
+                }
+
+
+
+
 
                 .subtitle__row {
-                    margin-right: 135px;
+                    
 
-                    ul {
-                        display: flex;
-                        list-style: none;
-                        flex-direction: column;
-                        padding: 0;
+                    @media(min-width:768px) {
+                        margin-right: 37px;
+                    }
 
-                        li {
-                            margin-bottom: 33px;
+                    @media(min-width:1280px) {
+                        margin-right: 135px;
+                    }
+                }
 
-                            a {
-                                text-decoration: none;
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 20px;
-                                line-height: 25px;
-                                text-transform: uppercase;
-                                color: $black;
+                ul {
+                    display: flex;
+                    list-style: none;
+                    flex-direction: column;
+                    padding: 0;
 
-                                &:hover {
-                                    color: $red;
-                                }
+                    @media(min-width:440px) {
+                        position: absolute;
+                        top: 200px;
+                    }
+
+                    @media(min-width:768px) {
+                        margin: 0;
+                        width: 185px;
+                        position: relative;
+                        top: 0;
+                    }
+
+                    li {
+                        margin-bottom: 33px;
+
+                        @media(min-width:440px) {
+
+                            &:first-child {
+                                position: absolute;
+                                bottom: 369px;
+                                width: 200px;
+                            }
+                        }
+
+                        @media(min-width:768px) {}
+
+                        &:first-child {
+                            position: relative;
+                            bottom: 0;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 20px;
+                            line-height: 25px;
+                            text-transform: uppercase;
+                            color: $black;
+
+                            &:hover {
+                                color: $red;
                             }
                         }
                     }
                 }
+            }
 
-                .subtitle__content {
-                    width: 480px;
-                    border-left: 2px solid#000;
+            .subtitle__content {
+                width: 480px;
+                border-left: 2px solid#000;
 
-                    .subtitle__content_row {
-                        padding-left: 42px;
+                @media(min-width:768px) {
+                    width: 438px;
+                    height: 230px;
+                }
 
-                        .subtitle__icon {
-                            background-image: url(../img/icon_header.png);
-                            background-size: cover;
-                            width: 103px;
-                            height: 73px;
-                            margin-bottom: 30px;
+                .subtitle__content_row {
+                    padding-left: 42px;
 
+                    .subtitle__icon {
+                        background-image: url(../img/icon_header.png);
+                        background-size: cover;
+                        width: 103px;
+                        height: 73px;
+                        margin-bottom: 30px;
+
+                    }
+
+                    .subtitle__content_text {
+                        margin-bottom: 15px;
+
+                        @media(min-width: 440px) {
+                            display: none;
                         }
 
-                        .subtitle__content_text {
-                            margin-bottom: 15px;
-
-                            @media(min-width: 440px){
-                                display: none;
-                            }
-
-                            h3 {
-                                font-style: normal;
-                                font-weight: 600;
-                                font-size: 22px;
-                                line-height: 28px;
-                                text-transform: uppercase;
-                                color: $black;
-                                margin: 0;
-
-                            }
+                        @media(min-width:768px) {
+                            display: block;
                         }
 
-                        .subtitle__desc {
+                        h3 {
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 22px;
+                            line-height: 28px;
+                            text-transform: uppercase;
+                            color: $black;
+                            margin: 0;
 
-                            p {
-                                margin: 0;
-                                font-family: 'Mulish';
-                                font-style: normal;
-                                font-weight: 400;
-                                font-size: 20px;
-                                line-height: 28px;
-                                color: $black;
+                        }
+                    }
 
-                                @media(min-width: 440px){
-                                    padding-right: 60px;
-                                }
+                    .subtitle__desc {
+
+                        p {
+                            margin: 0;
+                            font-family: 'Mulish';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 20px;
+                            line-height: 28px;
+                            color: $black;
+
+                            @media(min-width: 440px) {
+                                padding-right: 60px;
+                            }
+
+                            @media(min-width: 768px) {
+                                padding: 0;
                             }
                         }
                     }
                 }
             }
         }
+    }
 
-        .image {
-            margin-right: 70px;
-            margin-bottom: 70px;
+    .image {
+        margin-right: 70px;
+        margin-bottom: 70px;
 
-            @media (min-width:440px) {
-                display: none;
-            }
+        @media (min-width:440px) {
+            display: none;
+        }
+
+        @media(min-width: 1920px) {
+            display: block;
         }
     }
 }

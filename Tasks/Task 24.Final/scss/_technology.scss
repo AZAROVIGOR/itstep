@@ -2,8 +2,16 @@
     background-color: $black;
     color: $white;
 
-    @media(min-width:440px){
+    @media(min-width:440px) {
         width: 440px;
+    }
+
+    @media(min-width:768px) {
+        width: 768px;
+    }
+
+    @media(min-width:1280px) {
+        width: 1280px;
     }
 
     .container {
@@ -11,36 +19,38 @@
         .technology__row {
             display: flex;
 
-            @media(min-width:440px){
+            @media(min-width:440px) {
                 flex-direction: column;
             }
 
+            @media(min-width:1280px) {
+                flex-direction: row;
+            }
 
             .technology__stages {
                 padding: 160px 0 0 70px;
                 width: 395px;
                 margin-right: 317px;
 
-                @media(min-width:440px){
+                @media(min-width:440px) {
                     padding: 80px 114px 60px 20px;
                     margin: 0;
                 }
 
-                @media(min-width:1280px) {
-                    margin: 160px 0 0 50px;
-                    padding: 0;
+                @media(min-width:768px) {
+                    padding: 95.63px 428px 60px 34px;
 
+                }
+
+                @media(min-width:1280px) {
+                    padding: 160px 91px 0 50px;
                 }
 
                 .technology__stages_title {
                     margin-bottom: 30px;
 
                     @media(min-width:440px) {
-                            margin-bottom: 20px;
-                        }
-
-                    @media(min-width:1280px) {
-                        width: 335px;
+                        margin-bottom: 20px;
                     }
 
                     h2 {
@@ -52,8 +62,12 @@
                         margin: 0;
 
                         @media(min-width:440px) {
-                                font-size: 24px;
-                            }
+                            font-size: 24px;
+                        }
+
+                        @media(min-width: 1280px) {
+                            font-size: 40px;
+                        }
                     }
                 }
 
@@ -69,7 +83,16 @@
 
                         @media(min-width:440px) {
                             font-size: 18px;
-                            }
+                        }
+
+                        @media(min-width: 768px) {
+                            padding-right: 110px;
+                        }
+
+                        @media(min-width: 1280px) {
+                            font-size: 24px;
+                            padding-right: 55px;
+                        }
                     }
                 }
             }
@@ -77,19 +100,20 @@
             .technology__inform {
 
                 @media(min-width:440px) {
-                        padding: 0 20px 80px 20px;
-                    }
+                    padding: 0 20px 80px 20px;
+                }
+
+                @media(min-width:1280px) {
+                    padding: 160px 50px 160px 0px;
+                }
 
                 .technology__stage {
                     padding: 160px 70px 160px 0;
 
                     @media(min-width:440px) {
-                           padding: 0px;
-                        }
-
-                    @media(min-width:1280px){
-                        padding: 160px 50px 160px 91px;
+                        padding: 0px;
                     }
+
 
                     .stage {
                         display: flex;
@@ -102,20 +126,23 @@
                         @media(min-width:440px) {
                             width: 400px;
                             height: 100%;
-                            }
+                        }
 
-                        @media(min-width:1280px) {
-                            width: 760px;
-                            height: 182px;
-                           
+                        @media(min-width:768px) {
+                            width: 700px;
+
                         }
 
                         .number {
                             margin-right: 60px;
 
                             @media(min-width:440px) {
-                                   margin-right: 40px;
-                                }
+                                margin-right: 40px;
+                            }
+
+                            @media(min-width:1280px) {
+                                margin-right: 60px;
+                            }
 
                             h2 {
                                 font-weight: 300;
@@ -125,8 +152,12 @@
                                 text-transform: uppercase;
 
                                 @media(min-width:440px) {
-                                        font-size: 36px;
-                                    }
+                                    font-size: 36px;
+                                }
+
+                                @media(min-width:1280px) {
+                                    font-size: 48px;
+                                }
 
                                 &:hover {
                                     color: $red;
@@ -143,12 +174,11 @@
                             color: $white;
 
                             @media(min-width:440px) {
-                                    font-size: 18px;
-                                }
+                                font-size: 18px;
+                            }
 
                             @media(min-width: 1280px) {
-                                margin: 0;
-                                padding: 35px 0;
+                                font-size: 20px;
                             }
                         }
                     }
