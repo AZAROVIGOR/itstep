@@ -18,11 +18,15 @@
         height: 615px;
     }
 
+    @media(min-width:1920px){
+        width: 1920px;
+        height: 655px;
+    }
+
     .container {
 
         .footer__row {
             display: flex;
-            padding: 70px 170px 160px 70px;
 
             @media(min-width:440px) {
                 flex-wrap: wrap;
@@ -36,12 +40,15 @@
             @media(min-width: 1280px) {
                 padding: 57.50px 50px 120px 50px;
             }
+
+            @media(min-width: 1920px){
+                padding: 70px 178px 160px 70px;
+            }
         }
 
         h3 {
             margin: 0;
             font-weight: 400;
-            font-size: 24px;
             line-height: 33px;
             text-transform: uppercase;
             margin-bottom: 44px;
@@ -80,7 +87,6 @@
             text-decoration: none;
             color: $white;
             font-weight: 400;
-            font-size: 18px;
             line-height: 23px;
 
             &:hover {
@@ -99,7 +105,6 @@
 
 
         .footer__logo {
-            margin-right: 206px;
 
             @media(min-width: 440px) {
                 display: none;
@@ -108,6 +113,10 @@
             @media(min-width: 1280px) {
                 display: block;
                 margin-right: 107px;
+            }
+
+            @media(min-width:1920px){
+                margin-right: 206px;
             }
 
             img {
@@ -119,7 +128,6 @@
         }
 
         .footer__company {
-            margin-right: 122px;
 
             @media(min-width:440px) {
                 width: 50%;
@@ -136,10 +144,13 @@
                 margin-right: 85px;
             }
 
+            @media(min-width: 1920px){
+                margin-right: 122px;
+            }
+
         }
 
         .footer__services {
-            margin-right: 451px;
 
             a {
                 text-transform: uppercase;
@@ -158,6 +169,10 @@
             @media(min-width: 1280px) {
                 width: 270px;
                 margin-right: 95px;
+            }
+
+            @media(min-width: 1920px){
+                margin-right: 451px;
             }
         }
 
@@ -235,6 +250,7 @@
                 margin-left: 20px;
                 text-align: start;
                 padding: 25px 0 25px 20px;
+                margin: 0;
             }
 
             @media(min-width:768px) {

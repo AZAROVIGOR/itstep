@@ -148,6 +148,7 @@
                         text-align: start;
                         padding-left: 40px;
                         cursor: pointer;
+                        background-color: $white;
 
                         @media(min-width:440px) {
                             width: 238px;
@@ -205,6 +206,7 @@
 
                 @media(min-width:1920px) {
                     width: 410px;
+                    margin-right: 20px;
                 }
 
 
@@ -218,16 +220,13 @@
                         @media(min-width: 768px) {
                             width: 220px;
                         }
+
+                        @media(min-width: 1920px) {
+                            width: 410px;
+                        }
                     }
                 }
 
-
-                .mobile__text {
-
-                    p {
-                        padding-right: 35px;
-                    }
-                }
             }
 
             .univer {
@@ -248,6 +247,7 @@
 
                 @media(min-width:1920px) {
                     width: 410px;
+                    margin-right: 20px;
                 }
 
 
@@ -261,14 +261,14 @@
                         @media(min-width: 768px) {
                             width: 220px;
                         }
+
+                        @media(min-width: 1920px) {
+                            width: 410px;
+                        }
                     }
                 }
 
-                .univer__text {
-                    p {
-                        padding-right: 37px;
-                    }
-                }
+
             }
 
             .learning {
@@ -289,6 +289,7 @@
 
                 @media(min-width:1920px) {
                     width: 410px;
+
                 }
 
                 .learning__image {
@@ -302,18 +303,14 @@
                             width: 220px;
                         }
 
-                        @media(min-width: 1920px){
-                            
+                        @media(min-width: 1920px) {
+                            width: 410px;
                         }
 
                     }
                 }
 
-                .learning__text {
-                    p {
-                        padding-right: 50px;
-                    }
-                }
+
             }
         }
 
@@ -327,6 +324,23 @@
         .univer__title,
         .learning__title {
             margin-bottom: 18px;
+        }
+
+        .mobile__text,
+        .univer__text,
+        .learning__text {
+           
+            @media(min-width:768px){
+                display: none;
+            }
+
+            @media(min-width: 1280px){
+                display: none;
+            }
+
+            @media(min-width: 1920px){
+                display: block;
+            }
         }
 
         h3 {

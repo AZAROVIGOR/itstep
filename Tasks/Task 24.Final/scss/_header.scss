@@ -120,7 +120,7 @@
                     }
 
                     @media(min-width: 1280px) {
-                        padding-right: 570px;
+                        padding-right: 410px;
                         font-size: 20px;
                     }
 
@@ -139,17 +139,18 @@
                 @media(min-width:440px) {
                     flex-direction: column;
                     height: 100%;
-                    position: relative;
-                    height: 391px;
+                    
                 }
 
                 @media(min-width:768px) {
                     flex-direction: row;
                 }
 
-                @media(min-width:1920px){
-                    height: 230px;
+                @media(min-width:1280px){
+                    height: auto;
                 }
+
+                
 
 
 
@@ -174,8 +175,7 @@
                     padding: 0;
 
                     @media(min-width:440px) {
-                        position: absolute;
-                        top: 200px;
+                       
                     }
 
                     @media(min-width:768px) {
