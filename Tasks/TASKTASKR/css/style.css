@@ -404,7 +404,6 @@ body h3 {
   list-style: none;
   flex-direction: column;
   padding: 0;
-  position: relative;
 }
 @media (min-width: 768px) {
   .content .content-row .subtitle .subtitle__tabs ul {
@@ -444,26 +443,16 @@ body h3 {
   display: block;
 }
 .content .content-row .subtitle .subtitle__tabs ul .subtitle__content {
+  width: 480px;
   border-left: 2px solid #000;
   display: none;
-}
-@media (min-width: 440px) {
-  .content .content-row .subtitle .subtitle__tabs ul .subtitle__content {
-    margin: 0 0 33px 0;
-  }
+  position: absolute;
+  left: 248px;
 }
 @media (min-width: 768px) {
   .content .content-row .subtitle .subtitle__tabs ul .subtitle__content {
     width: 438px;
     height: 230px;
-    left: 320px;
-    position: absolute;
-  }
-}
-@media (min-width: 1920px) {
-  .content .content-row .subtitle .subtitle__tabs ul .subtitle__content {
-    width: 480px;
-    position: absolute;
   }
 }
 .content .content-row .subtitle .subtitle__tabs ul .subtitle__content .subtitle__content_row {
@@ -507,18 +496,14 @@ body h3 {
   line-height: 28px;
   color: #000;
 }
-.content .image {
-  margin-right: 70px;
-  margin-bottom: 70px;
-}
 @media (min-width: 440px) {
-  .content .image {
-    display: none;
+  .content .content-row .subtitle .subtitle__tabs ul .subtitle__content .subtitle__content_row .subtitle__desc p {
+    padding-right: 60px;
   }
 }
-@media (min-width: 1920px) {
-  .content .image {
-    display: block;
+@media (min-width: 768px) {
+  .content .content-row .subtitle .subtitle__tabs ul .subtitle__content .subtitle__content_row .subtitle__desc p {
+    padding: 0;
   }
 }
 
@@ -929,9 +914,6 @@ body h3 {
   position: absolute;
   right: 40px;
   top: 25px;
-}
-.our-works .container .our-works__row .works .works__btn button img:hover {
-  background-image: url(../img/arrow\ white.png);
 }
 @media (min-width: 440px) {
   .our-works .container .our-works__row .works .works__btn button img {
@@ -1663,6 +1645,7 @@ body h3 {
 @media (min-width: 1920px) {
   .blog .container .blog__row .cloud__text p {
     display: block;
+    padding: 0 50px;
     font-size: 16px;
   }
 }
@@ -1695,32 +1678,16 @@ body h3 {
     margin: 40px 25px 20px 25px;
   }
 }
+.blog .results__title,
+.blog .market__title,
+.blog .cloud__title {
+  padding: 0 50px 18px;
+}
 @media (min-width: 440px) {
   .blog .results__title,
 .blog .market__title,
 .blog .cloud__title {
     padding: 0 37px 18px 35px;
-  }
-}
-@media (min-width: 768px) {
-  .blog .results__title,
-.blog .market__title,
-.blog .cloud__title {
-    padding: 20px 30px 40px 30px;
-  }
-}
-@media (min-width: 1280px) {
-  .blog .results__title,
-.blog .market__title,
-.blog .cloud__title {
-    padding: 30px 30px 50px 30px;
-  }
-}
-@media (min-width: 1920px) {
-  .blog .results__title,
-.blog .market__title,
-.blog .cloud__title {
-    padding: 0 50px 18px;
   }
 }
 .blog a {
@@ -2069,7 +2036,7 @@ body h3 {
 .contactes .contactes__row .contact__form .contact__row .surname,
 .contactes .contactes__row .contact__form .contact__row .email {
     width: 359px;
-    height: 50px;
+    height: 49px;
     margin-right: 102px;
     flex-direction: row;
   }
@@ -2140,7 +2107,6 @@ body h3 {
 }
 .contactes .contactes__row .contact__message .message input:focus {
   outline: none;
-  color: #000;
 }
 .contactes .contactes__row .contact__message .message input:hover ~ p {
   display: inline-block;
@@ -2148,37 +2114,44 @@ body h3 {
 }
 .contactes .contactes__row .contact__message .confidentiality {
   display: flex;
+  align-items: center;
   margin-bottom: 60px;
+}
+@media (min-width: 440px) {
+  .contactes .contactes__row .contact__message .confidentiality {
+    align-items: flex-start;
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 768px) {
+  .contactes .contactes__row .contact__message .confidentiality {
+    margin-bottom: 5px;
+  }
+}
+@media (min-width: 1280px) {
+  .contactes .contactes__row .contact__message .confidentiality {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1920px) {
+  .contactes .contactes__row .contact__message .confidentiality {
+    margin-bottom: 60px;
+  }
 }
 .contactes .contactes__row .contact__message .confidentiality label {
   display: flex;
-  cursor: pointer;
 }
-.contactes .contactes__row .contact__message .confidentiality label .checkbox {
-  display: none;
-}
-.contactes .contactes__row .contact__message .confidentiality label .fake_checkbox {
-  display: inline-block;
-  width: 18px;
+.contactes .contactes__row .contact__message .confidentiality input {
+  width: 26px;
   height: 18px;
-  border: 1px solid #929292;
-  margin-right: 18px;
+  margin: 0px 18px 10px 120px;
 }
-.contactes .contactes__row .contact__message .confidentiality label .fake_checkbox::before {
-  content: "";
-  display: block;
-  width: 18px;
-  height: 18px;
-  background-color: #F6523C;
-  opacity: 0;
+@media (min-width: 440px) {
+  .contactes .contactes__row .contact__message .confidentiality input {
+    margin: 0 18px 0 0;
+  }
 }
-.contactes .contactes__row .contact__message .confidentiality label .checkbox:checked + .fake_checkbox::before {
-  background-image: url(../img/VectorSVG.svg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-  opacity: 1;
-}
-.contactes .contactes__row .contact__message .confidentiality label p {
+.contactes .contactes__row .contact__message .confidentiality p {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -2189,27 +2162,21 @@ body h3 {
   margin: 0;
 }
 @media (min-width: 440px) {
-  .contactes .contactes__row .contact__message .confidentiality label p {
-    padding: 0 40px 0 0;
+  .contactes .contactes__row .contact__message .confidentiality p {
+    padding: 0 46px 0 0;
   }
 }
 @media (min-width: 768px) {
-  .contactes .contactes__row .contact__message .confidentiality label p {
-    padding-right: 0px;
-  }
-}
-@media (min-width: 1280px) {
-  .contactes .contactes__row .contact__message .confidentiality label p {
-    padding-right: 10px;
+  .contactes .contactes__row .contact__message .confidentiality p {
+    padding-right: 65px;
   }
 }
 @media (min-width: 1920px) {
-  .contactes .contactes__row .contact__message .confidentiality label p {
+  .contactes .contactes__row .contact__message .confidentiality p {
     padding: 0;
-    width: 784px;
   }
 }
-.contactes .contactes__row .contact__message .confidentiality label span {
+.contactes .contactes__row .contact__message .confidentiality span {
   color: #F6523C;
 }
 .contactes .contactes__row .contact__message .contact__btn {

@@ -344,6 +344,7 @@
 
                     @media(min-width: 1920px) {
                         display: block;
+                        padding: 0 50px;
                         font-size: 16px;
                     }
 
@@ -382,19 +383,10 @@
     .results__title,
     .market__title,
     .cloud__title {
-        
+        padding: 0 50px 18px;
 
         @media(min-width: 440px) {
             padding: 0 37px 18px 35px;
-        }
-        @media(min-width:768px){
-            padding: 20px 30px 40px 30px;
-        }
-        @media(min-width:1280px){
-            padding: 30px 30px 50px 30px;
-        }
-        @media(min-width: 1920px){
-            padding: 0 50px 18px;
         }
     }
 

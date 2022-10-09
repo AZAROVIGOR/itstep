@@ -170,7 +170,6 @@
                             color: $white;
                             background-color: $red;
                             border: 1px solid$red;
-                           
                         }
 
                         img {
@@ -178,10 +177,6 @@
                             position: absolute;
                             right: 40px;
                             top: 25px;
-
-                            &:hover{
-                                background-image: url(../img/arrow\ white.png);
-                            }
 
                             @media(min-width:440px) {
                                 width: 12px;

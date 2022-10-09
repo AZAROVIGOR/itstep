@@ -173,7 +173,6 @@
                     list-style: none;
                     flex-direction: column;
                     padding: 0;
-                    position: relative;
 
                     @media(min-width:440px) {}
 
@@ -204,7 +203,6 @@
 
                         }
 
-
                         a {
                             text-decoration: none;
                             font-style: normal;
@@ -218,34 +216,24 @@
                                 color: $red;
                             }
                         }
-
-                        &:hover+.subtitle__content {
+                        &:hover + .subtitle__content{
                             display: block;
                         }
                     }
 
                     .subtitle__content {
+                        width: 480px;
                         border-left: 2px solid#000;
-                         display: none;
-                        
-                       
-
-                        @media(min-width:440px){
-                            margin: 0 0 33px 0;
-                        }
+                        display: none;
+                        position: absolute;
+                            left: 248px;
 
 
                         @media(min-width:768px) {
                             width: 438px;
                             height: 230px;
-                            left: 320px;
-                            position: absolute;
                         }
 
-                        @media(min-width:1920px){
-                            width: 480px;
-                            position: absolute;
-                        }
 
 
                         .subtitle__content_row {
@@ -293,25 +281,24 @@
                                     font-size: 20px;
                                     line-height: 28px;
                                     color: $black;
+
+                                    @media(min-width: 440px) {
+                                        padding-right: 60px;
+                                    }
+
+                                    @media(min-width: 768px) {
+                                        padding: 0;
+                                    }
                                 }
                             }
                         }
                     }
                 }
+
+
             }
         }
-    }
 
-    .image {
-        margin-right: 70px;
-        margin-bottom: 70px;
 
-        @media (min-width:440px) {
-            display: none;
-        }
-
-        @media(min-width: 1920px) {
-            display: block;
-        }
     }
 }
