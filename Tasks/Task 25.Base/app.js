@@ -57,8 +57,9 @@ console.log("Гипотенуза равна", d);
 
 // Переменные меняем  значение
 
-var x = 8;
-var y = 12;
+var x = 5;
+var y = 6;
+console.log(x, y);
 var z = x + y;
 var x = z - x;
 var y = z - y;
@@ -66,10 +67,18 @@ console.log(x,y);
 
 //Сумма цифр
 
-var number = 123;
-var a = number%;
-
-console.log(a);
+var x = 357;
+var thirdNum = x % 10;
+// console.log(thirdNum);
+var z = (x - thirdNum) / 10;
+var secondNum = z % 10;
+// console.log(secondNum);
+var firstNum = (z - z % 10) / 10;
+// console.log(firstNum);
+var sum = (`${firstNum + secondNum + thirdNum}`);
+console.log(sum);
+var reverse = (`${thirdNum}${secondNum}${firstNum}`);
+console.log(reverse);
 
 
 

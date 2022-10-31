@@ -2529,4 +2529,8 @@ body h3 {
     font-size: 18px;
     line-height: 25px;
   }
+}
+
+.menu_burger {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
