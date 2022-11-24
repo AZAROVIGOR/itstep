@@ -27,9 +27,9 @@ for (let i = 1; i < a.length; i++) {
 }
 console.log("Минимальный элемент равен " + minElement);
 
-let change = maxElement;
-maxElement = minElement;
-minElement = change;
+let change = a[maxElement];
+a[maxElement] = a[minElement];
+a[minElement] = change;
 
-console.log(a[i]);
+console.log(a);
 //console.log(minElement);

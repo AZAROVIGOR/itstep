@@ -13,14 +13,25 @@ console.log(a);
 
 let x = 5;
 
+let isfind = false;
+
 
 for (let i = 0; i < a.length; i++){
     
     if(a[i] == x){
-        console.log(`Число ${x} присутствует в  массиве`);
+        isfind = true;
+        break;
     }
-    
-    // else if(a[i] != x){
-    //     console.log(`Число ${x} в массиве нету`); // Спросить !!!!!
-    // }
+   
 }
+
+
+if(isfind){
+    console.log(`Число ${x} присутствует в  массиве`);
+}
+else{
+    console.log(`Число ${x} в массиве нету`);
+}
+
+
+

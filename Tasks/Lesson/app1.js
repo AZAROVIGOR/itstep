@@ -15,5 +15,9 @@ for (let i = 1; i < a.length; i++) {
     if (a[i] > maxElement) {
         maxElement = a[i];
     }
+    console.log(a[maxElement])
 }
 console.log("Максимальный элемент равен " + maxElement);
+
+console.log(a[maxElement])
+
