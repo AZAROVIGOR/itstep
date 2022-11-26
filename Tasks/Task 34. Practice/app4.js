@@ -4,9 +4,10 @@ let array = [5, 2, 1, 8, 25, 16, 3];
 
 let maxElement = array.reduce((max, item) => {
     if(item > max){
-        max = item
+        return item
+        return max;
     }
-    return max;
+    
 });
 
 console.log(maxElement);
