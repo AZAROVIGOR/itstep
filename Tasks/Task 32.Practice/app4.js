@@ -13,3 +13,14 @@ function compareNumbers(x, y){
 let a = compareNumbers(3, 4);
 
 console.log(a);
+
+let twoNum = (a, b) =>{
+    if(a == b){
+        return true
+    }
+    return false;
+}
+
+let b = twoNum(3, 3);
+
+console.log(b);

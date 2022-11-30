@@ -7,3 +7,7 @@ while(i <= 2022){
     sum = i++;
     console.log(`${sum}`);
 }
+
+for(i = 1983; i <= 2022; i++){
+    console.log(i);
+}

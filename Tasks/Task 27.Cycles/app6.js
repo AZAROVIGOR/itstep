@@ -10,3 +10,7 @@ while(i < 100){
     console.log(`${sum}`);
     
 }
+
+for(i = -4; i <= 100; i+=2){
+    console.log(i);
+}

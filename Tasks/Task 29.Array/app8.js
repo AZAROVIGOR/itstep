@@ -4,17 +4,15 @@ let num = [5, 7, 33, 31, 21];
 
 let sum;
 
+for (let i = 0; i < num.length; i++) {
 
-
-for(let i = 0; i < num.length; i++){
-    
-    num[i]+=3;
+    num[i] += 3;
 }
 
- num[0] += 3;
- num[1] += 3;
- num[2] += 3;
- num[3] += 3;
- num[4] += 3;
+num[0] += 3;
+num[1] += 3;
+num[2] += 3;
+num[3] += 3;
+num[4] += 3;
 
- console.log(num);
+console.log(num);

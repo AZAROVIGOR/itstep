@@ -14,3 +14,13 @@ function numberCheck(x){
 let a = numberCheck(5);
 
 console.log(a);
+
+let num = (a) =>{
+    if(a < 0){
+        return true
+    }
+    return false
+}
+
+let b = num(-5);
+console.log(b);

@@ -12,3 +12,9 @@ while(i < 10){
     console.log(`${a} * ${i} = ${sum}`);
 
 }
+let b = 7;
+let res;
+for(i = 1; i <= 10; i++){
+    res = b * i;
+    console.log(`${b} * ${i} = ${res}`);
+}

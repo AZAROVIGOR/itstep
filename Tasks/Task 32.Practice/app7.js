@@ -13,8 +13,16 @@ function evenOrOddNumber(x){
 
 let a = evenOrOddNumber(7);
 
-//console.log(a);
+console.log(a);
 
+let num = (a) =>{
+    if(a % 2 == 0){
+        return true
+    }
+    return false
+}
 
+let b = num(4);
+console.log(b);
 
 

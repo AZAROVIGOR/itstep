@@ -3,14 +3,19 @@
 
 let array = [1, 2, 3, 0, 4, 5, 6];
 
-let x = 0
+let isNull = false;
 
-let newArray = array.reduce((sum, item, index) => {
+let newArray = array.reduce((sum, item) => {
    if(item == 0){
-        array.length = sum;
+        isNull = true
    }
-   //else return sum + item;
-}
-)
+   if(!isNull){
+      return sum + item 
+   }
+   return sum
+
+})
+
+
 let a = newArray
 console.log(a);

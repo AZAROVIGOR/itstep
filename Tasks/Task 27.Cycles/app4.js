@@ -7,3 +7,8 @@ while(i <= 654 && i >= 0){
     sum = i--;
     console.log(`${sum}`);
 }
+
+
+for(i = 654; i >=0; i--){
+    console.log(i);
+}
