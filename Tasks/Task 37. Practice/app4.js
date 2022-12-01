@@ -4,18 +4,24 @@ let array1 = [1, 2, -2, -3, 4];
 
 let array2 = [1, 2, -2, -3, 5];
 
+if (array1.length == array2.length) {
+    let isEqual = array1.every((item, index) => {
+        return a[index] == b[index]  // item == a[index]
+    });
 
- newArray = array1.forEach((item) => {
-    console.log(item)
-});
+    if (isEqual) {
+        console.log("Совпадают")
+    }
+    else {
+        console.log("Не совпадает")
+    }
 
- newArray1 = array2.forEach((item) => {
-    console.log(item)
-})
 
-if(newArray == newArray1){
-    console.log("Совпадают")
 }
+else {
+    console.log("Не совпадают")
+}
+
 
 
 
