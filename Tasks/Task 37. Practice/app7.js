@@ -9,5 +9,5 @@ let panogram = str.toLowerCase().replaceAll(" ", "").split('');
 
 
 
-console.log(x);
+console.log(panogram);
 

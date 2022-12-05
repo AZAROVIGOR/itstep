@@ -2,22 +2,17 @@
 
 let sentence = "JavaScript это мультипарадигменный язык программирования.";
 
-let longestWord = sentence.split(" ").reduce((max, item) =>  {
-    
-        
-    
+let longestWord = sentence.split(" ").reduce((max, item) => {
+    if (item.length > max.length) {
+        return item
+    }
+    else {
+        return max
+    }
 })
 
-console.log(longestWord);
+console.log(`${longestWord} - самое длинное слово в предложении`);
 
-
-
-
-
-
-//console.log(x);
-
-let array = ['JavaScript', 'это', 'мультипарадигменный', 'язык', 'программирования.']
 
 
 

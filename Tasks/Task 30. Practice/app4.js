@@ -11,25 +11,28 @@ console.log(a);
 
 
 
-let maxElement = a[0];
+
+let maxIndex = 0;
 for (let i = 1; i < a.length; i++) {
-    if (a[i] > maxElement) {
-        maxElement = a[i];
+    if (a[i] > a[maxIndex]) {
+        maxIndex = i;
     }
 }
-console.log("Максимальный элемент равен " + maxElement);
 
-let minElement = a[0];
+console.log(maxIndex)
+
+let minIndex = 0;
 for (let i = 1; i < a.length; i++) {
-    if (a[i] < minElement) {
-        minElement = a[i];
+    if (a[i] < a[minIndex]) {
+        minIndex = i;
     }
 }
-console.log("Минимальный элемент равен " + minElement);
+console.log(minIndex)
 
-let change = a[maxElement];
-a[maxElement] = a[minElement];
-a[minElement] = change;
+let temp;
+
+temp = a[maxIndex];
+a[maxIndex] = a[minIndex];
+a[minIndex] = temp;
 
 console.log(a);
-//console.log(minElement);
