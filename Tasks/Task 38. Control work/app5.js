@@ -20,32 +20,10 @@ let minIndex = array.reduce((min, item, index, arr) => {
     return min
 },0)
 
-// console.log(maxIndex);
-// console.log(minIndex);
+
 
 let swap = array[maxIndex];
 array[maxIndex] = array[minIndex];
 array[minIndex] = swap;
 console.log(array);
 
-// let maxIndex = 0;
-// for (let i = 1; i < a.length; i++) {
-//     if (a[i] > a[maxIndex]) {
-//         maxIndex = i;
-//     }
-// }
-
-// let minIndex = 0;
-// for (let i = 1; i < a.length; i++) {
-//     if (a[i] < a[minIndex]) {
-//         minIndex = i;
-//     }
-// }
-// console.log(a);
-// let temp;
-
-// temp = a[maxIndex];
-// a[maxIndex] = a[minIndex];
-// a[minIndex] = temp;
-
-// console.log(a);
