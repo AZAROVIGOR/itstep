@@ -1,0 +1,6 @@
+1. Преобразование хинты
+2. object Object
+3. toPrimitive  // string , number, default
+4.set / get
+5.let obj = {};
+   alert( obj ); // "[object Object]" ?
