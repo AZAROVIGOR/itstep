@@ -1,42 +1,42 @@
-class Engine{
+class Engine {
     power;
     company;
-    
-    constructor(power, company){
+
+    constructor(power, company) {
         this.power = power;
         this.company = company;
     }
 
-    toString(){
-       console.log( `Мощность двигателя: ${this.power}, Мотор компании ${this.company}`);
+    toString() {
+        console.log(`Мощность двигателя: ${this.power}, Мотор компании ${this.company}`);
     }
 }
 
 
 class Person {
-        age;
-        fullName;
-    
-        constructor(age, fullName){
-            this.age = age;
-            this.fullName = fullName;
-        }
-        
-        toString(){
-            console.log(`Возраст: ${this.age}, Полное имя: ${this.fullName}`);
-        }
+    age;
+    fullName;
+
+    constructor(age, fullName) {
+        this.age = age;
+        this.fullName = fullName;
+    }
+
+    toString() {
+        console.log(`Возраст: ${this.age}, Полное имя: ${this.fullName}`);
+    }
 }
 
 
-class Driver extends Person{
+class Driver extends Person {
     experiense;
 
-    constructor(age, fullName, experiense){
+    constructor(age, fullName, experiense) {
         super(age, fullName)
         this.experiense = experiense;
     }
 
-    toString(){
+    toString() {
         console.log(`Стаж вождения: ${this.experiense}`);
     }
 }
@@ -47,23 +47,23 @@ class Car {
     marka;
     engine;
     driver;
-    constructor(carClass, marka, engine, driver){
+    constructor(carClass, marka, engine, driver) {
         this.carClass = carClass;
         this.marka = marka;
         this.engine = engine;
-        this.driver =  driver;
+        this.driver = driver;
     }
 
-    start(){
+    start() {
         console.log("Машина поехала");
     }
 
     stop() {
-        console.log ("Машина остановилась");
+        console.log("Машина остановилась");
     }
 
     turnRight() {
-        console.log ("Поверните на  право");
+        console.log("Поверните на  право");
     }
 
     turnLeft() {
@@ -74,33 +74,33 @@ class Car {
         console.log(`Машина марки: ${this.marka} имеет двигатель ${this.engine} Класс машины : ${this.carClass} опыть вождения - ${this.drive}`);
 
 
-}
+    }
 }
 
 
 
 class Lorry extends Car {
     carrying;
-    constructor(carClass, marka, engine, driver, carrying){
+    constructor(carClass, marka, engine, driver, carrying) {
         super(carClass, marka, engine, driver)
         this.carrying = carrying;
     }
 
-    toString(){
+    toString() {
         console.log(`Грузовик перевозит ${this.carrying}`);
     }
 
 }
 
-class SportCar extends Car{
+class SportCar extends Car {
     speed;
 
-    constructor(carClass, marka, engine, driver, speed){
+    constructor(carClass, marka, engine, driver, speed) {
         super(carClass, marka, engine, driver);
         this.speed = speed;
     }
 
-    toString(){
+    toString() {
         console.log(`Максимальня скорость: ${this.speed}`);
     }
 }
@@ -113,8 +113,8 @@ engineRolls.toString()
 engineBmw.toString()
 
 
-let firstDriver = new Person("53 года","Михаэль Шумахер");
-let secondDriver = new Person("50 лет","Рубенс Баррикелло");
+let firstDriver = new Person("53 года", "Михаэль Шумахер");
+let secondDriver = new Person("50 лет", "Рубенс Баррикелло");
 firstDriver.toString();
 secondDriver.toString();
 
@@ -132,11 +132,6 @@ car.start();
 car.stop();
 car.turnLeft();
 car.turnRight();
-
-
-
-
-
 
 let lorry = new Lorry("Грузовик", "Volvo", "Дизель", "Опыт", "опасные грузы");
 console.log(lorry);
