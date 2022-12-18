@@ -6,8 +6,8 @@
 
 class Product{
     name;
-    price;
-    rating;
+    price = 0;
+    rating = 0;
     constructor(name, price, rating){
         this.name = name;
         this.price = price;
@@ -15,32 +15,68 @@ class Product{
     }
 }
 
-class Category extends Product{
+class Category {
     name;
-    arrayProducts;
+    products;
     
-    constructor(name,arrayProducts){
+    constructor(name){
         this.name = name;
-        this.arrayProducts = arrayProducts;
+        this.products = [];
+    }
+
+    addProduct(product) {
+        this.products.push(product);
     }
     
 }
 
-let  
-let 
-let 
+
 
 class Basket{
-    byProduct;
-    constructor(byProduct){
-
+    byProducts = [];
+    
+    addProduct(product) {
+        this.byProducts.push(product);
     }
 }
 
-class User extends Basket{
+class User {
     login;
     password;
-    constructor(login, password){
+    basket;
+    constructor(login, password, basket){
+        this.login = login;
+        this.password = password;
+        this.basket = basket;
+    }
 
+    addProduct(product) {
+        this.basket.addProduct(product);
     }
 }
+
+let milk = new Product("Молоко", "1.50", "5");
+let bread = new Product("Хлеб", "2.00", "6");
+let meat = new Product("Мясо", "14.00", "7");
+let shampoo = new Product("Шампунь", "14.00", "7");
+let soap = new Product("Мыло", "14.00", "7");
+
+let food = new Category("Еда");
+let householdСhemicals = new Category("Бытовая химия");
+
+food.addProduct(milk);
+food.addProduct(bread);
+food.addProduct(meat);
+
+householdСhemicals.addProduct(shampoo);
+householdСhemicals.addProduct(soap);
+
+let basket = new Basket();
+
+let person = new User("hp@.mail.ru", "1111", basket);
+
+person.addProduct(milk);
+person.addProduct(meat);
+person.addProduct(shampoo);
+
+//console.log(person);
