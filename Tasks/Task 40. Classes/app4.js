@@ -71,6 +71,8 @@ food.addProduct(meat);
 householdСhemicals.addProduct(shampoo);
 householdСhemicals.addProduct(soap);
 
+console.log(food, householdСhemicals);
+
 let basket = new Basket();
 
 let person = new User("hp@.mail.ru", "1111", basket);
@@ -79,4 +81,4 @@ person.addProduct(milk);
 person.addProduct(meat);
 person.addProduct(shampoo);
 
-//console.log(person);
+console.log(person);
