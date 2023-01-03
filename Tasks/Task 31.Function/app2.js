@@ -142,4 +142,4 @@ function searchIndexInArray(arrayRandomNumbers, x){
 
 let searchIndex = searchIndexInArray(arrayRandomNumbers, 5);
 
-if(searchIndex = );
+if(searchIndex);

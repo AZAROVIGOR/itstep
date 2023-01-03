@@ -2,7 +2,7 @@
 
 let word = "радар";
 
-let reversWord = word.toLocaleLowerCase().split("").reverse().join("");
+let reversWord = word.toLowerCase().split("").reverse().join("");
    if(word === reversWord){
        console.log(`Слово ${word} является полиндромом`);
    }
