@@ -210,6 +210,22 @@ const myObj = {
 console.log("TASK 25");
 console.log(myObj.hasOwnProperty('name'));//true
 
+//26.***    Что будет выведено в консоль ?
+
+var a = Array();
+a[a.length] = 0;
+
+console.log("TASK 26");
+console.log(a.length)
+
+//27.   Результат выполнения кода ?
+
+    function sum(a, b = a) {
+        console.log(a + b)
+    }
+
+sum(10);
+
 
 
 
