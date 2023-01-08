@@ -223,7 +223,7 @@ console.log(a.length)
     function sum(a, b = a) {
         console.log(a + b)
     }
-
+console.log("TASK 27");
 sum(10);
 
 
