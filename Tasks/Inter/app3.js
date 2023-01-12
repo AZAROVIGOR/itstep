@@ -75,14 +75,28 @@
 */
 //let name = "азаров игорь"
 
+
+function abbr(name){
+    return name.toUpperCase()
+          .split(" ")
+          .map(item => `${item.slice(0, 1)}.`)
+          .join("");
+}
+
+let n = abbr("азаров игорь")
+console.log(n);
+
+
+
 let toInitial = (name) => name.split(" ").map(item =>
     `${item.slice(0, 1).toUpperCase()}.`
 ).join("");
 
-
 let a = toInitial("азаров игорь")
 console.log(a);
 
-let abbrev = name => name.toUpperCase().split(" ").map(item => item[0]).join("");
+
+
+let abbrev = name => name.toUpperCase().split(" ").map(item => item[0]).join(".");
 let b = abbrev("азаров игорь")
 console.log(b);
