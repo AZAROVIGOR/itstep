@@ -1,7 +1,0 @@
-.day{
-    display: none;
-}
-
-li:hover + .day{
-    display: block;
-}
