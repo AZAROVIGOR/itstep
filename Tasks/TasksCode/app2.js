@@ -8,7 +8,7 @@ function abbrevName(name) {
    
     console.log(abb);
 }
-abbrevName("азаро ян")
+abbrevName("азаров ян")
 
 
 function abbrevName(name){
