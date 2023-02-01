@@ -39,7 +39,7 @@ console.log(obj["0"] + obj[0]); // 4  имена свойств д.быть ст
     a = 2, с = 0;
 var b = a + a * a / с;
 console.log("TASK 5")
-console.log(b); // NAN   !!!правильно infinity
+console.log(b); //    !!!правильно infinity
 
 
 //6. file.js содержит следующий код:
@@ -48,20 +48,20 @@ console.log(b); // NAN   !!!правильно infinity
 //Что будет выведено при подключении следующей конструкции ?
     // <script src="file.js">
     //     alert(2);
-    // </script>
+    // </script>   // ничего 
 
 //7.  После выполнения этого кода – в каких объектах из списка содержится свойство name?
 
 function User() { }
 var vasya = new User();
-vasya.__proto__.name = "Vasya";
+vasya.__proto__.name = "Vasya"; //vasya.prototype
 
 //8.*** Какое из следующих выражений вернет false?
 
 console.log("TASK 8")
 console.log(undefined == 0) // false
-console.log('' == false)
-console.log(null >= 0)
+console.log('' == false)// false == false
+console.log(null >= 0) //  0 >=0
 console.log(null == undefined) 
 console.log('2' > 1) 
 
@@ -74,7 +74,7 @@ console.log('2' > 1)
 // setTimeout(function () {
 //     clearInterval(timerId);
 //     console.log('стоп');
-// }, 6000);
+// }, 6000);                                  // 3 раза тик  один раз стоп
 
 //10. Чему равно 0 || 1 && 2 || 3 ?
 console.log("TASK 10")
@@ -96,7 +96,7 @@ console.log(x);// 1   правильно NAN
 console.log("TASK 12")
 console.log(null >= 0) // yes
 console.log(null > 0)
-console.log(null == 0) //yes -- не верно будет false
+console.log(null == 0) // будет false
 console.log(null < 0)
 console.log(null === 0)
 
@@ -117,8 +117,8 @@ console.log(a)// true
 //15.***  Чему равно значение переменной x?
 
 var x = "1";
-if ("0")
-    x++;
+if ("0")          //  не  пустая строка  => true
+     x++;
     
 else
     x += 3;
@@ -128,9 +128,9 @@ console.log(x)  // 1  правильно 2
 
 //16.***  Какой будет результат выполнения функции ?
 
-//     (function () {
+//     (function () {                            анонимная функция , вызываетяся ()             
 //         return typeof arguments;
-//     })()
+//     })()                   typeof от function - будет   function
 
 // console.log("TASK 16");
 // console.log();
@@ -193,13 +193,13 @@ console.log(n.sort()) // [19,32,34,4,6]
 
 //23*** Что будет выведено в консоль ?
     console.log("TASK 23");
-    console.log(+function (val) { return val; });
+    console.log(+function (val) { return val; }); //NAN =>   +строка  будет NaN
 
 //24  Какое количество раз выполнится цикл ?
 
 for (var i = 0; i < 10; i++) {
     ++i;
-    console.log(i)//  5раз
+    console.log(i)//  5раз     0-2-4-6-8
 } 
 
 //25.   Что будет выведено в консоль ?
@@ -228,7 +228,7 @@ sum(10);  // 20
 
 //28.  Что будет выведено на экран?
 console.log("TASK 28");
-console.log('0xFF     ' - '1'); //254
+console.log('0xFF     ' - '1'); //254   255 - 1   FF - это 255
 
 //29 Результат выполнения кода?
 console.log("TASK 29");
@@ -241,9 +241,9 @@ var a = 12;
     console.log("a = ", a);
     var b = 500
 })()
-console.log("TASK 30");
+console.log("TASK 30");// а = 12
 console.log("a = ", a);//a =  12
-console.log("b = ", b); //b = Infinity
+console.log("b = ", b); //b = referensEror
 
 //31 Чему будет равно значение x[0] и x===y после исполнения данного кода?
 
@@ -265,9 +265,9 @@ switch (a) {
     case null:
         console.log(null); break;
     case undefined:
-        console.log(undefined); break;
+        console.log(undefined); break;// undefined
     default:
-        console.log("something else");//something else
+        console.log("something else");
 }
 
 //33 Что будет выведено в консоль?
@@ -287,7 +287,7 @@ var student = {
 }
 console.log("TASK 34");
 for (let i in student) {
-    console.log(student[i])
+    console.log(student(i))  // in name age // of mark  25 
 }
 
 //35*** Какой будет результат выполнения кода?
@@ -296,16 +296,16 @@ var a = 3;
 
 switch (a) {
     default:
-        a += 4;
+        a += 4;  //7
     case 1:
-        a += 2;
-        break;
+        a += 2;  // 2      7 + 2 = 9
+        break;  // => stop
     case 2:
         a += 3;
         break;
 }
 console.log("TASK 35");
-console.log(a)
+console.log(a) // 9     3 + 4 + 2
 
 //36 Что выведет данный код в консоль?
 console.log("TASK 36");
@@ -317,7 +317,7 @@ function checkValue(value) {
     } else {
         return !!a;
     }
-}
+}                                          // false
 
 //37 Какой будет результат выполнения кода?
 
@@ -331,7 +331,7 @@ console.log(g);// число 7  Вторым параметром можно у�
 function Test() { }
 
 var test1 = new Test()
-Test.prototype.member = "World";
+Test.prototype.member = "World"; // 
 var test2 = new Test();
 
 console.log("TASK 38");
@@ -373,7 +373,7 @@ var r = ['a', 'l', 'p', 'h'];
 r.length = 10;
 console.log("TASK 43");
 console.log(r.length);
-delete r[0];
+delete r[0];  // затирает значение элемента будет unefined
 console.log(r.length); // 10 и 10
 
 //44 Каков результат выполнения следующего кода?
@@ -386,7 +386,7 @@ console.log(nums) //1,2,3,5
 
 //45 Какой из вариантов будет выводить "Wake up" каждые 10 минут?
 
-//setTimeout(console.log("Wake up!"), 60000)
+//setTimeout(console.log("Wake up!"), 600000)
 
 //46 Что вернет функция после выполнения?
 
@@ -404,7 +404,7 @@ console.log(d)// 1
 
 //47 Что будет выведено в консоль?
 
-// let result = 0;
+//  result = 0;
 // function add(x) {
 //     result += x;
 //     return result;
@@ -416,22 +416,23 @@ console.log(d)// 1
 
 class SomeThing { }
 console.log("TASK 48");
-console.log(typeof SomeThing)//function
+console.log(typeof SomeThing)//function  
 
 //49 Что будет выведено на экран?
 
 let p = 0;
-while (++p < 5)
+while (++p < 5)   // сначала увеличивает потом сравнивает
     console.log("TASK 49");
     console.log(p);// от 1 до 4
 
 //50 Какой из методов объекта Date вернет текущее время прошедшее с 1/1/1970 в миллисекундах?
 
+//getTime()  
 
 //51 Что будет выведено на экран?
 
 let k = 0;
-while (k++ < 5)
+while (k++ < 5) // увеличиваем после сравнения
     console.log("TASK 51");
     console.log(k);  // от 1 до 5
 
@@ -443,7 +444,7 @@ function a() {
 
 //var b = a("not");
 console.log("TASK 52");
-console.log(b)    
+console.log(b)    //works
 
 //53 Каким будет результат выполнения следующего кода?
 console.log("TASK 53");
@@ -452,16 +453,16 @@ console.log(parseInt(1 / 0, 19))
 
 //54   Каким будет результат выполнения следующего кода?
 console.log("TASK 54");
-console.log(null + true + 0) // 1   приводится к строке
+console.log(null + true + 0) // 1   приводится к числу
 
 //55 Что будет выведено на экран?
 console.log("TASK 55");
 const arr = [3, 4, 5]
-for (let item in arr) {
+for (let item in arr) {   // имена  свойств  0 1 2
     console.log(item)
 }
 
-for (let item of arr) {
+for (let item of arr) { // знаение свойст 3 4 5 
     console.log(item)
 }                           // 0 1 2 3 4 5
 
@@ -469,11 +470,11 @@ for (let item of arr) {
 console.log("TASK 56");
 function f(x, y, z) {
     x = 5;
-    arguments[2] = 10;
-    console.log(x + y + z)
+    arguments[2] = 10;   // z = 10
+    console.log(x + y + z)  // 5 + 0 + 10
 }
 
-f(-1, 0, 2)
+f(-1, 0, 2)   // 15 
 
 //57  Что будет выведено в консоль?
 
@@ -483,7 +484,7 @@ console.log(set)
 
 //58  Чему будет равно значение следующего выражения в JS?
 console.log("TASK 58")
-console.log([] + {})  //[object Object]
+console.log([] + {})  //[object Object] массив + обьект преобразуем в строку пустая строка  + [object Object]
 
 //59  Чему будет равно значение выражения?
 console.log("TASK 59")
@@ -494,7 +495,7 @@ console.log([] + [])//пустая строка
 //     (function (foo) {
 //         arguments[0] = 42;
 //         console.log(foo);
-//     })(5)
+//     })(5)  //  42
 
 //61 Что выведен данный код?
 
@@ -555,7 +556,7 @@ console.log(q);   // 0 - 55
 
 var a = new Array(5).join('5');
 console.log("TASK 67")
-console.log(a); // 55555
+console.log(a); // 5555
 
 //68 Что будет выведено в консоль?
 console.log("TASK 68")
@@ -567,10 +568,10 @@ console.log(str.substring(3, 3));// Пустая строка  //Метод subs
 let v = -1;
 let e = 0.25;
 console.log("TASK 69")
-console.log(d == ~e ^ 0) // 0
+console.log(d == ~e ^ 0) // 1
 
 /*70 Какие из вызов parseFloat() не возвратят число?
-parseFloat()
+parseFloat()  // не возвратят
 parseFloat("27.2 m")
 parseFloat("27,2")
 parseFloat(".2")
@@ -580,17 +581,17 @@ parseFloat("56,")
 //71 Что будет выведено на экран?
 
 var x;
-x = 'x0ff' - 1;
-if (x != x)
+x = 'x0ff' - 1;  //nan
+if (x != x) // true
     console.log(true);
 else
-    console.log(x);
+    console.log(x); // 
 
 //72 Что будет выведено в консоль?
 
 let w = null;
 let u = undefined;
-console.log("TASK 72")
+console.log("TASK 72")//Иначе говоря, оператор ?? возвращает первый аргумент, если он не null/undefined, иначе второй.
 console.log(w ?? u) // Оператор нулевого слияния ответ undefined  (w !== null && w !== undefined) ? w : u;
 
 //73 Что будет выведено в консоль?
@@ -602,20 +603,20 @@ console.log([..."JS"])// ['J', 'S']
 let m = NaN;
 let l = 1;
 console.log("TASK 74")
-console.log(m ?? l)// NaN
+console.log(m ?? l)// NaN      NaN !== null(true) && NaN !==undefined (true)
 
 //75 Какой результаты будет выведен в консоль?
 
 function ab(param) {
-    let m = param;
-    m = m + 10;
-    return m + param;
+    let m = param;  // 10
+    m = m + 10;     //  10+ 10 = 20
+    return m + param; // 20 + 10 = 30
 }
 
 function cd(param) {
-    let n = param;
-    n = 20;
-    return param + n;
+    let n = param;  // n = 10
+    n = 20;         //  n = 20   
+    return param + n; // 10 + 20 = 30
 }
 console.log("TASK 75")
 console.log(ab(10), cd(10)); // 30, 30    m = 10 + 10 => return 20 + 10 
@@ -624,14 +625,14 @@ console.log(ab(10), cd(10)); // 30, 30    m = 10 + 10 => return 20 + 10
 console.log("TASK 76")
 console.log(
     (function () {
-        var a = true + false; // undefined
-        a;
+        var a = true + false; 
+        a;                    // undefined      нету  return
     })()
 )
 
 //77 Чему будет равно значение выражения?
 console.log("TASK 77")
-console.log(null || "0" || undefined || false || NaN); // 0
+console.log(null || "0" || undefined || false || NaN); // "0"
 
 //78 Что будет выведено в консоль?
 
@@ -642,7 +643,7 @@ for (var i = 0; i < 9; i += 2) {
         continue
 }
 console.log("TASK 78")
-console.log(i++) // 9
+console.log(i++) // 9    
 
 //79 Что будет записано в поле name после выполнения кода?
 console.log("TASK 79")
@@ -650,7 +651,7 @@ const user = {
     name: "Вася"
 };
 
-user.name = "Петя"; // Петя 
+user.name = "Петя"; // Петя - копируется по ссылке
 
 //80 Чему равно значение переменной x?
 
@@ -682,7 +683,7 @@ for (let i = 0; i < 10; i++) {
 }
 let xy = i;
 console.log("TASK 84")
-console.log(xy)// 10
+console.log(xy)// ошибка 
 
 //85 Чему будет рано значение выражения?
 console.log("TASK 85")
@@ -699,13 +700,13 @@ console.log("TASK 86")
 //87 Что выведет данный код?
 console.log("TASK 87")
 if (function f() { }) {
-    console.log(typeof f);   // function
+    console.log(typeof f);   // function   
 
 }
 
 //88 Чему равно значение выражения?
 
-//[].push(1, 2).unshift(3).join() // Код содержит ошибку
+//[].push(1, 2).unshift(3).join() // Код содержит ошибку   - 
 
 /*89  Какой из этих вариантов задает массив из элементов "a" и "b"?
 
@@ -717,17 +718,17 @@ let a =new array("a","b")
 
 */
 
-//90 Что выведет код?
-console.log("TASK 90")
-// let array = [1, 2]
+//90 Что выведет код?    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+console.log("TASK 90")   
+// let array = [1, 2]   //  точка  с запятой не стоит будет оштбка
 //     (function () {
-//         console.log(array)
+//         console.log(array)   // ошибка    точка  с запятой не стоит
 //     })()
 
 //91 Что выведет код?
-// console.log("TASK 91")
-// const f = (a, b) => a + b;
-// console.log(f)    // undefined
+// console.log("TASK 91")    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// const f = (a, b) => a + b;    
+// console.log(f)    // код функции  
 
 //92  Что выведет на экран следующий код?
 console.log("TASK 92")
@@ -737,17 +738,17 @@ console.log(Math.ceil(Math.random())); // ответ 1  // Метод Math.rando
 //93 Какой результат будет выведен в консоль?
 
 console.log("TASK 93")
-console.log(0 / 0); // NaN
+console.log(0 / 0); // NaN  
 
 //94 Что будет выведено в консоль?
 console.log("TASK 94")
-let array1 = ['1', '2', '3'].map(parseInt);  //[1, NaN, NaN]
+let array1 = ['1', '2', '3'].map(parseInt);  //[1, NaN, NaN]   parseInt преобразует число в строку двоичная система 
 console.log(array1)
 
 //95 Что будет выведено в консоль?
 
 function sum1(a, b, c) {
-    arguments[2] = 10;
+    arguments[2] = 10;   // c == 10
     return a + b + c;
 }
 console.log("TASK 95")
@@ -758,7 +759,7 @@ console.log(sum1(1, 2, 3))//13   Объект arguments — это подобн�
 
 var A = 1;
 var B = ++A + A;
-console.log("TASK 96")  //префиксная форма возвращает новое значение
+console.log("TASK 96")  //префиксная форма возвращает новое значение  1+1 = 2   2 + 2
 console.log(B); //ответ 4  постфиксная форма возвращает старое значение   
 
 //97 Какой результат будет выведен на экран?
@@ -766,11 +767,11 @@ console.log(B); //ответ 4  постфиксная форма возвращ
 var a1 = new Array();
 a1['key'] = 'value';
 console.log("TASK 97")
-console.log(a1.length);// 0 
+console.log(a1.length);// 0  длинна массива работает для массива с числовым индексом a1['key']
 
 //98 Что будет выведено в консоль?
 
-function Test(param) {
+function Test(param) {   // функция конструктор только  через his
     this.var1 = param;
     var var2 = 'World'
 }
@@ -783,7 +784,7 @@ console.log(test.var1, test.var2);//  Hello undefined
 
 // var a1 = "wrong"
 // function a() { return "1st"; }
-// function a(val) { this.a1 = "right"; return "2nd"; }
+// function a(val) { this.a1 = "right"; return "2nd"; }   // переопределение функции
 // console.log(new a().a1); // right
 
 
@@ -829,7 +830,7 @@ console.log("TASK 106")
 var n = 3;
 var b = true;
 n = n.toString(2) + Number(b) + n.toString() - 3 + !Number(b); // "11" + 1 + "3" - 3 + false
-console.log(n); // 1110 
+console.log(n); // 1110   
 
 //107 Что будет выведено в консоль?
 console.log("TASK 107")
@@ -949,7 +950,7 @@ var foo = function () {
 var a = 1;
 var c = a++ + 1;
 console.log("TASK 121")
-console.log(a, c)
+console.log(a, c) // 2 2    1+1   
 
 //122 Что будет выведено в консоль?
 
@@ -972,7 +973,7 @@ console.log(a5)//false
 
 //125 Что будет выведено в консоль?
 console.log("TASK 125")
-console.log(typeof typeof null)// string
+console.log(typeof typeof null)// string //  typeof null = "object"   typeof   "object"   = string
 
 //126 Что будет выведено в консоль?
 console.log("TASK 126")
@@ -989,7 +990,7 @@ console.log(sayHi())//Hi there, undefined
 //128 Что выведен следующий код?
 console.log("TASK 128")
 console.log(1);
-js: {
+js: {                     // метки :
     console.log(2);
     break js;
     console.log(3);
@@ -1000,7 +1001,7 @@ console.log(4); // 1, 2, 4
 console.log("TASK 129")
 for (i = 5; i < 10; i++) {
     for (j = i; j < i + 1; j++) {
-        console.log(j) // 5 раз  - 5,6,7,8,9
+        console.log(j) // 5 раз  - 5,6,7,8,9   
     }
 }
 
@@ -1011,14 +1012,14 @@ console.log("TASK 130")
 console.log(st.split(",", 6));['myjs']
 
 //131 Что выведет следующий код?
-//console.log("Hello!' +"_"+ "World!'); // ошибку
+//console.log("Hello!' +"_"+ "World!'); // ошибку разные ковычки
 
 //132 Чему равно значение строки str?
 
 var str6 = "мама";
 for (var i = 0; i < str6.length; i++)
     if (!(i % 2))
-        str6[i] = "п";//Код содержит ошибку
+        str6[i] = "п";//мама    строки менять не льзя
 
         
 //133 Что будет выведено в консоль???????????????????????????????????????????????????????????????????
