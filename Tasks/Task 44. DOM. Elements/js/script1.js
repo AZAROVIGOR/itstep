@@ -8,9 +8,9 @@
  -  Выведите последовательно через console.log его классы.
  -  Сделайте его красного цвета, размером 30px, добавьте ему границу
  -  Выведите название его тега в нижнем регистре
- - Вставьте ему в конец span с текстом 'мой любимый спан'
+ -  Вставьте ему в конец span с текстом 'мой любимый спан'
  - Вставьте ему в конец список ul с элементами массива [createElement, appendChild, insertBefore] так, чтобы каждый элемент стоял в своем li.
- - Вставьте перед ним div с классом neighbor и текстом 'еще один сосед'
+ -  Вставьте перед ним div с классом neighbor и текстом 'еще один сосед'
  */
 
 let  element = document.getElementById("first-element");
@@ -39,13 +39,38 @@ for(let item of element.classList){
 
 element.style.color = "red";
 element.style.fontSize = "30px";
+element.style.border = "5px solid green"
+element.style.width = "400px "
 
 let tegLowerCase = element.tagName
 console.log(tegLowerCase.toLowerCase());
 
 let span = document.createElement("span");
 span.innerHTML = "мой любимый спан";
-console.log(span)
+element.append(span);
+console.log(span);
+
+let ul = document.createElement("ul")
+element.append(ul)
+
+let listOfElements = ["createElement", "appendChild", "insertBefore"];
+
+let liFirst = document.createElement("li")
+liFirst.innerHTML = listOfElements[0]
+ul.prepend(liFirst)
+
+let liSecond = document.createElement("li")
+liSecond.innerHTML = listOfElements[1]
+ul.prepend(liSecond)
+
+let lithird = document.createElement("li")
+lithird.innerHTML = listOfElements[2]
+ul.prepend(lithird)
 
 
+let div = document.createElement("div");
+element.before(div)
+div.className = "neighbor";
+div.innerHTML = "Еще один сосед";
+console.log(div);
 
