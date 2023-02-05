@@ -1,0 +1,9 @@
+if(element) -  проверяет есть таеой элемент или нету !!!!!;
+classList.add("class") -  добавить class;
+classList.remove("class") - удалить class;
+classList.contains("class") - проверяет наличие class у элемента;
+classList.toggle("class") - добавляет класс, если его нет и удаляет, если есть;
+classList.length - узнать количество классов;
+innerHTML - возвращает все ,вместе с синтаксисом 
+innerText - возвращает только текст 
+textContent - 

@@ -6,5 +6,14 @@
  */
 
 let fourthElement = document.getElementById("fourth-element");
-let upSub =  fourthElement.previousSibling;
-console.log(upSub)
+
+if(fourthElement){
+    fourthElement.previousElementSibling.insertAdjacentHTML("beforeend", "!");
+    fourthElement.nextElementSibling.insertAdjacentHTML("beforeend","!");
+    fourthElement.nextElementSibling.nextElementSibling.insertAdjacentHTML("beforeend", "!");
+}
+
+
+
+
+

@@ -5,8 +5,15 @@
  */
 
 let fifthElement = document.getElementById("fifth-element");
-let parent = document.querySelector("#fifth-element").parentElement;
-console.log(parent)
 
-let parentParants = document.querySelector("#fifth-element").parentNode;
-console.log(parentParants)
+if(fifthElement){
+    fifthElement.parentElement.style.color = "#00f";
+    fifthElement.parentElement.parentElement.style.color = "#ff0"
+}
+
+
+
+
+
+
+
