@@ -4,6 +4,15 @@ classList.remove("class") - удалить class;
 classList.contains("class") - проверяет наличие class у элемента;
 classList.toggle("class") - добавляет класс, если его нет и удаляет, если есть;
 classList.length - узнать количество классов;
-innerHTML - возвращает все ,вместе с синтаксисом 
+innerHTML - Свойство innerHTML позволяет получить HTML-содержимое элемента в виде строки.текстовое содержимое элемента, без тегов. То есть 
+            без форматирования
 innerText - возвращает только текст 
 textContent - 
+contains
+insertAdjacentElement
+insertAdjacent
+insertAdjacent
+getComputedStyle
+outerHTML - Свойство outerHTML содержит HTML элемента целиком. Это как innerHTML плюс сам элемент.в отличие от innerHTML, 
+            запись в outerHTML не изменяет элемент. Вместо этого элемент заменяется целиком во внешнем контексте.
+
