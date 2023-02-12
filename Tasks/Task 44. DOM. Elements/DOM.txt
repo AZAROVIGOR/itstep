@@ -16,3 +16,4 @@ getComputedStyle
 outerHTML - Свойство outerHTML содержит HTML элемента целиком. Это как innerHTML плюс сам элемент.в отличие от innerHTML, 
             запись в outerHTML не изменяет элемент. Вместо этого элемент заменяется целиком во внешнем контексте.
 
+setAttribute() - 

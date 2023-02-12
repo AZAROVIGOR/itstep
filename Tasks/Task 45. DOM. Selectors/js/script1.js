@@ -9,25 +9,24 @@
 
 let firstElement = document.querySelector("#first-element");
 let neighbors = firstElement.parentElement.querySelectorAll(".neighbor")
-console.log(neighbors)
-console.log(firstElement)
 
-if (neighbors.length){
+if (neighbors.length) {
     Array.from(neighbors).forEach(item => {
         item.innerHTML = "Я хороший сосед";
-    }) 
+    })
+
 
     Array.from(neighbors).forEach((item, index) => {
         item.innerHTML = `Я хороший сосед №${index + 1}`
     })
 
-   Array.from(neighbors).forEach(item => {
-       item.innerHTML = `<span>${item.innerHTML}</span>`
-   })
+    Array.from(neighbors).forEach(item => {
+        item.innerHTML = `<span>${item.innerHTML}</span>`
+    })
 
-   Array.from(neighbors).forEach(item =>{
-       item.innerHTML = `<b>${item.innerText}</b>`
-   })
+    Array.from(neighbors).forEach(item => {
+        item.innerHTML = `<b>${item.innerText}</b>`
+    })
 
     let lastNeighbor = document.querySelector(".fourth-neighbor");
     lastNeighbor.firstElementChild.innerHTML = "Я последний хороший сосед"

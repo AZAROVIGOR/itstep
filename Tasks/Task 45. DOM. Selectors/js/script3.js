@@ -27,7 +27,7 @@ if(thirdElement){
         }).join("");
         item.innerHTML = newStrong
     })
-
+   
 }
 
 
