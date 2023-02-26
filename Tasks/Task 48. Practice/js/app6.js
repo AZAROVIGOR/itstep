@@ -33,7 +33,12 @@ if (addButton) {
 
             buttonRemove.addEventListener("click", function () {
                 this.parentElement.remove();     //   this  - это формально buttonRemove , тот элемент на  который сейчас кликают 
+                
+                if (ul.children.length == 0) {  // если список пустой  , то удаляем ul
+                    ul.remove();
+                }
             })
+            
         }
 
         if (ul.children.length !== 0) {

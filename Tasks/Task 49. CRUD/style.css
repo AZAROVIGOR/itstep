@@ -2,8 +2,8 @@ table {
     border-spacing: 0px;
     border-collapse: collapse;
     border: 1px solid #fff;
-    width: 1500px;
-    height: 300px;
+    width: 453px;
+    height: 150px;
 
 
 }
@@ -27,4 +27,8 @@ tr:nth-child(2n+1) {
 
 tr:nth-child(2n) {
     background: #cce4e8;
+}
+
+input{
+    opacity: 0.5;
 }
