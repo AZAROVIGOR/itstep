@@ -17,6 +17,7 @@ form.addEventListener("submit", function (event) {
     div.innerHTML += `Образование: ${education}<br>`;
 
     let sex = document.getElementsByName("sex");
+    
     for(let element of sex){
         if (element.checked){
             div.innerHTML += `Пол: ${element.value}<br>`
@@ -74,14 +75,18 @@ form.addEventListener("submit", function (event) {
     }
 
     if (education == "") {
+        let span = document.getElementById("education");
+        if(span){
+            span.remove();
+        }
         let spanEducation = document.createElement("span");
         let formEducation = document.getElementById(".education");
         spanEducation.className = "formeducation"
         spanEducation.innerText = "Образование не выбрано"
-        formEducation.insertAdjacentElement("beforeend", spanEducation);
-        
     }
-    
-    
-    
+
+    let file = document.getElementById("file").value;
+    let x = file.split("\\");
+    div.innerHTML = `Файл: ${x.length-1}<br>`;
 })
+

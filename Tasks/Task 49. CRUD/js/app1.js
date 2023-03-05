@@ -53,7 +53,7 @@ addButton.addEventListener("click", function () {
         let food = this.closest("tr").firstElementChild.innerText
         let weight = this.closest("tr").firstElementChild.nextElementSibling.innerText
 
-        document.getElementById("food").value = food;    // при клике на  кнопку редактировать в input появляютя именно те значения которые мы хотим изменить
+        document.getElementById("food").value = food;    // при клике на  кнопку редактировать в input появляютя именно те значения которые мы хотим изменить c классом ".edit"
         document.getElementById("weight").value = weight;
 
         let trEdit = document.querySelector(".edit");
@@ -76,7 +76,7 @@ buttonSave.addEventListener("click", function () {
         trEdit.firstElementChild.innerText = food;
         trEdit.children[1].innerText = weight;
         trEdit.classList.remove("edit");
-        console.log(trEdit)
+        document.querySelector("input").value = "";
     }
 })
 

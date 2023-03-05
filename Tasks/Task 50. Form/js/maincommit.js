@@ -1,20 +1,19 @@
 let form = document.getElementById("reg_form");
 
 form.addEventListener("submit", function(event){
-    event.preventDefault(); // отменяет стандартные действия браузера
+    event.preventDefault();                                   // отменяет стандартные действия браузера
 
-    // <span class="error-text">Заполните поле</span>
+                                                             
 
-    let errors = document.querySelectorAll(".error-text");   // Находим все элементы с классом  .error-text
-    
-    if(errors.length){                                          // если в input что- то ввели
+    let errors = document.querySelectorAll(".error-text");   // Находим все элементы с классом  .error-text  (span заполните поле)
+    if(errors.length){                                          // если в input ничего не ввели добавляется span 
         Array.from(errors).forEach((errorSpan) => {                 // то у каждго найденого элемента
             errorSpan.parentElement.classList.remove("error");    // удаляем класс  error
             errorSpan.remove();                                     // удаляем <span></span>
         })
     }
 
-    let hasError = false;                   // 
+    let hasError = false;                   // проверка на  ошибки предпологаем что ошибок нет
 
     let nameInput = document.querySelector("#name");
     let emailInput = document.querySelector("#email");
@@ -29,9 +28,9 @@ form.addEventListener("submit", function(event){
             let span = document.createElement("span");
             span.className = "error-text"; // span.classList.add("error-text");   вешаем элементу span class "error-text"
             span.innerText = "Заполните поле";                      // со значением  "Заполните поле"
-            field.insertAdjacentElement("afterend", span);  // в элементы input  заносим span
+            field.insertAdjacentElement("afterend", span);  // в элементы input  заносим span  // <span class="error-text">Заполните поле</span>
             field.parentElement.classList.add("error");  //  родителю inputa  добавляем класс  "error"
-            hasError = true;  // 
+            hasError = true;  // если ошибка есть меняем на true => ошибка  есть 
         }
     });
 
@@ -63,7 +62,7 @@ form.addEventListener("submit", function(event){
         hasError = true;
     }
 
-    if (!hasError) {                                      // если hasError  везде не true
+    if (!hasError) {                                      // если hasError  везде не true  если везде ошибок не было то выводим данные
         let div = document.querySelector(".result");
 
         div.innerHTML += `Имя: ${nameInput.value}<br>`;    // выводим в  div . result все значения
