@@ -44,7 +44,8 @@ form.addEventListener("submit", function (event) {
     }
 
     if (!hasError) {
-        let locality = document.getElementById("name").value;
+        let local = document.getElementById("name").value;
+        let locality = local[0].toUpperCase() + local.slice(1);
         let region = document.getElementById("region").value;
         let tr = document.createElement("tr");
 
@@ -91,7 +92,7 @@ form.addEventListener("submit", function (event) {
             let locality = this.closest("tr").firstElementChild.innerText;
             let region = this.closest("tr").firstElementChild.nextElementSibling.innerText;
             let typeLocality = document.getElementsByName("type-locality");
-            let type = Array.from(typeLocality).forEach(item => {
+            Array.from(typeLocality).forEach(item => {
                 if (item.checked) {
                     typeValue = item.value;
                 }
@@ -100,6 +101,7 @@ form.addEventListener("submit", function (event) {
 
             document.getElementById("name").value = locality;
             document.getElementById("region").value = region;
+            document.querySelectorAll("type-locality").value = typeValue;
 
             let trEdit = document.querySelector(".edit");
             if (trEdit) {
@@ -108,6 +110,7 @@ form.addEventListener("submit", function (event) {
             this.closest("tr").classList.add("edit");
         })
     }
+    
 })
 
 let buttonSave = document.querySelector(".btn-save");
@@ -115,14 +118,26 @@ let buttonSave = document.querySelector(".btn-save");
 buttonSave.addEventListener("click", function () {
     let trEdit = document.querySelector(".edit");
     if (trEdit) {
-        let locality = document.getElementById("name").value;
+        let local = document.getElementById("name").value;
+        let locality = local[0].toUpperCase() + local.slice(1);
         let region = document.getElementById("region").value;
-
+        let typeLocality = document.getElementsByName("type-locality");
+        Array.from(typeLocality).forEach(item => {
+            if (item.checked) {
+                typeValue = item.value;
+            }
+        })
+       
+        console.log(typeLocality);
+        console.log(typeValue);
         trEdit.firstElementChild.innerText = locality;
         trEdit.children[1].innerText = region;
+        trEdit.children[2].innerText = typeValue;
+        
         trEdit.classList.remove(".edit")
-        document.querySelector("input").value = "";
+        
     }
+    form.reset();
 })
 
 
