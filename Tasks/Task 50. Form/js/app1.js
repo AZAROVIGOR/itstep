@@ -85,8 +85,12 @@ form.addEventListener("submit", function (event) {
         spanEducation.innerText = "Образование не выбрано"
     }
 
-    let file = document.getElementById("file").value;
-    let x = file.split("\\");
-    div.innerHTML = `Файл: ${x.length-1}<br>`;
+    let path = avatarInput.value;
+    let pathArray = path.split("\\");
+    let file = pathArray[pathArray.length - 1];
+    div.innerHTML += `Аватар: ${file}<br>`;
+
+    this.reset();
+
 })
 

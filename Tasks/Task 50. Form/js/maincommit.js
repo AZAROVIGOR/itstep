@@ -85,6 +85,12 @@ form.addEventListener("submit", function(event){
 
         div.innerHTML += `Хобби: ${hobbyValue.join(",")}<br>`;  // в div с result помещаем  помещаем  хобби 
         div.innerHTML += `О себе: ${aboutInput.value}<br>`;
+
+        let path = avatarInput.value;
+        let pathArray = path.split("\\");
+        let file = pathArray[pathArray.length - 1];
+        div.innerHTML += `Аватар: ${file}<br>`;
+
         this.reset(); // очищение формы this==form
     }
 })

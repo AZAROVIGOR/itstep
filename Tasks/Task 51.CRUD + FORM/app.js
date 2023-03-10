@@ -97,8 +97,7 @@ form.addEventListener("submit", function (event) {
                     typeValue = item.value;
                 }
             })
-            console.log(typeValue);
-
+            
             document.getElementById("name").value = locality;
             document.getElementById("region").value = region;
             document.querySelectorAll("type-locality").value = typeValue;
