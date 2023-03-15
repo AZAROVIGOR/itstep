@@ -1,9 +1,11 @@
-/*
-3. Дана шахматная таблица 4х4 и 3 кнопки
-    - при нажатии на первую кнопку на доску случайным образом должна помещаться шашка в одну из клеток. Если шашка уже стоит, то она должна удалятся и ставится новая;
-    - при нажатии на вторую кнопку черные клетки должны меняться на белые, а белые - на черные;
-    - при нажатии на третью кнопку доска должна поворачиваться на 90 градусов (использовать CSS-анимацию)
-    */
+
+// 3. Дана шахматная таблица 4х4 и 3 кнопки
+//     - при нажатии на первую кнопку на доску случайным образом должна помещаться шашка в одну из клеток. Если шашка уже стоит, то она должна удалятся и ставится новая;
+//     - при нажатии на вторую кнопку черные клетки должны меняться на белые, а белые - на черные;
+//     - при нажатии на третью кнопку доска должна поворачиваться на 90 градусов (использовать CSS-анимацию)
+
+    
+
 let out = "<table class='chess'>";
 
 for (let i = 1; i <= 4; i++) {
@@ -20,6 +22,7 @@ for (let i = 1; i <= 4; i++) {
 }
 
 out += "</table>";
+
 document.write(out);
 
 const button1 = document.querySelector(".btn-1");
@@ -29,14 +32,19 @@ const button3 = document.querySelector(".btn-3");
 
 button1.addEventListener("click", function (event) {
     let td = document.querySelectorAll("td");
-    let circle = document.createElement("div");
-    circle.classList.add("circle");
-    circle.style.width = `50px`;
-    circle.style.height = `50px`;
-
+    let div = document.createElement("div");
+    
+    let random = Math.round((Math.random() * td.length));
+    console.log(random)
+    
+    let circle = document.querySelector(".circle");
+    
+    if(circle){
+        div.classList.remove("circle");
+    }
+    div.classList.add("circle");
     td.forEach(item => {
-        item.insertAdjacentElement("beforeend", circle);
-        console.log(item)
+        item.insertAdjacentElement("beforeend", div);
     })
 
 })
@@ -49,21 +57,21 @@ button2.addEventListener("click", function (event) {
     tdWhite.forEach(item => {
         item.classList.remove("white")
         item.classList.add("black")
-        console.log(item)
+        
     })
     tdblack.forEach(item => {
         item.classList.remove("black")
         item.classList.add("white")
-        console.log(item)
+        
     })
 })
 
 
 // //- при нажатии на третью кнопку доска должна поворачиваться на 90 градусов (использовать CSS-анимацию)
-
+let degree = 0;
 button3.addEventListener("click", function (event) {
     const table = document.querySelector(".chess");
-    let degree = 90;
+     degree += 90;
     let time = 2;
     table.style.transform = `rotate(${degree}deg)`;
     table.style.transitionDuration = `${time}s`;
