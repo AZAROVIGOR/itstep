@@ -3,23 +3,31 @@
 В случае неккоретного ввода чисел предусмотреть вывод сообщения об этом вместо результата.
 */
 
-let input1 = document.getElementById("number1");
-let input2 = document.getElementById("number2");
-let equals = document.querySelectorAll(".radio");
 
+let equals = document.querySelectorAll("input[name='equals']");
 
-console.log(equals)
-input1.addEventListener("change",function(){
-    console.log(this.value)
+for (let i = 0; i < equals.length; i++) {
+    equals[i].onchange = function () {
+
+        let number1 = +(document.getElementById("number1").value);
+        let number2 = +(document.getElementById("number2").value);
+
+        let radio = this.value;
+        let result = "";
+       
+        if(radio == "+"){
+            result = number1 + number2;
+        }
+        if(radio == "-"){
+            result = number1 - number2;
+        }
+        if(radio == "*"){
+            result = number1 * number2;
+        }
+        if(radio == "/"){
+            result = number1 / number2;
+        }
+        document.querySelector(".result").innerHTML = result;
+    }
    
-})
-
-input2.addEventListener("change", function(){
-    console.log(this.value)
-})
-
-equals.addEventListener("click", function(){
-    equals.forEach(item => {
-        console.log(5)
-    })
-})
+}
