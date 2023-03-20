@@ -12,4 +12,3 @@ item.addEventListener("mousemove", function (event) {
     
 })
 
-//relative.target

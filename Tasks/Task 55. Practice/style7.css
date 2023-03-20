@@ -7,9 +7,9 @@ td {
     width: 100px;
     height: 100px;
     border: 1px solid #000;
-    background-color: brown;
+    background-color: rgb(107, 91, 91);
 }
 
 .hover {
-    background: chartreuse;
+    background: rgb(154, 211, 218);
 }
