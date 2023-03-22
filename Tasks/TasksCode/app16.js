@@ -11,16 +11,6 @@ function invert(array) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
 let result = invert([1, -2, 3, -4, 5]);
 console.log(result);
 
