@@ -3,18 +3,19 @@
 то при нажатии на кнопку неоходимо подсчитать - сколько раз этот символ втречается в тексте.
 */
 
-document.addEventListener("keyup", function (event) {
-    event.preventDefault();
+document.querySelector("input").onkeyup = function (event) {
+    let symbol = this.value;
+    let text = document.querySelector(".text").textContent;
+    let showButton = document.querySelector(".btn-11");
 
-    document.addEventListener("keypress", function (event) {
-        let input = document.getElementById("text").value;
-        if (input.length <= 1) {
-            event.preventDefault();
-        }
-        console.log(input)
+    showButton.addEventListener("click", function (event) {
+        let count = text.toLowerCase().split(symbol).length - 1;
+        let result = document.querySelector(".result");
+        result.innerHTML = `Символ ${symbol} встечается в тексте ${count} раз`;
+        result.style.fontSize = "25px";
     })
-   
+}
 
-   
-   
-})
+
+
+

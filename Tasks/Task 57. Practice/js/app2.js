@@ -7,7 +7,7 @@
 let input = document.getElementById("number");
 
 input.addEventListener("focus", function(event){
-  this.style.backgroundColor = "#f0f";
+  this.style.backgroundColor = "#00f";
 });
 
 input.addEventListener("blur", function(){

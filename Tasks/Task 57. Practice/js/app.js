@@ -10,6 +10,10 @@ const colors = document.getElementById("color");
 colors.addEventListener("change", function(event){
     let options = document.querySelectorAll("option");
     
+    
+   
+   
+
     let block = document.querySelector(".block");
     block.style.backgroundColor = `${this.value}`;
 })

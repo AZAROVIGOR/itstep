@@ -18,5 +18,4 @@ button.addEventListener("click", function (event) {
         div.style.display = "none";
         button.innerHTML = "Показать";
     }
-
 })
