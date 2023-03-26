@@ -107,17 +107,12 @@ console.log(decreaseNumberArray);
 
 function presenceElementInArray(arrayRandomNumbers, x) {
 
-        
-
         for (let i = 0; i < arrayRandomNumbers.length; i++) {
                 if (arrayRandomNumbers[i] == x) {
                         return true;
-
                 }
         }
-        
         return false;
-
 }
 
 let presence = presenceElementInArray(5);
