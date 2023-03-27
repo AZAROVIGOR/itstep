@@ -4,9 +4,6 @@
 
  let arr = [1, 10, 3, 4, 9, 6]
 
-
-
-
 for (let i = 0; i < arr.length; i++) {
   setTimeout(() => console.log(`Элемент ${arr[i]}: индекс ${i}`), 3000 * i);
 }
