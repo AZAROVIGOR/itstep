@@ -2,13 +2,19 @@
 7. Данно 2 массива с целыми числами. Написать функцию, которая возвращает массив элементов, которые входят в оба массива без повторений. 
 */
 
-let arr1 = [1, 2 , 5, 6, 8, 2, 2, 5];
-let arr2 = [5, 6 , 8, 4, 2];
+function sortArray(arr1, arr2) {
+    let newArr1 = Array.from(new Set(arr1));
+    let newArr2 = Array.from(new Set(arr2));
+    let result = [];
 
-let uniqueArr = (arr1 , arr2) => {
-    let array = Array.from(new Set(arr1.concat(arr2)));
-    return array
+    newArr1.forEach(item => {
+        if (newArr2.includes(item)) {
+            result.push(item)
+        }
+    })
+    return result
 }
 
-let arr = uniqueArr(arr1, arr2)
-console.log(arr);
+let arr1 = [1, 2, 3, 4, 5, 3, 5, 9];
+let arr2 = [6, 2, 3, 4, 5, 7, 4, 2, 8, 9];
+console.log(sortArray(arr1, arr2));

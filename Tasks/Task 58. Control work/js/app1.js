@@ -5,13 +5,12 @@
 
 let twoStrings = (str1, str2) => {
     let firstStr = str1.toLowerCase().split("").sort().join('');
-   let secondStr =  str2.toLowerCase().split("").sort().join('');
-    if (firstStr === secondStr){
+    let secondStr = str2.toLowerCase().split("").sort().join('');
+    if (firstStr === secondStr) {
         return true
     }
     return false
-    
 }
 
-let result = twoStrings("Мама", "маМа" );
+let result = twoStrings("Мама", "маМа");
 console.log(result)
