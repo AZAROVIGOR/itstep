@@ -4,15 +4,34 @@
 */
 
 let ul = document.querySelector("ul");
-ul.addEventListener("click", function(event){
-    let li = document.querySelectorAll("li");
-   li.forEach(item => {
-    if(event.target % 2 == 0){
-        item.style.background = "red"
-    }
-    else{
-        item.style.background = "blue"
-    }
-   })
+ul.addEventListener("mouseover", function (event) {
     
+    let li = event.target;
+    if (li.tagName != "LI") {
+        return false
+    }
+
+    if ((+li.innerText % 2) == 0) {
+        li.classList.add("red");
+    }
+    else {
+        li.classList.add("blue");
+    }
+    })
+
+
+ul.addEventListener("mouseout", function (event) {
+    let li = event.target;
+    if (li.tagName != "LI") {
+        return false
+    }
+
+    if ((+li.innerText % 2) == 0) {
+        li.classList.remove("red");
+    }
+    else {
+        li.classList.remove("blue");
+    }
+
 })
+

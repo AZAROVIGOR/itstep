@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: center;
+   
+   
+}
+
+li{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
