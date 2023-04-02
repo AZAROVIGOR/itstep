@@ -5,9 +5,7 @@
 
 function countVowels(str) {
     const words = ("aeiou")
-
     return str.split("").filter(item => words.includes(item.toLowerCase())).length;
 }
-
 let string = countVowels("This website is for losers LOL!");
 console.log(string);
