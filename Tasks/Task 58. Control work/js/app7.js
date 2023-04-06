@@ -3,8 +3,7 @@
 */
 
 function sortArray(arr1, arr2) {
-    let newArr1 = Array.from(new Set(arr1));
-    let newArr2 = Array.from(new Set(arr2));
+    
     let result = [];
 
     newArr1.forEach(item => {
