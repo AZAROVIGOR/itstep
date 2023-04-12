@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        function Calculator() {
+            const [num1, setNum1] = React.useState(0);
+            const [num2, setNum2] = React.useState(0);
+
+            function counter() {
+                let inputNum1 = document.getElementById("num1");
+                let inputNum2 = document.getElementById("num2");
+
+                setNum1(+inputNum1.value);
+                setNum2(+inputNum2.value);
+            }
+
+            return (
+                <div>
+                    <input type="text" id="num1" name="num1" />
+                    <input type="text" id="num2" name="num2" />
+                    <button onClick={counter}>Посчитать</button>
+                    <div>
+                        Сумма:{num1} + {num2} = {num1 + num2} <br />
+                        Разность:{num1} - {num2} = {num1 - num2} <br />
+                        Произведение:{num1} * {num2} = {num1 * num2} <br />
+                        {num2 == 0 &&
+                           
+                            <span>Деление на ноль</span>
+                        }
+                        {num2 != 0 &&
+                            <span>Частное: {num1}:{num2}={num1 / num2}</span>
+                        }
+                    </div>
+                </div>
+            );
+        }
+         ReactDOM.createRoot(document.getElementById("app"))
+                .render(
+                    <Calculator />
+                );
+    </script>
+</body>
+
+</html>
