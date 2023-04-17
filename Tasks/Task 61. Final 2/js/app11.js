@@ -6,15 +6,20 @@
 */
 
 const addButton = document.querySelector(".add_button");
-
+let count = 0;
 addButton.addEventListener("click", function () {
     let code = document.getElementById("code").value;
     let name = document.getElementById("name").value;
     let price = Number(document.getElementById("price").value);
     let quantity =Number(document.getElementById("quantity").value);
+    
+    let result = document.querySelector(".result");
+   
 
-    console.log(typeof price, price)
-    console.log(typeof quantity, quantity)
+    count += ((price * 100) * quantity) / 100;
+    result.innerText = `Стоимость продуктов: ${count}`;    
+
+    
 
     let tdCode = document.createElement("td");
     let tdName = document.createElement("td");
@@ -83,8 +88,12 @@ buttonSave.addEventListener("click", function () {
     if (trEdit) {
         let code = document.getElementById("code").value;
         let name = document.getElementById("name").value;
-        let price = document.getElementById("price").value;
-        let quantity = document.getElementById("quantity").value;
+        let price = Number(document.getElementById("price").value);
+        let quantity = Number(document.getElementById("quantity").value);
+        
+
+        result.innerText = `Стоимость продуктов: ${count}`;  
+       
 
         trEdit.firstChild.innerText = code;
         trEdit.children[1].innerText = name;
@@ -94,4 +103,23 @@ buttonSave.addEventListener("click", function () {
        trEdit.classList.remove(".edit")
     }
 
+})
+
+
+let table = document.getElementById("table");
+
+table.addEventListener("dblclick", function(event){
+  
+    let value = event.target.innerHTML;
+   
+    let input = document.createElement("input");
+    input.type = 'text';
+    input.classList.add("editInput")
+    input.value = value;
+    
+    event.target.innerHTML = '';
+    event.target.appendChild(input);
+ 
+    input.focus()
+    
 })

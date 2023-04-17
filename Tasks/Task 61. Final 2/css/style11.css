@@ -95,3 +95,7 @@ tr{
 .result{
     font-size: 25px;
 }
+
+.editInput{
+    width: 130px;
+}
