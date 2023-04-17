@@ -127,8 +127,6 @@ buttonSave.addEventListener("click", function () {
             }
         })
        
-        console.log(typeLocality);
-        console.log(typeValue);
         trEdit.firstElementChild.innerText = locality;
         trEdit.children[1].innerText = region;
         trEdit.children[2].innerText = typeValue;

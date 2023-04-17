@@ -17,14 +17,18 @@
     <script type="text/babel">
 
         function List() {
-            const [number, setNumber] = React.useState(0);
-            const [arr, setArr] = React.useState([]);
-
+             const [num, setNum] = React.useState(0)
+             const [arr, setArr] = React.useState([]);
+           
+             function list(){
+               
+               
+            }
             return (
                 <div>
                     <ul>
-                        <ul>{arr}</ul>
-                    </ul>
+
+                        </ul>
                     <input type="number" id="number" name="number" />
                     <button onClick={list}>Добавить список</button>
                 </div>

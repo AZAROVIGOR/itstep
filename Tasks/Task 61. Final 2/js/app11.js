@@ -5,13 +5,16 @@
 Под таблицей должна выводится суммарная стоимость продуктов, которая должна пересчитываться при добавлении, удалении и редактировании продуктов.
 */
 
-const addButton = document.querySelector(".btn-4");
+const addButton = document.querySelector(".add_button");
 
 addButton.addEventListener("click", function () {
     let code = document.getElementById("code").value;
     let name = document.getElementById("name").value;
-    let price = document.getElementById("price").value;
-    let quantity = document.getElementById("quantity").value;
+    let price = Number(document.getElementById("price").value);
+    let quantity =Number(document.getElementById("quantity").value);
+
+    console.log(typeof price, price)
+    console.log(typeof quantity, quantity)
 
     let tdCode = document.createElement("td");
     let tdName = document.createElement("td");
@@ -22,6 +25,7 @@ addButton.addEventListener("click", function () {
     tdName.innerText = name;
     tdPrice.innerText = price;
     tdQuantity.innerText = quantity;
+    
 
     let tr = document.createElement("tr");
     let td = document.createElement("td");
@@ -52,21 +56,42 @@ addButton.addEventListener("click", function () {
     })
 
     editButton.addEventListener("click", function () {
+        let code = this.closest("tr").firstElementChild.innerText;
+        let name = this.closest("tr").firstElementChild.nextElementSibling.innerText;
+        let price = this.closest("tr").lastElementChild.previousElementSibling.previousElementSibling.innerText;
+        let quantity = this.closest("tr").lastElementChild.previousElementSibling.innerText;
+
+        document.getElementById("code").value = code;
+        document.getElementById("name").value = name;
+        document.getElementById("price").value = price;
+        document.getElementById("quantity").value = quantity;
+
         let trEdit = document.querySelector(".edit");
         if (trEdit) {
             trEdit.closest("tr").classList.remove("edit");
         }
         this.closest("tr").classList.add("edit");
 
-        let code = this.closest("tr").firstElementChild.innerText;
-        let name = this.closest("tr").firstElementChild.nextElementSibling.innerText;
-        let price = this.closest("tr").lastElementChild.previousElementSibling.previousElementSibling.innerText;
-        let quantity = this.closest("tr").lastElementChild.previousElementSibling.innerText;;
-
-        document.getElementById("code").value = code;
-        document.getElementById("name").value = name;
-        document.getElementById("price").value = price;
-        document.getElementById("quantity").value = quantity;
     })
-    
+
+})
+
+const buttonSave = document.querySelector(".save_button");
+
+buttonSave.addEventListener("click", function () {
+    let trEdit = document.querySelector(".edit");
+    if (trEdit) {
+        let code = document.getElementById("code").value;
+        let name = document.getElementById("name").value;
+        let price = document.getElementById("price").value;
+        let quantity = document.getElementById("quantity").value;
+
+        trEdit.firstChild.innerText = code;
+        trEdit.children[1].innerText = name;
+        trEdit.children[2].innerText = price;
+        trEdit.children[3].innerText = quantity;
+
+       trEdit.classList.remove(".edit")
+    }
+
 })
