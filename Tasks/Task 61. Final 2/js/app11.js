@@ -6,26 +6,18 @@
 */
 
 const addButton = document.querySelector(".add_button");
-let count = 0;
+
 addButton.addEventListener("click", function () {
     let code = document.getElementById("code").value;
     let name = document.getElementById("name").value;
     let price = Number(document.getElementById("price").value);
-    let quantity =Number(document.getElementById("quantity").value);
-    
-    let result = document.querySelector(".result");
-   
-
-    count += ((price * 100) * quantity) / 100;
-    result.innerText = `Стоимость продуктов: ${count}`;    
-
-    
+    let quantity = Number(document.getElementById("quantity").value);
 
     let tdCode = document.createElement("td");
     let tdName = document.createElement("td");
     let tdPrice = document.createElement("td");
     let tdQuantity = document.createElement("td");
-
+    
     tdCode.innerText = code;
     tdName.innerText = name;
     tdPrice.innerText = price;
@@ -35,6 +27,7 @@ addButton.addEventListener("click", function () {
     let tr = document.createElement("tr");
     let td = document.createElement("td");
 
+    costOfProducts()
     let deleteButton = document.createElement("button");
     deleteButton.className = ("delete_button");
     deleteButton.innerText = ("Удалить");
@@ -55,9 +48,10 @@ addButton.addEventListener("click", function () {
 
     let tBody = document.querySelector("tbody");
     tBody.insertAdjacentElement("beforeend", tr);
-
+    
     deleteButton.addEventListener("click", function () {
         this.closest("tr").remove();
+       
     })
 
     editButton.addEventListener("click", function () {
@@ -76,50 +70,72 @@ addButton.addEventListener("click", function () {
             trEdit.closest("tr").classList.remove("edit");
         }
         this.closest("tr").classList.add("edit");
-
     })
+    
+})
 
+const table = document.getElementById("table");
+table.addEventListener("dblclick", function (event) {
+
+    let code = event.target.innerText;
+    let name = event.target.innerText;
+    let price = event.target.innerText;
+    let quantity = event.target.innerText;
+
+    console.log(code)
+    console.log(price)
+    console.log(quantity)
+
+    document.getElementById("code").value = code;
+    document.getElementById("name").value = name;
+    document.getElementById("price").value = price;
+    document.getElementById("quantity").value = quantity;
+    
+    // let trEdit = document.querySelector(".edit");
+    // if (trEdit) {
+    //     trEdit.closest("tr").classList.remove("edit");
+    // }
+    // event.target.closest("tr").classList.add("edit");
+  
 })
 
 const buttonSave = document.querySelector(".save_button");
-
 buttonSave.addEventListener("click", function () {
     let trEdit = document.querySelector(".edit");
+   
     if (trEdit) {
         let code = document.getElementById("code").value;
         let name = document.getElementById("name").value;
-        let price = Number(document.getElementById("price").value);
-        let quantity = Number(document.getElementById("quantity").value);
-        
-
-        result.innerText = `Стоимость продуктов: ${count}`;  
-       
+        let price = document.getElementById("price").value;
+        let quantity = document.getElementById("quantity").value;
 
         trEdit.firstChild.innerText = code;
         trEdit.children[1].innerText = name;
         trEdit.children[2].innerText = price;
         trEdit.children[3].innerText = quantity;
-
-       trEdit.classList.remove(".edit")
+        
+        trEdit.classList.remove(".edit")
     }
-
+    
 })
 
 
-let table = document.getElementById("table");
-
-table.addEventListener("dblclick", function(event){
-  
-    let value = event.target.innerHTML;
+function costOfProducts() {
+    let tr = document.querySelectorAll("tr");
+    let totalСost = 0;
    
-    let input = document.createElement("input");
-    input.type = 'text';
-    input.classList.add("editInput")
-    input.value = value;
-    
-    event.target.innerHTML = '';
-    event.target.appendChild(input);
- 
-    input.focus()
-    
-})
+    if(tr.length){
+        tr.forEach((item) => {
+            let cost = +item.children[2].innerText;
+            let quantity = +item.children[3].innerText;
+            totalСost += cost * quantity;
+            console.log(cost)
+            console.log(quantity)
+            
+        })
+    }
+    console.log(totalСost)
+    let result = document.querySelector(".result");
+    result.innerText = totalСost;
+
+}

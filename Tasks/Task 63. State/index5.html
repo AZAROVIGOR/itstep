@@ -10,7 +10,7 @@
 
 <body>
     <div id="app"></div>
-    
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -19,39 +19,63 @@
         function Calculator() {
             const [num1, setNum1] = React.useState(0);
             const [num2, setNum2] = React.useState(0);
+            const [operations, setOperations] = React.useState("");
 
             function counter() {
                 let inputNum1 = document.getElementById("num1");
                 let inputNum2 = document.getElementById("num2");
-
                 setNum1(+inputNum1.value);
                 setNum2(+inputNum2.value);
             }
 
+            function handleChangeNum1(event) {
+                setNum1(+event.target.value);
+            }
+
+            function handleChangeNum2(event) {
+                setNum2(+event.target.value);
+            }
+
+            function handleChangeOperations(event) {
+                setOperations(event.target.value);
+            }
+
             return (
                 <div>
-                    <input type="text" id="num1" name="num1" />
-                    <input type="text" id="num2" name="num2" />
-                    <button onClick={counter}>Посчитать</button>
+                    <input type="text" id="num1" name="num1" onChange={handleChangeNum1} />
+                    <input type="text" id="num2" name="num2" onChange={handleChangeNum2} />
+
+                    <select name="operations" id="operations" value={operations} onChange={handleChangeOperations}>
+                        <option value="*">Умножить</option>
+                        <option value="/">Разделить</option>
+                        <option value="+">Сложить</option>
+                        <option value="-">Вычесть</option>
+                    </select>
+
                     <div>
-                        Сумма:{num1} + {num2} = {num1 + num2} <br />
-                        Разность:{num1} - {num2} = {num1 - num2} <br />
-                        Произведение:{num1} * {num2} = {num1 * num2} <br />
-                        {num2 == 0 &&
-                           
-                            <span>Деление на ноль</span>
+                        {operations == "*" &&
+                            <>Произведение: {num1}*{num2}={num1 * num2} <br /></>
                         }
-                        {num2 != 0 &&
-                            <span>Частное: {num1}:{num2}={num1 / num2}</span>
+                        {operations == "+" &&
+                            <>Сумма: {num1}+{num2}={num1 + num2} <br /></>
+                        }
+                        {operations == "-" &&
+                            <>Разность: {num1}-{num2}={num1 - num2} <br /></>
+                        }
+                        {operations == "/" && num2 == 0 &&
+                            <>Деление на ноль <br /></>
+                        }
+                        {operations == "/" && num2 != 0 &&
+                            <>Частное: {num1}:{num2}={num1 / num2} <br /></>
                         }
                     </div>
                 </div>
             );
         }
-         ReactDOM.createRoot(document.getElementById("app"))
-                .render(
-                    <Calculator />
-                );
+        ReactDOM.createRoot(document.getElementById("app"))
+            .render(
+                <Calculator />
+            );
     </script>
 </body>
 
