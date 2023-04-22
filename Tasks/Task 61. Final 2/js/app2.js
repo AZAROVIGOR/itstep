@@ -3,6 +3,7 @@
 */
 
 function countFolders(str) {
+
     return str.split("\\").length - 2
 }
 

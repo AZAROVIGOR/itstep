@@ -3,6 +3,7 @@
 let str = "самый часто встечаемый элемент";
 
 let unique = Array.from(new Set(str.toLowerCase().split("")));
+
 let uniqueCount = [];
 
 unique.forEach((item, index) => {

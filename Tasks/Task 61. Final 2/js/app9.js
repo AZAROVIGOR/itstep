@@ -3,8 +3,10 @@
 
 function getDate(str) {
     let newDate = str.split(".").reverse().join(".");
+
     let addDays = new Date(newDate);
     addDays.setDate(addDays.getDate() + 10);
+
     return addDays.toLocaleDateString();
 }
 

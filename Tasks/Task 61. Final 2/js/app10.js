@@ -7,24 +7,25 @@
 г) Создать массив типа Student, содержащий объекты класса Student и Aspirant. Вызвать метод getScholarship() для каждого элемента массива.
 */
 
-class Student{
+
+class Student {
     firstName;
     lastName;
     group;
     averageMark;
 
-    constructor(firstName,lastName,group,averageMark){
+    constructor(firstName, lastName, group, averageMark) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.group = group;
         this.averageMark = averageMark;
     }
 
-    getScholarship(averageMark){
-        if(this.averageMark == 5){
+    getScholarship(averageMark) {
+        if (this.averageMark == 5) {
             return "Сумма стипендии 100$"
         }
-        else{
+        else {
             "Сумма стипендии 80$"
         }
     }

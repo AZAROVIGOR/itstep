@@ -4,8 +4,10 @@
 */
 
 function removeSpaces(str) {
+
     let string = str.split(" ").filter(item => item).join(" ");
+
     return ` ${string} `
 }
 
-console.log(removeSpaces("     Дана         строка, состоящее  из   слов     "))
+console.log(removeSpaces("     Дана         строка, состоящее  из   слов     "));
