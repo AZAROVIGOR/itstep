@@ -1,141 +1,108 @@
-/*
-11. Реализовать калькулятор продуктов. Он будет представлять собой таблицу, в которую пользователь будет вносить свои покупки. 
-Покупки вносятся с помощью формы (код_товара, название, цена_одной_единицы, количество). Кроме того, для каждого продукта предусмотреть 
-кнопку удаления и редактирования. Редактирование также должно происходить по двойному клику по строке в таблице. 
-Под таблицей должна выводится суммарная стоимость продуктов, которая должна пересчитываться при добавлении, удалении и редактировании продуктов.
-*/
+const form = document.getElementById("reg_form");
 
-const addButton = document.querySelector(".add_button");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-addButton.addEventListener("click", function () {
-    let code = document.getElementById("code").value;
-    let name = document.getElementById("name").value;
-    let price = Number(document.getElementById("price").value);
-    let quantity = Number(document.getElementById("quantity").value);
+    let errors = document.querySelectorAll(".error-text");
 
-    let tdCode = document.createElement("td");
-    let tdName = document.createElement("td");
-    let tdPrice = document.createElement("td");
-    let tdQuantity = document.createElement("td");
-    
-    tdCode.innerText = code;
-    tdName.innerText = name;
-    tdPrice.innerText = price;
-    tdQuantity.innerText = quantity;
-    
-
-    let tr = document.createElement("tr");
-    let td = document.createElement("td");
-
-    costOfProducts()
-    let deleteButton = document.createElement("button");
-    deleteButton.className = ("delete_button");
-    deleteButton.innerText = ("Удалить");
-    deleteButton.classList.add("btn-3");
-    td.insertAdjacentElement("beforeend", deleteButton);
-
-    let editButton = document.createElement("button");
-    editButton.className = ("edit_button");
-    editButton.innerText = ("Редактировать");
-    editButton.classList.add("btn-3")
-    td.insertAdjacentElement("beforeend", editButton);
-
-    tr.insertAdjacentElement("beforeend", tdCode);
-    tr.insertAdjacentElement("beforeend", tdName);
-    tr.insertAdjacentElement("beforeend", tdPrice);
-    tr.insertAdjacentElement("beforeend", tdQuantity);
-    tr.insertAdjacentElement("beforeend", td);
-
-    let tBody = document.querySelector("tbody");
-    tBody.insertAdjacentElement("beforeend", tr);
-    
-    deleteButton.addEventListener("click", function () {
-        this.closest("tr").remove();
-       
-    })
-
-    editButton.addEventListener("click", function () {
-        let code = this.closest("tr").firstElementChild.innerText;
-        let name = this.closest("tr").firstElementChild.nextElementSibling.innerText;
-        let price = this.closest("tr").lastElementChild.previousElementSibling.previousElementSibling.innerText;
-        let quantity = this.closest("tr").lastElementChild.previousElementSibling.innerText;
-
-        document.getElementById("code").value = code;
-        document.getElementById("name").value = name;
-        document.getElementById("price").value = price;
-        document.getElementById("quantity").value = quantity;
-
-        let trEdit = document.querySelector(".edit");
-        if (trEdit) {
-            trEdit.closest("tr").classList.remove("edit");
-        }
-        this.closest("tr").classList.add("edit");
-    })
-    
-})
-
-const table = document.getElementById("table");
-table.addEventListener("dblclick", function (event) {
-
-    let code = event.target.innerText;
-    let name = event.target.innerText;
-    let price = event.target.innerText;
-    let quantity = event.target.innerText;
-
-    console.log(code)
-    console.log(price)
-    console.log(quantity)
-
-    document.getElementById("code").value = code;
-    document.getElementById("name").value = name;
-    document.getElementById("price").value = price;
-    document.getElementById("quantity").value = quantity;
-    
-    // let trEdit = document.querySelector(".edit");
-    // if (trEdit) {
-    //     trEdit.closest("tr").classList.remove("edit");
-    // }
-    // event.target.closest("tr").classList.add("edit");
-  
-})
-
-const buttonSave = document.querySelector(".save_button");
-buttonSave.addEventListener("click", function () {
-    let trEdit = document.querySelector(".edit");
-   
-    if (trEdit) {
-        let code = document.getElementById("code").value;
-        let name = document.getElementById("name").value;
-        let price = document.getElementById("price").value;
-        let quantity = document.getElementById("quantity").value;
-
-        trEdit.firstChild.innerText = code;
-        trEdit.children[1].innerText = name;
-        trEdit.children[2].innerText = price;
-        trEdit.children[3].innerText = quantity;
-        
-        trEdit.classList.remove(".edit")
-    }
-    
-})
-
-
-function costOfProducts() {
-    let tr = document.querySelectorAll("tr");
-    let totalСost = 0;
-   
-    if(tr.length){
-        tr.forEach((item) => {
-            let cost = +item.children[2].innerText;
-            let quantity = +item.children[3].innerText;
-            totalСost += cost * quantity;
-            console.log(cost)
-            console.log(quantity)
-            
+    if (errors.length) {
+        Array.from(errors).forEach((errorSpan) => {
+            errorSpan.parentElement.classList.remove("error");
+            errorSpan.remove();
         })
     }
-    console.log(totalСost)
-    let result = document.querySelector(".result");
-    result.innerText = totalСost;
 
+    let hasError = false;
+
+    let data = new FormData(this);
+
+    data.forEach((value, name) => {
+        if (value == "") {
+            let span = document.createElement("span");
+            span.className = "error-text";
+            span.innerText = "Заполните поле";
+
+            let field = this.querySelector(`[name="${name}"]`);
+            if (name != "type") {
+                field.insertAdjacentElement("afterend", span);
+                field.parentElement.classList.add("error");
+            } else {
+                field.parentElement.parentElement.insertAdjacentElement("beforeend", span);
+                field.parentElement.parentElement.classList.add("error");
+            }
+            hasError = true;
+        }
+    })
+    if (!hasError) {
+        let table = document.querySelector("tbody");
+        let saveButton = this.querySelector("button.save");
+        if (saveButton) {
+            let tr = document.querySelector(".edit-row");
+            let index = 0;
+            data.forEach((value, name) => {
+                let td = tr.children[index];
+                td.innerText = value;
+                index++;
+            });
+            saveButton.innerText = "Добавить";
+            saveButton.classList.remove("save");
+            tr.classList.remove("edit-row");
+            totalSum()
+        }
+        else {
+            let tr = document.createElement("tr");
+            data.forEach((value, name) => {
+                let td = document.createElement("td");
+                td.innerText = value;
+                tr.insertAdjacentElement("beforeend", td);
+            });
+
+            let tdAction = document.createElement("td");
+
+            let editButton = document.createElement("button");
+            editButton.innerText = "Редактировать";
+            tdAction.insertAdjacentElement("beforeend", editButton);
+
+            let deleteButton = document.createElement("button");
+            deleteButton.innerText = "Удалить";
+            tdAction.insertAdjacentElement("beforeend", deleteButton);
+
+            tr.insertAdjacentElement("beforeend", tdAction);
+            table.insertAdjacentElement("beforeend", tr);
+
+            deleteButton.addEventListener("click", function () {
+                this.closest("tr").remove();
+                totalSum()
+            })
+            editButton.addEventListener("click", function () {
+                let editTr = document.querySelector(".edit-row");
+                if (editTr) {
+                    editTr.classList.remove("edit-row");
+                }
+                this.closest("tr").classList.add("edit-row");
+
+                document.querySelector(`[name="code"]`).value = this.closest("tr").children[0].innerText;
+                document.querySelector(`[name="name"]`).value = this.closest("tr").children[1].innerText;
+                document.querySelector(`[name="price"]`).value = this.closest("tr").children[2].innerText;
+                document.querySelector(`[name="quantity"]`).value = this.closest("tr").children[3].innerText;
+                document.querySelector("[type='submit']").innerText = "Сохранить";
+                document.querySelector("[type='submit']").classList.add("save");
+            })
+            totalSum()
+        }
+        this.reset();
+    }
+})
+
+function totalSum() {
+    let tr = document.querySelectorAll("tbody tr");
+    let result = 0;
+    if (tr.length) {
+        tr.forEach((item) => {
+            let price = +item.children[2].innerText;
+            let quantity = +item.children[3].innerText;
+            result += price * quantity;
+        });
+    }
+    document.querySelector(".result").innerText = `Стоимость продуктов: ${result}р.`;
 }

@@ -22,13 +22,13 @@ body {
     border-spacing: 0px 1px;
 }
 
-input{
-    width: 247px;
+input {
+    width: 100%;
     height: 25px;
     border: 0;
     border-bottom: 1px solid #732a85;
     box-shadow: 0 0 15px 4px rgba(82, 5, 113, 0.08);
-   
+
 }
 
 td {
@@ -47,14 +47,14 @@ th {
     height: 50px;
 }
 
-tr{
+tr {
     background: linear-gradient(221.87deg, #85b3b3 1%, #c4adc2 128%);
     color: aliceblue;
 }
 
 .btn-3 {
     background-color: #4dccc6;
-    background-image: linear-gradient(315deg, #171818 0%,#7f417f 74%);
+    background-image: linear-gradient(315deg, #171818 0%, #7f417f 74%);
     line-height: 42px;
     padding: 0;
     border: none;
@@ -74,12 +74,13 @@ tr{
 
 .btn-4 {
     background-color: #4dccc6;
-    background-image: linear-gradient(315deg, #85d8d4 0%,#8f6e8f 74%);
+    background-image: linear-gradient(315deg, #85d8d4 0%, #8f6e8f 74%);
     line-height: 42px;
     padding: 0;
     border: none;
-    width: 49%;
+    width: 100%;
     margin-bottom: 15px;
+    margin-top: 35px;
     font-size: 15px;
     color: aliceblue;
     border-radius: 5px;
@@ -92,10 +93,26 @@ tr{
     background-image: linear-gradient(315deg, #d4cb50 0%, #984993 74%);
 }
 
-.result{
+.result {
     font-size: 25px;
 }
 
-.editInput{
+.editInput {
     width: 130px;
+}
+
+.error-text {
+    color: red;
+    font-size: 14px;
+    right: 125px;
+}
+
+.input_fields {
+    display: flex;
+}
+
+span {
+    position: relative;
+    top: 30px;
+    width: 100%;
 }

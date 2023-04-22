@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        function appBook() {
+            const[book, setBook] = React.useState({
+                title: "",
+                author: "",
+                genre: "Фентези",
+                pages: 0
+            });
+
+            const[books, setBooks] = React.useState([{
+                title: "Хоббит",
+                author: "Дж.Р.Р.Толкиен",
+                genre: "Фентези",
+                pages: 600
+            }]);
+            
+            function handleChangeSubmit(event) {
+                event.preventDefault();
+                 setBooks([...books, book]);                  {/*в массив books добавляем новую book и  обновляем до настройки по умолчанию*/}
+                setBook({
+                    title: "",                                 
+                    author: "",
+                    genre: "Детектив",
+                    pages: 0
+                });
+            }
+
+            function handleChangeButton(event){
+
+            }
+
+            
+
+            function handleChangeName(event){
+                setBook(event.target.value)
+            }
+
+            return (
+                <div>
+                    <div>
+                        <form action="" onSubmit = {handleChangeSubmit}></form>
+                        <div>
+                            <label for="title">Название</label>
+                            <input type="text" id="name" name="name" onChange={handleChangeName} />
+                        </div>
+                        <div>
+                             <label for="author">Автор</label>
+                             <textarea name="author" id="author" onChange={handleChangeAuthor} ></textarea> {/*kjbhjbhjvjghvghj*/}
+                        </div>
+                        <div>
+                             <label for="genre">Жанр</label>
+                            <select name="genre" id="genre"> onChange={handleChangeGenre}
+                                <option value="">Фентези</option>
+                                <option value="">Детектив</option>
+                                <option value="">Приключение</option>
+                                <option value="">Комедия</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="pages">Количество страниц</label>
+                             <input type="text" id="numberOfPages" name="numberOfPages" onChange={handleChangeNumberOfPages} />
+                        </div>
+                        <button type="submit">Сохранить</button>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <th>Номер</th>
+                                <th>Название</th>
+                                <th>Автор</th>
+                                <th>Жанр</th>
+                                <th>Количество страниц</th>
+                                <th>Действия</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Хоббит</td>
+                                <td>Дж.Р.Р.Толкиен</td>
+                                <td>Фентези</td>
+                                <td>600</td>
+                                <td>
+                                    <button >Редактировать</button>
+                                    <button>Удалить</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            )
+        }
+        ReactDOM.createRoot(
+            document.getElementById("app")
+        )
+            .render(
+                <appBook />
+            );
+    </script>
+</body>
+
+</html>
