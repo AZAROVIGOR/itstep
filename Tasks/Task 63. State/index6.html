@@ -17,19 +17,22 @@
     <script type="text/babel">
 
         function List() {
-             const [num, setNum] = React.useState(0)
-             const [arr, setArr] = React.useState([]);
+             const[count, setCount] = React.useState(0); 
            
-             function list(){
-              
+             function outList(event){
+               setCount(event.target.previousElementSibling.value);
             }
             return (
                 <div>
-                    <ul>
-
+                    <input type="text" id = "x"/>
+                    <button onClick = {outList}>Вывести</button>
+                    <div>
+                        <ul>
+                            {[...Array(+count)].map((item, index)=>{
+                                return <li>Пункт{index + 1}</li>
+                            })}
                         </ul>
-                    <input type="number" id="number" name="number" />
-                    <button onClick={list}>Добавить список</button>
+                    </div>
                 </div>
             );
         }
