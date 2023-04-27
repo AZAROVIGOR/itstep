@@ -10,105 +10,125 @@
 
 <body>
     <div id="app"></div>
-    
+
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
 
-        function appBook() {
-            const[book, setBook] = React.useState({
-                title: "",
-                author: "",
-                genre: "Фентези",
-                pages: 0
-            });
-
-            const[books, setBooks] = React.useState([{
-                title: "Хоббит",
-                author: "Дж.Р.Р.Толкиен",
-                genre: "Фентези",
-                pages: 600
-            }]);
-            
-            function handleChangeSubmit(event) {
-                event.preventDefault();
-                 setBooks([...books, book]);                  {/*в массив books добавляем новую book и  обновляем до настройки по умолчанию*/}
-                setBook({
-                    title: "",                                 
+        function App() {
+           const [book, setBook] = React.useState(
+                {
+                    title: "",
                     author: "",
                     genre: "Детектив",
+                    pages: 0
+                }
+            );
+
+            const [books, setBooks] = React.useState([
+                {
+                    title: "Хоббит",
+                    author: "Дж.Р.Р.Толкиен",
+                    genre: "Фэнтези",
+                    pages: 368,
+                }
+            ]);
+
+           function handleFormSubmit(event) {
+                event.preventDefault();
+                setBooks([...books, book]);
+                setBook({
+                    title: "",
+                    author: "",
+                    genre: "",
                     pages: 0
                 });
             }
 
-            function handleChangeButton(event){
-
+            function handleFormSubmit(event) {
+                event.preventDefault();
+                setBooks([...books, book]);
+                
             }
 
-            function handleChangeName(event){
-                setBook(event.target.value)
+            function handleTitleChange(event) {
+                setBook({ ...book, title: event.target.value });
+            }
+            function handleAuthorChange(event) {
+                setBook({ ...book, author: event.target.value });
+            }
+            function handleGenreChange(event) {
+                setBook({ ...book, genre: event.target.value });
+            }
+            function handlePagesChange(event) {
+                setBook({ ...book, pages: event.target.value });
             }
 
-            return (
+            return <>
                 <div>
-                    <div>
-                        <form action="" onSubmit = {handleChangeSubmit}></form>
+                    <form action="" onSubmit={handleFormSubmit}>
                         <div>
                             <label for="title">Название</label>
-                            <input type="text" id="name" name="name" onChange={handleChangeName} />
+                            <input type="text" value={book.title} name="title" id="title" onChange={handleTitleChange} />
                         </div>
                         <div>
-                             <label for="author">Автор</label>
-                             <textarea name="author" id="author" onChange={handleChangeAuthor} ></textarea> {/*kjbhjbhjvjghvghj*/}
+                            <label for="author">Автор</label>
+                            <textarea name="author" id="author" value={book.author} onChange={handleAuthorChange} />
                         </div>
                         <div>
-                             <label for="genre">Жанр</label>
-                            <select name="genre" id="genre"> onChange={handleChangeGenre}
-                                <option value="">Фентези</option>
-                                <option value="">Детектив</option>
-                                <option value="">Приключение</option>
-                                <option value="">Комедия</option>
+                            <label for="genre">Жанр</label>
+                            <select name="genre" id="genre" value={book.genre} onChange={handleGenreChange}>
+                                <option value="Фантастика">Фэнтези</option>
+                                <option value="Детектив">Детектив</option>
+                                <option value="Приключения">Приключения</option>
+                                <option value="Приключения">Комедия</option>
                             </select>
                         </div>
                         <div>
                             <label for="pages">Количество страниц</label>
-                             <input type="text" id="numberOfPages" name="numberOfPages" onChange={handleChangeNumberOfPages} />
+                            <input type="text" name="pages" id="pages" value={book.pages} onChange={handlePagesChange} />
                         </div>
-                        <button type="submit">Сохранить</button>
-                    </div>
-                    <div>
-                        <table>
-                            <tr>
-                                <th>Номер</th>
-                                <th>Название</th>
-                                <th>Автор</th>
-                                <th>Жанр</th>
-                                <th>Количество страниц</th>
-                                <th>Действия</th>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>Хоббит</td>
-                                <td>Дж.Р.Р.Толкиен</td>
-                                <td>Фентези</td>
-                                <td>600</td>
-                                <td>
-                                    <button >Редактировать</button>
-                                    <button>Удалить</button>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                        <div>
+                            <button type="submit">Сохранить</button>
+                        </div>
+                    </form>
                 </div>
-            )
+                <div>
+                    <table>
+                        <tr>
+                            <th>Номер</th>
+                            <th>Название</th>
+                            <th>Автор</th>
+                            <th>Жанр</th>
+                            <th>Страницы</th>
+                            <th>Действия</th>
+                        </tr>
+                            {books.map(function (item, index) {
+                                return <tr>
+                                    <td>{index + 1}</td>
+                                    <td>{item.title}</td>
+                                    <td>{item.author}</td>
+                                    <td>{item.genre}</td>
+                                    <td>{item.pages}</td>
+                                    <td>
+                                        <button>Редактировать</button>
+                                        <button>Удалить</button>
+                                    </td>
+                                </tr>
+                            })
+                        }
+                    </table>
+                </div>
+            </>;
         }
+
         ReactDOM.createRoot(
             document.getElementById("app")
         )
             .render(
-                <appBook />
-            );
+                <App />
+            )
     </script>
 </body>
 
