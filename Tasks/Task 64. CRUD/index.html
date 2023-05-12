@@ -16,8 +16,9 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
 
-        function App() {
-           const [book, setBook] = React.useState(
+       function App() {
+
+            const [book, setBook] = React.useState(
                 {
                     title: "",
                     author: "",
@@ -28,28 +29,36 @@
 
             const [books, setBooks] = React.useState([
                 {
-                    title: "Хоббит",
-                    author: "Дж.Р.Р.Толкиен",
-                    genre: "Фэнтези",
-                    pages: 368,
+                    title: "Властелин колец",
+                    author: "Дж. Р. Толкин",
+                    genre: "Фантастика",
+                    pages: 1000
                 }
             ]);
 
-           function handleFormSubmit(event) {
-                event.preventDefault();
-                setBooks([...books, book]);
-                setBook({
-                    title: "",
-                    author: "",
-                    genre: "",
-                    pages: 0
-                });
-            }
+            const [editIndex, setEditIndex] = React.useState(-1);
 
             function handleFormSubmit(event) {
                 event.preventDefault();
-                setBooks([...books, book]);
-                
+                if (editIndex == - 1) {
+                    setBooks([...books, book]);
+                    setBook({
+                        title: "",
+                        author: "",
+                        genre: "Детектив",
+                        pages: 0
+                    });
+                } else {
+                    books[editIndex] = book;
+                    setBooks([...books]);
+                    setBook({
+                        title: "",
+                        author: "",
+                        genre: "Детектив",
+                        pages: 0
+                    });
+                    setEditIndex(-1);
+                }
             }
 
             function handleTitleChange(event) {
@@ -63,6 +72,25 @@
             }
             function handlePagesChange(event) {
                 setBook({ ...book, pages: event.target.value });
+            }
+
+            function handleBookDelete(event) {
+                let index = +event.target.dataset.id;
+                books.splice(index, 1);
+                setBooks([...books]);
+            }
+
+            function handleBookEdit(event) {
+                let index = +event.target.dataset.id; // event.target - кнопка dataset.id - атрибут data-id кнопки
+                // index - номер книги в массиве books
+                let editBook = books[index]; // редактируемая книга, поулченная по номеру элемента в массиве
+                setBook({
+                    title: editBook.title,
+                    author: editBook.author,
+                    genre: editBook.genre,
+                    pages: editBook.pages
+                });
+                setEditIndex(index);
             }
 
             return <>
@@ -79,10 +107,9 @@
                         <div>
                             <label for="genre">Жанр</label>
                             <select name="genre" id="genre" value={book.genre} onChange={handleGenreChange}>
-                                <option value="Фантастика">Фэнтези</option>
+                                <option value="Фантастика">Фантастика</option>
                                 <option value="Детектив">Детектив</option>
                                 <option value="Приключения">Приключения</option>
-                                <option value="Приключения">Комедия</option>
                             </select>
                         </div>
                         <div>
@@ -90,7 +117,7 @@
                             <input type="text" name="pages" id="pages" value={book.pages} onChange={handlePagesChange} />
                         </div>
                         <div>
-                            <button type="submit">Сохранить</button>
+                            <button type="submit">{editIndex > -1 ? <>Сохранить</> : <>Добавить</>}</button>
                         </div>
                     </form>
                 </div>
@@ -104,7 +131,8 @@
                             <th>Страницы</th>
                             <th>Действия</th>
                         </tr>
-                            {books.map(function (item, index) {
+                        {
+                            books.map(function (item, index) {
                                 return <tr>
                                     <td>{index + 1}</td>
                                     <td>{item.title}</td>
@@ -112,8 +140,8 @@
                                     <td>{item.genre}</td>
                                     <td>{item.pages}</td>
                                     <td>
-                                        <button>Редактировать</button>
-                                        <button>Удалить</button>
+                                        <button onClick={handleBookEdit} data-id={index}>Редактировать</button>
+                                        <button onClick={handleBookDelete} data-id={index}>Удалить</button>
                                     </td>
                                 </tr>
                             })
@@ -121,8 +149,8 @@
                     </table>
                 </div>
             </>;
-        }
 
+        }
         ReactDOM.createRoot(
             document.getElementById("app")
         )
@@ -130,6 +158,6 @@
                 <App />
             )
     </script>
-</body>
-
-</html>
+        </body>
+        
+        </html>
