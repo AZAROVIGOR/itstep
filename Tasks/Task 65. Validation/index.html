@@ -18,18 +18,27 @@
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/babel">
-       
-       function Blog() {
+        function Blog() {
             const [form, setForm] = React.useState({
                 id: 0,
                 title: "",
                 text: "",
                 image: "no-image.png"
-            })
+            });
+
+            const [formError, setFormError] = React.useState({
+                title: "",
+                text: "",
+                image: ""
+            });
+
+            let [lastId, setLastId] = React.useState(1);
 
             const [posts, setPosts] = React.useState([]);
 
-            let [lastId, setLastId] = React.useState(1);
+            function handleIdChange(event) {
+                setForm({ ...form, id: event.target.value });
+            }
 
             function handleTitleChange(event) {
                 setForm({ ...form, title: event.target.value });
@@ -43,16 +52,42 @@
                 setForm({ ...form, image: event.target.value });
             }
 
+            function validate() {
+                let isValid = true;
+                if (form.title == "") {
+                    formError.title = "Поле не заполнено";
+                    isValid = false;
+                } else {
+                    formError.title = "";
+                }
+                if (form.text == "") {
+                    formError.text = "Поле не заполнено";
+                    isValid = false;
+                } else {
+                    formError.text = "";
+                }
+                if (form.image == "") {
+                    formError.image = "Картинка не выбрана";
+                    isValid = false;
+                } else {
+                    formError.image = "";
+                }
+                setFormError({ ...formError });
+                return isValid;
+            }
+
             function handleFormSubmit(event) {
                 event.preventDefault();
-
+                if (!validate()) {
+                    return false;
+                }
                 if (form.id == 0) {
                     let post = {
                         id: lastId,
                         title: form.title,
                         text: form.text,
                         image: form.image,
-                        data: new Date()
+                        date: new Date()
                     }
 
                     setPosts([...posts, post]);
@@ -62,10 +97,11 @@
                     setLastId(lastId);
 
                     setForm({
+                        id: 0,
                         title: "",
                         text: "",
                         image: "no-image.png"
-                    })
+                    });
                 } else {
                     let index = posts.findIndex((post) => post.id == form.id);
                     posts[index] = {
@@ -87,13 +123,17 @@
             }
 
             function handlePostDelete(event) {
+
                 let id = +event.target.dataset.id;
-                let newPosts = posts.filter(post => { post.id != id })
+                let newPosts = posts.filter(function (post) {
+                    return post.id !== id;
+                });
+
                 setPosts([...newPosts]);
             }
 
             function handlePostEdit(event) {
-                let id = + event.target.dataset.id;
+                let id = +event.target.dataset.id;
 
                 let editPost = posts.find((post) => post.id == id);
 
@@ -105,33 +145,37 @@
                 });
 
             }
+
             return <>
-                <form class="blog_form" action="" onSubmit={handleFormSubmit} >
+                <form class="blog_form" action="" onSubmit={handleFormSubmit}>
                     <div class="mb-3">
                         <label for="title" class="form-label">Название</label>
                         <input type="text" class="form-control" id="title" value={form.title} onChange={handleTitleChange} />
+                        {formError.title != "" && <div>{formError.title}</div>}
                     </div>
                     <div class="mb-3">
                         <label for="text" class="form-label">Текст</label>
                         <textarea class="form-control" id="text" rows="3" value={form.text} onChange={handleTextChange} />
+                        {formError.text != "" && <div>{formError.text}</div>}
                     </div>
                     <div class="mb-3">
                         <label for="image" class="form-label">Картинка</label>
                         <input type="text" class="form-control" id="image" value={form.image} onChange={handleImageChange} />
+                        {formError.image != "" && <div>{formError.image}</div>}
                     </div>
                     <div class="mb-3">
-                        <input type="hidden" id="id" value="" />
-                        <button type="submit" class="btn btn-primary">{form.id > 0 ? <>Сохранить</> : <>Добавить</>}</button>
+                        <input type="hidden" id="id" value={form.id} onChange={handleIdChange} />
+                        <button type="submit" class="btn btn-primary">{(form.id > 0) ? <>Сохранить</> : <>Добавить</>}</button>
                     </div>
                 </form>
                 <div class="blog_posts">
                     {
                         posts.map((post) =>
                             <div class="card mb-3">
-                                <img src={`./images/${post.image}`} class="card-img-top" alt={post.title} />
+                                <img src={`./img/${post.image}`} class="card-img-top" alt={post.title} />
                                 <div class="card-body">
-                                    <h5 class="card-title">{post.title}</h5>
-                                    <p class="card-text">{post.text}</p>
+                                    <h5 class="card-title">#{post.id} {post.title}</h5>
+                                    <p class="card-text">{post.text} </p>
                                     <p class="card-text"><small class="text-body-secondary">{post.date.toLocaleDateString()}</small></p>
                                 </div>
                                 <div class="card-footer text-body-secondary">
@@ -143,7 +187,6 @@
                     }
                 </div>
             </>
-
         }
 
         ReactDOM.createRoot(
@@ -152,6 +195,8 @@
             .render(
                 <Blog />
             )
+
+
     </script>
 </body>
 
