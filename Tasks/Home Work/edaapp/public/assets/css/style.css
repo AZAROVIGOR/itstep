@@ -1,18 +1,20 @@
-body {
+body{
     display: flex;
     margin-top: 50px;
     justify-content: center;
 }
 
-#app {
+#app{
     width: 800px;
 }
-
-.blog_posts {
+.blog_posts{
     margin-top: 50px;
 }
-
-.btn-like{
+.button_trash,
+.button_favorite,
+.button_unfavorite{
+    cursor: pointer;
     border: 0;
-    font-size: 20px;
+    background-color: #fff;
 }
+

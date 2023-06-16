@@ -2,30 +2,28 @@ const reducer = (state = {}, action) => {
 
     switch (action.type) {
 
-        case "SET_POST":
+        case "SET_STATE":
             return {
                 ...state,
                 posts: action.posts,
-                lastIdPost: action.lastIdPost
-
+                lastIdPost: action.lastIdPpost
             }
 
         case "ADD_POST":
-
-            let newId = ++state.lastIdPost;
+           
+        let newId = ++lastIdPost;
 
             let newPost = {
                 id: newId,
                 name: action.post.name,
                 text: action.post.text,
-                image: action.post.image,
-                date: new Date(),
-                favorite: action.post.favorite
+                image: action.post.image
             }
+            state.posts.push(newPost);
 
             return {
                 ...state,
-                posts: [...state.posts, newPost],
+                posts: state.posts,
                 lastIdPost: newId
             };
 
@@ -35,20 +33,6 @@ const reducer = (state = {}, action) => {
                 ...state,
                 posts: state.posts.filter((item) => item.id != action.postId)
             }
-
-        case "PRODUCT_FAVORITE": {
-
-            return {
-                ...state,
-                posts: state.posts.map((item) => {
-                    if (item.id == action.id) {
-                        item.favorite++;
-                    }
-                    return item;
-                })
-            }
-        }
-
     }
     return state;
 };

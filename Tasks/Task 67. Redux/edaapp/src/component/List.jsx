@@ -29,6 +29,7 @@ const List = (props) => {
                     <th scope="col">Цена</th>
                     <th scope="col">Количество</th>
                     <th scope="col">Единица измерения</th>
+                    <th scope="col">Картинка</th>
                     <th scope="col">Избранное</th>
                     <th scope="col">Действия</th>
                     <th scope="col">Итого</th>
@@ -43,6 +44,7 @@ const List = (props) => {
                         <td>{item.price}</td>
                         <td>{item.quantity}</td>
                         <td>{item. productUnit}</td>
+                        <td><img src={`./public/image/${item.productImage}`}/></td>
                         <td>
                             {item.favorite == true &&
                                 <button className="button_favorite" data-id={item.id} onClick={handleFavoriteClick}>

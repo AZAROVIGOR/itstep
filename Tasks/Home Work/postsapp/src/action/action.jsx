@@ -15,12 +15,4 @@ const deletePost = (postId) => {
     }
 }
 
-const favoritePost = (id, favorite) => {
-    return {
-        type: "PRODUCT_FAVORITE",
-        id,
-        favorite
-    }
-}
-
-module.exports = {addPost, deletePost, favoritePost}
+module.exports = {addPost, deletePost}

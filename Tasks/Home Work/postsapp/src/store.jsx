@@ -8,11 +8,9 @@ store.dispatch({
     posts: [
         {
             id: 1,
-            title: "Название",
-            text: "Текст",
-            image: "no-image.png",
-            date: new Date(),
-            favorite: 0,
+            name: "",
+            text: "",
+            image: 1,
         }
     ],
     lastIdPost: 1

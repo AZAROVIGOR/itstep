@@ -16,10 +16,12 @@ store.dispatch({
             price: 5,
             quantity: 1,
             productUnit: "kg",
+            productImage: "milk.png",
             favorite: false,
-           
         }
     ],
+
+   
     lastIdProduct: 1
 });
 

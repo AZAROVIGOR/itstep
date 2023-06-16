@@ -6,6 +6,7 @@ const reducer = (state = {}, action) => {
                 ...state,
                 products: action.products,
                 user: action.user,
+                formError: action.formError,
                 lastIdProduct: action.lastIdProduct
             }
         case "PRODUСT_ADD":
@@ -16,6 +17,7 @@ const reducer = (state = {}, action) => {
                 price: action.product.price,
                 quantity: action.product.quantity,
                 productUnit: action.product.productUnit,
+                productImage: action.product.productImage,
                 favorite: action.product.favorite,
                 
                

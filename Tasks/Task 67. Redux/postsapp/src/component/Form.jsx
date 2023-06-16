@@ -1,31 +1,40 @@
 const React = require("react");
 
-const Form = (props) =>{
+const Form = (props) => {
 
     const [form, setForm] = React.useState({
         title: "",
         text: "",
-        image: "no-image.png"
+        image: "no-image.png",
+        favorite: 0
     })
 
-    function handleFormSubmit(event){
+    function handleFormSubmit(event) {
+
         event.preventDefault();
+
         props.onPostAdd(form);
+        setForm({
+            title: "",
+            text: "",
+            image: "no-image.png",
+            favorite: 0
+        })
     }
 
-    function handleTitleChange(event){
-        setForm({...form, title: event.target.value})
+    function handleTitleChange(event) {
+        setForm({ ...form, title: event.target.value })
     }
 
-    function handleTextChange(event){
-        setForm({ ...form, text: event.target.value})
+    function handleTextChange(event) {
+        setForm({ ...form, text: event.target.value })
     }
 
-    function handleImageChange(event){
-        setForm({ ...form, image: event.target.value})
+    function handleImageChange(event) {
+        setForm({ ...form, image: event.target.value })
     }
 
-    return<>
+    return <>
         <form className="blog_form" action="" onSubmit={handleFormSubmit}  >
             <div className="mb-3">
                 <label htmlFor="title" className="form-label">Название</label>
